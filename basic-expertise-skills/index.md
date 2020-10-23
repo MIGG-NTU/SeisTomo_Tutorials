@@ -53,6 +53,8 @@ There are many interpreted languages, the most used in seismology community are 
 
 ## Seismological Tools
 
-- [SAC](http://ds.iris.edu/ds/nodes/dmc/software/downloads/sac/): Seismic Analysis Code, the most commonly used seismic data processing software | [Download](http://ds.iris.edu/ds/nodes/dmc/forms/sac) | [Chinese manual](https://seisman.github.io/SAC_Docs_zh)
-- [GMT](https://www.generic-mapping-tools.org/): Generic Mapping Tools, the most commonly used software in geophysics community for plotting high-quality beautiful figures, especially maps. | [GMT China Community](https://gmt-china.org/)
+- [SAC](http://ds.iris.edu/ds/nodes/dmc/software/downloads/sac/): Seismic Analysis Code, the most commonly used seismic data processing software | [Download](http://ds.iris.edu/ds/nodes/dmc/forms/sac)
+    - [Chinese manual](https://seisman.github.io/SAC_Docs_zh): For a new SAC user, you can quickly look through the first four sections, i.e., [SAC brief introduction](https://seisman.github.io/SAC_Docs_zh/introduction/), [SAC basis](https://seisman.github.io/SAC_Docs_zh/basis/), [SAC format](https://seisman.github.io/SAC_Docs_zh/fileformat/) and [SAC data processing](https://seisman.github.io/SAC_Docs_zh/data-process/). Youcan learn details later when you use it to do real data processing.
+- [GMT](https://www.generic-mapping-tools.org/): Generic Mapping Tools, the most commonly used software in geophysics community for plotting high-quality beautiful figures, especially maps.
+    - [GMT China Community](https://gmt-china.org/): For new GMT user, you can quickly follow the first four sections, i.e., [GMT brief introduction](https://docs.gmt-china.org/6.1/intro/), [install](https://docs.gmt-china.org/6.1/install/), [introductionary tutorials](https://docs.gmt-china.org/6.1/tutorial/), and [GMT basis](https://docs.gmt-china.org/6.1/basis/).
 

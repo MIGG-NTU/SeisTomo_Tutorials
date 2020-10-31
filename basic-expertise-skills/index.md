@@ -18,6 +18,7 @@ Most seismologists choose macOS or Linux as their primary operation system for d
 Please refer to the following references for a brief introduction about them:
 - [Operating system](https://core-man.github.io/blog/post/intro-material-seismology/#11-operating-system)
 - [Operating system](https://sites.google.com/msu.edu/wei-seismic-training/seismic-analysis-101?authuser=0)
+- [WSL](./WSL.md)
 
 
 ## Linux/macOS basis and Command Lines

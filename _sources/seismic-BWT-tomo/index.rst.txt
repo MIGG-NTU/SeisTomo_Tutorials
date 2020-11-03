@@ -1,5 +1,5 @@
-Seismic Body-wave Traveltime Tomography
-=======================================
+Seismic Tomography
+==================
 
 ``TODO``
 

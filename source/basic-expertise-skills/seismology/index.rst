@@ -4,8 +4,8 @@ Seismology
 
 .. toctree::
 
+   seis-tools
    catalog
    station
    waveform
-   seis-tools
 

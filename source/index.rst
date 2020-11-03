@@ -1,5 +1,5 @@
-SeisTomo Tutorial
-=================
+SeisTomo Tutorials
+==================
 
 
 .. toctree::

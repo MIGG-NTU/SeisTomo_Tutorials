@@ -149,7 +149,7 @@ html_static_path = ['_static']
 html_context = {
     'display_github': True,
     'github_user': 'MIGG-NTU',
-    'github_repo': 'geosciences.Myanmar',
+    'github_repo': 'SeisTomo_Tutorials',
     'github_version': 'main',
     'conf_py_path': '/source/',
     'theme_vcs_pageview_mode': 'blob',

@@ -1,5 +1,4 @@
-Waveform
+Plotting
 ========
 
 ``TODO``
-

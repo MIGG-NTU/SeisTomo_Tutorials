@@ -4,6 +4,6 @@ Seismic Data
 
 .. toctree::
 
-   download/index
-   processing/index
-   plot/index
+   data-downloading/index
+   data-processing/index
+   plotting/index

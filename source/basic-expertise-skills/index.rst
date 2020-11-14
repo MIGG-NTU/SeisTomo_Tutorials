@@ -4,5 +4,7 @@ Basic Expertise and Skills
 
 .. toctree::
 
-   computer/index
-   seismology/index
+   operating-system
+   LinuxmacOS-basis-and-command-lines
+   commonly-used-commands
+   prgramming-languages

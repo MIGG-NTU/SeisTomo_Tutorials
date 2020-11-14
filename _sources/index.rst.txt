@@ -7,6 +7,7 @@ SeisTomo Tutorials
    :hidden:
 
    basic-expertise-skills/index
+   seismology/index
    seismic-data/index
    seismic-BWT-tomo/index
    references/index

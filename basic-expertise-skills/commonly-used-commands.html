@@ -1,0 +1,355 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Commonly-used Commands &mdash; SeisTomo_Tutorials 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Prgramming Languages" href="prgramming-languages.html" />
+    <link rel="prev" title="Linux/macOS Basis and Command Lines" href="LinuxmacOS-basis-and-command-lines.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> SeisTomo_Tutorials
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Basic Expertise and Skills</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="operating-system.html">Operating System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LinuxmacOS-basis-and-command-lines.html">Linux/macOS Basis and Command Lines</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Commonly-used Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#data-processing">Data Processing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#awk">awk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cut">cut</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#grep">grep</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wc">wc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sort">sort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#uniq">uniq</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#file-compressing">File Compressing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tar">tar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gzip">gzip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bzip2">bzip2</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#non-classified-commands">Non-classified Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cat">cat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#touch">touch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#head">head</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tail">tail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#which">which</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#locate">locate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#paste">paste</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#printf">printf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sed">sed</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="prgramming-languages.html">Prgramming Languages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../seismology/index.html">Seismology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic-data/index.html">Seismic Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic-BWT-tomo/index.html">Seismic Tomography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../links/index.html">Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact/index.html">Contact</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SeisTomo_Tutorials</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Basic Expertise and Skills</a> &raquo;</li>
+        
+      <li>Commonly-used Commands</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/MIGG-NTU/geosciences.Myanmar/blob/main/source/basic-expertise-skills/commonly-used-commands.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="commonly-used-commands">
+<h1>Commonly-used Commands<a class="headerlink" href="#commonly-used-commands" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="data-processing">
+<h2>Data Processing<a class="headerlink" href="#data-processing" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="awk">
+<h3>awk<a class="headerlink" href="#awk" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://man.linuxde.net/awk">awk</a> is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> check events.csv
+<span class="gp">$</span> cat events.csv
+<span class="go">2019-09-01T10:30:32.320Z  32.398   90.841  39.32  6.5  MW</span>
+<span class="go">2013-03-11T12:21:01.149Z  19.691  120.933  23.83  4.5  MW</span>
+<span class="go">2010-01-09T01:01:10.921Z  51.582  110.850   9.33  3.3  MB</span>
+
+<span class="gp">#</span> extract the first and fifth columns
+<span class="gp">$</span> awk <span class="s1">&#39;{print $1,$5}&#39;</span> events.csv
+<span class="go">2019-09-01T10:30:32.320Z 6.5</span>
+<span class="go">2013-03-11T12:21:01.149Z 4.5</span>
+<span class="go">2010-01-09T01:01:10.921Z 3.3</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="cut">
+<h3>cut<a class="headerlink" href="#cut" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+</div>
+<div class="section" id="grep">
+<h3>grep<a class="headerlink" href="#grep" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+</div>
+<div class="section" id="wc">
+<h3>wc<a class="headerlink" href="#wc" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+</div>
+<div class="section" id="sort">
+<h3>sort<a class="headerlink" href="#sort" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+</div>
+<div class="section" id="uniq">
+<h3>uniq<a class="headerlink" href="#uniq" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+</div>
+</div>
+<div class="section" id="file-compressing">
+<h2>File Compressing<a class="headerlink" href="#file-compressing" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tar">
+<h3>tar<a class="headerlink" href="#tar" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+</div>
+<div class="section" id="gzip">
+<h3>gzip<a class="headerlink" href="#gzip" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+</div>
+<div class="section" id="bzip2">
+<h3>bzip2<a class="headerlink" href="#bzip2" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+</div>
+</div>
+<div class="section" id="non-classified-commands">
+<h2>Non-classified Commands<a class="headerlink" href="#non-classified-commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="cat">
+<h3>cat<a class="headerlink" href="#cat" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+</div>
+<div class="section" id="touch">
+<h3>touch<a class="headerlink" href="#touch" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+</div>
+<div class="section" id="head">
+<h3>head<a class="headerlink" href="#head" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+</div>
+<div class="section" id="tail">
+<h3>tail<a class="headerlink" href="#tail" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+</div>
+<div class="section" id="which">
+<h3>which<a class="headerlink" href="#which" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+</div>
+<div class="section" id="locate">
+<h3>locate<a class="headerlink" href="#locate" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+</div>
+<div class="section" id="paste">
+<h3>paste<a class="headerlink" href="#paste" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+</div>
+<div class="section" id="printf">
+<h3>printf<a class="headerlink" href="#printf" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+</div>
+<div class="section" id="sed">
+<h3>sed<a class="headerlink" href="#sed" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="prgramming-languages.html" class="btn btn-neutral float-right" title="Prgramming Languages" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="LinuxmacOS-basis-and-command-lines.html" class="btn btn-neutral float-left" title="Linux/macOS Basis and Command Lines" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, MIG
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

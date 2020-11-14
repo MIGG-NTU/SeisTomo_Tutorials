@@ -4,7 +4,7 @@ Basic Expertise and Skills
 
 .. toctree::
 
-   operating-system
+   operating-systems
    LinuxmacOS-basis-and-command-lines
    commonly-used-commands
    prgramming-languages

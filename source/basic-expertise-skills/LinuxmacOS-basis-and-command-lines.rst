@@ -1,7 +1,20 @@
 Linux/macOS Basis and Command Lines
 ===================================
 
+Linux/macOS Basis
+-----------------
+
+``TODO``
+
+
+Command Lines
+-------------
+
 Seismologists usually use command lines (CLI) rather than Graphic User Interface (GUI) to navigate around different folders/directories, run programs, process data and almost everything you can imagine, because using CLI is usually much efficient than using GUI.
+
+
+References
+----------
 
 Please refer to the following references for some basis and commonly-used commands in Linux/macOS:
 

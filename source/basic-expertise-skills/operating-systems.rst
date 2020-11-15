@@ -39,7 +39,7 @@ Free Linux Distributions
 Windows Subsystem for Linux
 ---------------------------
 
-We can use Linux subsystem in Windows10, i.e., Windows Subsystem for Linux (WSL). Firstly, we have to update the windows system. Please check the following official document for the system version requirement. If the systeme version is a little low, please refer to `Update Assistant <https://support.microsoft.com/en-us/help/3159635/windows-10-update-assistant>`_.
+We can use Linux subsystem in Windows10, i.e., Windows Subsystem for Linux (WSL). Firstly, we have to update the windows system. Please check the following official document for the system version requirement. If the system version is a too low, please refer to `Update Assistant <https://support.microsoft.com/en-us/help/3159635/windows-10-update-assistant>`_.
 
 WSL now has two versions, WSL1 and WLS2. Please check their difference (`Microsoft DOC <https://docs.microsoft.com/en-us/windows/wsl/compare-versions>`__ & `USTC LUG <https://101.lug.ustc.edu.cn/Ch01/supplement/#wsl>`__). You can use WSL2. Please refer to the `Microsoft DOC <https://docs.microsoft.com/en-us/windows/wsl/install-win10>`_ and `Chinese DOC <https://blog.walterlv.com/post/how-to-install-wsl2.html#%E7%AC%AC%E4%B8%80%E6%AD%A5%E5%90%AF%E7%94%A8%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B9%B3%E5%8F%B0%E5%92%8C-linux-%E5%AD%90%E7%B3%BB%E7%BB%9F%E5%8A%9F%E8%83%BD>`_ to install WSL.
 

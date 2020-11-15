@@ -7,7 +7,7 @@ Data Processing
 awk
 +++
 
-`awk <https://man.linuxde.net/awk>`__ is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool. It is very convenient to extract certain columns in an ASCII-format file using awk given a specified division character, e.g., empty space " " as default, comma ",", semicolon ";", dash "-", or other describable characters. Here are two expamles showing the way that we usually use to extract location, magnitude, and origin time from a coomon catalogue file. 
+`awk <https://man.linuxde.net/awk>`__ is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool.
 
 .. code-block:: console
 

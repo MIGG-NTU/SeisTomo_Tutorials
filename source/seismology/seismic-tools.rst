@@ -3,6 +3,10 @@ Seismological Tools
 
 This is a list of seismological tools you may use in your daily research.
 
+**References**
+
+- `MSU Wei <https://sites.google.com/msu.edu/wei-seismic-training/seismological-tools?authuser=0>`__
+
 
 SAC
 ---
@@ -16,6 +20,15 @@ SAC
     - `SAC basis <https://seisman.github.io/SAC_Docs_zh/basis/>`_
     - `SAC format <https://seisman.github.io/SAC_Docs_zh/fileformat/>`_
     - `SAC data processing <https://seisman.github.io/SAC_Docs_zh/data-process/>`_
+
+
+SOD
+---
+
+SOD is a Java program to automatically select, download, and pre-process seismic waveform data.
+
+``TODO``
+
 
 
 TauP
@@ -37,13 +50,5 @@ GMT
     - `install GMT <https://docs.gmt-china.org/6.1/install/>`_
     - `GMT introductionary tutorials <https://docs.gmt-china.org/6.1/tutorial/>`_
     - `GMT basis <https://docs.gmt-china.org/6.1/basis/>`_
-
-
-SOD
----
-
-SOD is a Java program to automatically select, download, and pre-process seismic waveform data.
-
-``TODO``
 
 

@@ -7,3 +7,4 @@ Seismic Data
    data-downloading/index
    data-processing/index
    plotting/index
+   homework

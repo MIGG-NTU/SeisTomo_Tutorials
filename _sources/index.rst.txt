@@ -12,4 +12,4 @@ SeisTomo Tutorials
    seismic-BWT-tomo/index
    references/index
    links/index
-   contact/index
+   contributors/index

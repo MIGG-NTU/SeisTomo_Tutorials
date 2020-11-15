@@ -1,5 +1,17 @@
-Commonly-used Commands
-======================
+Command Lines
+=============
+
+Seismologists usually use command lines (CLI) rather than Graphic User Interface (GUI) to navigate around different folders/directories, run programs, process data and almost everything you can imagine, because using CLI is usually much efficient than using GUI.
+
+
+Resources
+---------
+
+- `Commonly-used Unix commands <https://igpppublic.ucsd.edu/~shearer/COMP233/Agnew_UNIX_onepage.pdf>`__
+- `Linux 命令手册 <http://linux.51yip.com>`__
+- `Linux 命令大全 <http://man.linuxde.net>`__
+- `Linux 命令大全 <https://www.runoob.com/linux/linux-command-manual.html>`__
+
 
 Data Processing
 ---------------
@@ -60,6 +72,9 @@ File Compressing
 tar
 +++
 ``TODO``
+
+``tar -zxvf``
+``tar -jxvf``
 
 
 gzip

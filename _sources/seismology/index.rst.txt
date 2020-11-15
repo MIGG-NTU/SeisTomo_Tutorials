@@ -9,4 +9,5 @@ Seismology
    seismic-station
    seismic-waveform
    seismic-tools
+   homework
 

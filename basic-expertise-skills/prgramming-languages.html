@@ -93,7 +93,12 @@
 <li class="toctree-l2"><a class="reference internal" href="command-lines.html">Command Lines</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Prgramming Languages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#compiled-language">Compiled Language</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#scripting-languages">Scripting Languages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scripting-languages">Scripting Languages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bash">Bash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#python">Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#matlab">Matlab</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="homework.html">Homework</a></li>
@@ -102,9 +107,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../seismology/index.html">Seismology</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../seismic-data/index.html">Seismic Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../seismic-BWT-tomo/index.html">Seismic Tomography</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../references/index.html">References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../links/index.html">Links</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributors/index.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">References</a></li>
 </ul>
 
             
@@ -191,23 +195,33 @@
 <li><p>Run the executable file</p></li>
 </ol>
 <p>To compile source codes to a executable file, you need to know some commonly used options for gcc and gfortran, such as <code class="docutils literal notranslate"><span class="pre">-c</span></code>, <code class="docutils literal notranslate"><span class="pre">-o</span></code>, <code class="docutils literal notranslate"><span class="pre">-g</span></code>, <code class="docutils literal notranslate"><span class="pre">-I</span></code>, <code class="docutils literal notranslate"><span class="pre">-L</span></code>, <code class="docutils literal notranslate"><span class="pre">-l</span></code>. It would be easier to solve some compilation errors if you have a basic understanding of the compiling, linking and executing for compiled languages.</p>
-<p>You also need to learn how to read and write a Makefile, which is a tool to automatize the compiling process for a large source codes with multiple executable files</p>
-<p><strong>Please refer to the following references</strong>:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://blog.seisman.info/simple-guide-to-seismology/#%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80">Compiled Language</a></p></li>
-<li><p><a class="reference external" href="https://core-man.github.io/blog/post/intro-material-seismology/#14-computer-languages">Compiled Language</a></p></li>
-<li><p><a class="reference external" href="https://sites.google.com/msu.edu/wei-seismic-training/seismic-analysis-101?authuser=0#h.p_JUXXXJxTZ7Qm">Compiled Language</a></p></li>
-</ul>
+<p>You also need to learn how to read and write a Makefile, which is a tool to automatize the compiling process for a large source codes with multiple executable files. Please refer to <a class="reference external" href="https://blog.seisman.info/how-to-write-makefile/">跟我一起写 Makefile</a>.</p>
 </div>
 <div class="section" id="scripting-languages">
 <h2>Scripting Languages<a class="headerlink" href="#scripting-languages" title="Permalink to this headline">¶</a></h2>
 <p>Scripting Languages can also be called as interpreted Languages. It’s usually easier to write and can accomplish complex tasks using only a few lines of codes. The only disadvantage is interpreted languages are usually much slower than compiled languages. There are many interpreted languages, the most used in seismology community are bash, Python (recommanded) and Matlab.</p>
-<p><strong>Please refer to the following references</strong>:</p>
+<div class="section" id="bash">
+<h3>Bash<a class="headerlink" href="#bash" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+</div>
+<div class="section" id="python">
+<h3>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h3>
+<p>Python is an interpreted, high-level, general-purpose programming language. It is FREE and OPEN-SOURCE! Unlike MATLAB, the basic Python libraries have limited capability for scientific research. Seismologists need extra open-source Python libraries (e.g. numpy, scipy, matplotlib) for data analysis and plotting.</p>
+<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+<p><strong>References</strong></p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://blog.seisman.info/simple-guide-to-seismology/#%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80">Scripting Languages</a></p></li>
-<li><p><a class="reference external" href="https://core-man.github.io/blog/post/intro-material-seismology/#14-computer-languages">Scripting Languages</a></p></li>
-<li><p><a class="reference external" href="https://sites.google.com/msu.edu/wei-seismic-training/programming?authuser=0">Scripting Languages</a></p></li>
+<li><p><a class="reference external" href="https://sites.google.com/msu.edu/wei-seismic-training/programming/python?authuser=0">MSU Wei</a></p></li>
 </ul>
+</div>
+<div class="section" id="matlab">
+<h3>Matlab<a class="headerlink" href="#matlab" title="Permalink to this headline">¶</a></h3>
+<p>MATLAB is a multi-paradigm numerical computing environment and proprietary programming language developed by MathWorks. MATLAB allows matrix manipulations, plotting of functions and data, implementation of algorithms, creation of user interfaces, and interfacing with programs written in other languages, including C, C++, C#, Java, Fortran and Python.</p>
+<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+<p><strong>References</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://sites.google.com/msu.edu/wei-seismic-training/programming/matlab?authuser=0">MSU Wei</a></p></li>
+</ul>
+</div>
 </div>
 </div>
 

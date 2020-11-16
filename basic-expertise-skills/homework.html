@@ -92,7 +92,15 @@
 <li class="toctree-l2"><a class="reference internal" href="LinuxmacOS-basis.html">Linux/macOS Basis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="command-lines.html">Command Lines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="prgramming-languages.html">Prgramming Languages</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Homework</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Homework</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bash">Bash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#python">Python</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#task-1">Task 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#task-2">Task 2</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../seismology/index.html">Seismology</a></li>
@@ -173,11 +181,41 @@
 <h1>Homework<a class="headerlink" href="#homework" title="Permalink to this headline">¶</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
 <p>We may have some exercises to let the students to complete about Linux command lines and Python.</p>
-<p><strong>References</strong></p>
+<div class="section" id="bash">
+<h2>Bash<a class="headerlink" href="#bash" title="Permalink to this headline">¶</a></h2>
+<p>Download the data for Python training: <a class="reference external" href="https://raw.githubusercontent.com/MIGG-NTU/SeisTomo_Tutorials/master/source/basic-expertise-skills/python-training.tar.gz">python-training.tar.gz</a></p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://sites.google.com/msu.edu/wei-seismic-training/linux-101?authuser=0#h.p_oA57cxydmZxB">MSU Wei: CLI</a></p></li>
-<li><p><a class="reference external" href="https://sites.google.com/msu.edu/wei-seismic-training/programming/python?authuser=0#h.p_74BnP8IBcHX3">MSU Wei: Python</a></p></li>
+<li><p>Use a bash script to automatically copy each of ‘ISClauraw?.lst’ files to a new directory with a new name ‘MSUtrain?.dat’</p></li>
+<li><p>Use awk to extract only the columns of latitude and longitude from ‘ISClauraw?.lst’ files and output to ‘epicenter?.lst’</p></li>
+<li><p>Sort each of ‘ISClauraw?.lst’ files based on ‘mb’ (body-wave magnitude), latitude, or depth, and output to another file</p></li>
+<li><p>Use a bash script to generate 50 new files based on the first 50 earthquakes in ‘ISClauraw1.lst’. Each file should be named after the earthquake ID (e.g., 51839.info or 51844.info), and contains the earthquake information in the following format:</p></li>
 </ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ID: 51839</span>
+<span class="go">Data: 12/08/09</span>
+<span class="go">Time: 05:55:42.37</span>
+<span class="go">Latitude: -17.8483</span>
+<span class="go">Longitude: -178.0777</span>
+<span class="go">Depth: 590.0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="python">
+<h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="task-1">
+<h3>Task 1<a class="headerlink" href="#task-1" title="Permalink to this headline">¶</a></h3>
+<p>Use Python to do the above bash tasks again.</p>
+</div>
+<div class="section" id="task-2">
+<h3>Task 2<a class="headerlink" href="#task-2" title="Permalink to this headline">¶</a></h3>
+<p>Here are some catalogs of earthquakes in Tonga, relocated by <a class="reference external" href="https://doi.org/10.1126/sciadv.1601755">Wei et al. (2019)</a>:</p>
+<ul class="simple">
+<li><p>4 of them (<code class="docutils literal notranslate"><span class="pre">ISClauraw?.lst</span></code>) include more than 700 earthquake that were recorded by local seismic stations and relocated by Antelope (a seismic software).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ISCid.lst</span></code> is an ISC catalog which should include most of these earthquakes.</p></li>
+</ul>
+<p>Generally speaking, we think the local catalogs (<code class="docutils literal notranslate"><span class="pre">ISClauraw?.lst</span></code>) should provide better hypocenters as the earthquakes are constained by local stations. On the other hand, the ISC catalog assigns each earthquake a unique ID which has a broader usage.</p>
+<p>Please write a Python script to associate these catalogs, i.e., create a new catalog in which each earthquake has a high-precision hypocenter from the local cataglos and a unique ISC ID. <code class="docutils literal notranslate"><span class="pre">assISCid.py</span></code> serves as a reference, but probably doesn’t work well. You can digest this Python script and write your own.</p>
+</div>
+</div>
 </div>
 
 

@@ -202,24 +202,75 @@
 <p>Scripting Languages can also be called as interpreted Languages. It’s usually easier to write and can accomplish complex tasks using only a few lines of codes. The only disadvantage is interpreted languages are usually much slower than compiled languages. There are many interpreted languages, the most used in seismology community are bash, Python (recommanded) and Matlab.</p>
 <div class="section" id="bash">
 <h3>Bash<a class="headerlink" href="#bash" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+<p>The basic concept of a bash script is a list of commands, which are listed in the order of execution. A good bash script will have comments, preceded by # sign, describing the steps.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1"># Author : San Zhang</span>
+<span class="c1"># Copyright (c) sanzhang@gmail.com</span>
+<span class="c1"># This is a simple demo.</span>
+
+<span class="c1"># print current date and time</span>
+date
+
+<span class="c1"># read your name</span>
+<span class="nb">echo</span> <span class="s2">&quot;What is your name?&quot;</span>
+<span class="nb">read</span> PERSON
+<span class="nb">echo</span> <span class="s2">&quot;Hellow, </span><span class="nv">$PERSON</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>Save the above content, make the script executable and run it:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> chmod +x hello.sh  <span class="c1"># make the script executable</span>
+<span class="gp">$</span> ./hello.sh         <span class="c1"># run the script</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="python">
 <h3>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h3>
 <p>Python is an interpreted, high-level, general-purpose programming language. It is FREE and OPEN-SOURCE! Unlike MATLAB, the basic Python libraries have limited capability for scientific research. Seismologists need extra open-source Python libraries (e.g. numpy, scipy, matplotlib) for data analysis and plotting.</p>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
-<p><strong>References</strong></p>
+<p><strong>1. Important libraries and packages</strong></p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://sites.google.com/msu.edu/wei-seismic-training/programming/python?authuser=0">MSU Wei</a></p></li>
+<li><p><a class="reference external" href="https://numpy.org/">NumPy</a>: a library for large, multi-dimensinal arrays and matrices, required by any scientific research</p></li>
+<li><p><a class="reference external" href="https://www.scipy.org/">SciPy</a>: a library for scientific computing, requiring NumPy, required by any scientific research</p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/">Matplotlib</a>: a library for plotting</p></li>
+<li><p><a class="reference external" href="https://pandas.pydata.org/">Pandas</a>: a library for data structures and data analysis</p></li>
+<li><p><a class="reference external" href="https://github.com/obspy/obspy">ObsPy</a>: a project specifically for processing seismic data</p></li>
+</ul>
+<p><strong>2. Quick start</strong></p>
+<p>macOS and most Linux distributions have their own pre-installed Python, it’s highly recommended to install the Anaconda distribution in your HOME directory.</p>
+<p><a class="reference external" href="https://www.anaconda.com/">Anaconda</a> is a FREE and OPEN-SOURCE distribution of the Python languages, designed for scientific computing that aims to simplify package installation and management.</p>
+<p>With anaconda installed, you will have full control of your Python and installed packages, avoid the risk messing up your operation system, and have more than 1000 popular Python packages available.</p>
+<p><strong>Install Anaconda</strong></p>
+<p>To install Anaconda on your own PC, please refer to the official installation guide on <a class="reference external" href="https://docs.anaconda.com/anaconda/install/mac-os/">macOS</a>, <a class="reference external" href="https://docs.anaconda.com/anaconda/install/linux/">Linux</a>, and <a class="reference external" href="https://docs.anaconda.com/anaconda/install/windows/">Windows</a>.</p>
+<p><strong>Install packages</strong></p>
+<p>There are several ways to install Python packages. The most convenient ways are <code class="docutils literal notranslate"><span class="pre">conda</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span></code>. If you want to install Python package, it’s recommended to check if it’s available from conda. If not, then you can pip.</p>
+<p>conda is the package manager provide d by Anaconda:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda search numpy   <span class="c1"># Search packages</span>
+<span class="gp">$</span> conda install numpy  <span class="c1"># Install packages</span>
+</pre></div>
+</div>
+<p>pip is the built-in package manager of Python:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install numpy  $ Search packages
+<span class="gp">$</span> pip install numpy  $ Install pacakges
+</pre></div>
+</div>
+<p>Run following commands to install some most commonly used packages for scientific computing:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda install ipython numpy scipy matplotlib pandas
+<span class="gp">$</span> conda install obspy --channel conda-forge
+</pre></div>
+</div>
+<p><strong>3. Free Online Resources</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/tutorial">The official Python Tutorial</a></p></li>
+<li><p><a class="reference external" href="http://scipy-lectures.org/">Scipy Lecture Notes</a></p></li>
+<li><p><a class="reference external" href="https://jalammar.github.io/visual-numpy/">A Visual Intro to NumPy and Data Representation</a></p></li>
 </ul>
 </div>
 <div class="section" id="matlab">
 <h3>Matlab<a class="headerlink" href="#matlab" title="Permalink to this headline">¶</a></h3>
 <p>MATLAB is a multi-paradigm numerical computing environment and proprietary programming language developed by MathWorks. MATLAB allows matrix manipulations, plotting of functions and data, implementation of algorithms, creation of user interfaces, and interfacing with programs written in other languages, including C, C++, C#, Java, Fortran and Python.</p>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
-<p><strong>References</strong></p>
+<p><strong>Resources</strong></p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://sites.google.com/msu.edu/wei-seismic-training/programming/matlab?authuser=0">MSU Wei</a></p></li>
+<li><p><a class="reference external" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-057-introduction-to-matlab-january-iap-2019/">MIT online course</a></p></li>
+<li><p><a class="reference external" href="https://www.mathworks.com/products/matlab/getting-started.html">MATLAB official website</a></p></li>
 </ul>
 </div>
 </div>

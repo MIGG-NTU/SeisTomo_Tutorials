@@ -16,7 +16,7 @@ Huge thanks to `seisman <https://github.com/seisman>`__ for some suggestions and
    :maxdepth: 3
    :hidden:
 
-   basic-expertise-skills/index
+   computer-programming/index
    seismology/index
    seismic-data/index
    seismic-BWT-tomo/index

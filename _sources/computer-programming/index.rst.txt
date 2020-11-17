@@ -1,5 +1,5 @@
-Basic Expertise and Skills
-==========================
+Computer & Programming
+======================
 
 
 .. toctree::

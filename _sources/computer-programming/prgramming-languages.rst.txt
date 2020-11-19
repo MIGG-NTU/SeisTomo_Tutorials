@@ -98,8 +98,8 @@ pip is the built-in package manager of Python:
 
 .. code-block:: console
 
-    $ pip install numpy  $ Search packages
-    $ pip install numpy  $ Install pacakges
+    $ pip install numpy  # Search packages
+    $ pip install numpy  # Install pacakges
 
 Run following commands to install some most commonly used packages for scientific computing:
 

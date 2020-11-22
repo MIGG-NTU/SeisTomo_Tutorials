@@ -12,8 +12,8 @@ You may refer to one of those resources to learn more about Linux.
 - `Basics of Linux and the vim editor <https://msu.edu/~allenmc/GLG873/2017-Linux_and_VI_basics.pdf>`_: by Dr. Allen McNamara (a geophysics professor at MSU EES)
 - `The Missing Semester of Your CS Education <https://missing.csail.mit.edu/>`__: `中文版 <https://missing-semester-cn.github.io/>`__
 - `The Linux Command Line <http://linuxcommand.org/tlcl.php>`__: `中文版 <http://billie66.github.io/TLCL/index.html>`__ (Github翻译项目) | `中文版 <https://www.kancloud.cn/thinkphp/linux-command-line>`__ (看云)
-- `Linux 101 <https://101.lug.ustc.edu.cn/>`__: by USTC LUG
-- `Linux学习笔记 <https://pan.baidu.com/s/1FGoYQ6H4nWxaiGyJ5Yrljg>`__ (华为工程师): w34q (提取码)
+- `Linux 101 <https://101.lug.ustc.edu.cn/>`__: by USTC LUG (**recommended**)
+- `Linux学习笔记 <https://pan.baidu.com/s/1Eo7xFt8UUbXL21OREXUPGA>`__: by 华为工程师 (提取码 7v19)
 - 鸟哥的 Linux 私房菜 (CentOS): `基础学习篇 第三版 <http://cn.linux.vbird.org>`__ | `基础学习篇 第四版 <https://wizardforcel.gitbooks.io/vbird-linux-basic-4e/content/index.html>`__
 
 

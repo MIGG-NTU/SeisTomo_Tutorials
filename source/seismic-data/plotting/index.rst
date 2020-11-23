@@ -1,4 +1,7 @@
 Plotting
 ========
 
-``TODO``
+.. toctree::
+
+   seismogram/index
+

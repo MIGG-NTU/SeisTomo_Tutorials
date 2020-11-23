@@ -32,11 +32,11 @@ jobs:
           sudo git clone --branch release --depth 1 'https://github.com/adobe-fonts/source-code-pro.git' /usr/share/fonts/opentype
           fc-cache -f -v
 
-      - name: Set up conda
+      - name: Set up conda & Install GMT
         uses: s-weigand/setup-conda@v1
         with:
           activate-conda: false
-      - run: |
+        run: |
           conda --version
           which python
           conda install gmt -c conda-forge

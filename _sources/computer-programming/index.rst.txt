@@ -7,5 +7,5 @@ Computer & Programming
    operating-systems
    LinuxmacOS-basis
    command-lines
-   prgramming-languages
+   programming/index
    homework

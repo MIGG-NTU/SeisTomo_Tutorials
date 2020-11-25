@@ -19,7 +19,7 @@ Data Processing
 awk
 +++
 
-`awk <https://man.linuxde.net/awk>`__ is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool. It is very convenient to extract certain columns in an ASCII-format file using awk given a specified division character, e.g., empty space " " as default, comma ",", semicolon ";", dash "-", or other describable characters. Here are two expamles showing the way that we usually use to extract location, magnitude, and origin time from a coomon catalogue file. 
+`awk <https://man.linuxde.net/awk>`__ is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool. It is very convenient to extract certain columns in an ASCII-format file using awk given a specified division character, e.g., empty space (as default), comma ``,`` semicolon ``;`` dash ``-`` or other describable characters. Here are two expamles showing the way that we usually use to extract location, magnitude, and origin time from a common catalogue file. 
 
 .. code-block:: console
 
@@ -30,17 +30,27 @@ awk
     2010-01-09T01:01:10.921Z  51.582  110.850   9.33  3.3  MB
 
     # extract the depth (fourth) and magnitude (fifth) columns
-    $ awk '{print $4,$5}' events.csv
+    $ awk '{print $4,$5}' events.csv  # Here, the division character is the default setting ``empty space`` 
     39.32 6.5
     23.83 4.5
     9.33 3.3
 
-    # extract the origin time (first) column and reformat into yyyymmdd hhmmsss
-    $ awk '{print $1,$5}' events.csv
-    2019-09-01T10:30:32.320Z 6.5
-    2013-03-11T12:21:01.149Z 4.5
-    2010-01-09T01:01:10.921Z 3.3
-
+    # extract the origin time (first) column and reformat it into yyyymmdd hhmmsss
+    $ awk '{print $1}' events.csv | awk -F'T' '{print $1}' | awk -F'-' '{print $1$2$3}' > origin.temp1
+    $ cat origin.temp1
+    20190901
+    20130311
+    20100109
+    $ awk '{print $1}' events.csv | awk -F'T' '{print $2}' | awk -F':' '{print $1$2$3}' | awk -F'Z' '{print $1}' | awk -F'.' '{print $1}'  > origin.temp2
+    $ cat origin.temp2
+    103032
+    122101
+    010110
+    $ paste origin.temp1 origin.temp2 > origin
+    $ cat origin 
+    20190901	103032
+    20130311	122101
+    20100109	010110
 
 cut
 +++

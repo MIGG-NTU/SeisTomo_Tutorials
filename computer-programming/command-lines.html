@@ -215,7 +215,7 @@
 <h2>Data Processing<a class="headerlink" href="#data-processing" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="awk">
 <h3>awk<a class="headerlink" href="#awk" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://man.linuxde.net/awk">awk</a> is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool. It is very convenient to extract certain columns in an ASCII-format file using awk given a specified division character, e.g., empty space (as default), comma <code class="docutils literal notranslate"><span class="pre">,</span></code> semicolon <code class="docutils literal notranslate"><span class="pre">;</span></code> dash <code class="docutils literal notranslate"><span class="pre">-</span></code> or other describable characters. Here are two expamles showing the way that we usually use to extract location, magnitude, and origin time from a common catalogue file.</p>
+<p><a class="reference external" href="https://man.linuxde.net/awk">awk</a> is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool. It is very convenient to extract certain columns or sections in an ASCII-format file using awk given a specified field separator. By default, fields are separated by a space. We can change that with the –field-separator option, which sets the -F‘S’ variable S to whatever you want it to be, e.g., comma <code class="docutils literal notranslate"><span class="pre">,</span></code> semicolon <code class="docutils literal notranslate"><span class="pre">;</span></code> dash <code class="docutils literal notranslate"><span class="pre">-</span></code> or other describable characters. Here are two expamles showing the way that we usually use to extract location, magnitude, and origin time from a common catalogue file.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> check a catalog file, e.g., events.csv
 <span class="gp">$</span> cat events.csv
 <span class="go">2019-09-01T10:30:32.320Z  32.398   90.841  39.32  6.5  MW</span>
@@ -249,11 +249,35 @@
 </div>
 <div class="section" id="cut">
 <h3>cut<a class="headerlink" href="#cut" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+<p><a class="reference external" href="https://man.linuxde.net/cut">cut</a> is a command for cutting out the sections from each line of files and writing the result to standard output. It can be used to cut parts of a line by byte position, character and field. It provides us more freedom to rename a file than <code class="docutils literal notranslate"><span class="pre">awk</span></code>. Often used options include column indicator <code class="docutils literal notranslate"><span class="pre">-c</span></code>, and combination of <code class="docutils literal notranslate"><span class="pre">-d</span></code> (seperator) and <code class="docutils literal notranslate"><span class="pre">-f</span></code> (field number) to realize the extraction of certain sections in the ASCII-format file. Here we use command <code class="docutils literal notranslate"><span class="pre">cut</span></code> to extract the origin time agian showing its powerfulness compared to command <code class="docutils literal notranslate"><span class="pre">awk</span></code>.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> extract the origin <span class="nb">time</span> <span class="o">(</span>first<span class="o">)</span> column and reformat it into yyyymmdd hhmmss
+<span class="gp">$</span> cat events.csv <span class="p">|</span> cut -d<span class="s2">&quot; &quot;</span> -f <span class="m">1</span> <span class="p">|</span> cut -c <span class="m">1</span>-4,6-7,9-10 &gt; origin.temp1
+<span class="gp">$</span> cat origin.temp1
+<span class="go">20190901</span>
+<span class="go">20130311</span>
+<span class="go">20100109</span>
+<span class="gp">$</span> cat events.csv <span class="p">|</span> cut -d<span class="s2">&quot; &quot;</span> -f <span class="m">1</span> <span class="p">|</span> cut -c <span class="m">12</span>-13,15-16,18-19  &gt; origin.temp2
+<span class="gp">$</span> cat origin.temp2
+<span class="go">103032</span>
+<span class="go">122101</span>
+<span class="go">010110</span>
+<span class="gp">$</span> paste origin.temp1 origin.temp2 &gt; origin  <span class="c1"># Merge two files into one: column addition</span>
+<span class="gp">$</span> cat origin
+<span class="go">20190901    103032</span>
+<span class="go">20130311    122101</span>
+<span class="go">20100109    010110</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="grep">
 <h3>grep<a class="headerlink" href="#grep" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+<p><a class="reference external" href="https://man.linuxde.net/grep">grep</a> is a filter command for searching for a particular pattern of characters in a file, and displaying all lines that contain that pattern. Here we show an example that searches the lines containing <code class="docutils literal notranslate"><span class="pre">Mw</span></code> in a catalogue file.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> extract the lines containing <span class="sb">``</span>Mw<span class="sb">``</span> in catalog file events.csv
+<span class="gp">$</span> cat events.csv <span class="p">|</span> grep <span class="s2">&quot;MW&quot;</span>  <span class="c1"># Note the capital case is different from the lower case.</span>
+<span class="go">2019-09-01T10:30:32.320Z  32.398   90.841  39.32  6.5  MW</span>
+<span class="go">2013-03-11T12:21:01.149Z  19.691  120.933  23.83  4.5  MW</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="wc">
 <h3>wc<a class="headerlink" href="#wc" title="Permalink to this headline">¶</a></h3>
@@ -261,11 +285,19 @@
 </div>
 <div class="section" id="sort">
 <h3>sort<a class="headerlink" href="#sort" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+<p><a class="reference external" href="https://man.linuxde.net/sort">sort</a> is a command for sorting a file, arranging the records in a particular order. Often used options include <code class="docutils literal notranslate"><span class="pre">-k</span></code> (column number), <code class="docutils literal notranslate"><span class="pre">-g</span></code> (in numerical order), <code class="docutils literal notranslate"><span class="pre">-r</span></code> (in decreasing order, default is increasing order), <code class="docutils literal notranslate"><span class="pre">-u</span></code> (sort and remove duplicates) and <code class="docutils literal notranslate"><span class="pre">-o</span></code> (output to a new file). Here we show an example that sort the events in decreasing order within the catalogue according to their magnitudes.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> sort the events in decreasing order within the catalog file events.csv according to their magnitudes.
+<span class="gp">$</span> cat events.csv <span class="p">|</span> sort -k5 -g -r -o events_ordered.csv
+<span class="gp">$</span> cat events_ordered.csv
+<span class="go">2019-09-01T10:30:32.320Z  32.398   90.841  39.32  6.5  MW</span>
+<span class="go">2013-03-11T12:21:01.149Z  19.691  120.933  23.83  4.5  MW</span>
+<span class="go">2010-01-09T01:01:10.921Z  51.582  110.850   9.33  3.3  MB</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="uniq">
 <h3>uniq<a class="headerlink" href="#uniq" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+<p><a class="reference external" href="https://man.linuxde.net/uniq">uniq</a> is a command for reporting or filtering out the repeated lines in a file. Often used options include <code class="docutils literal notranslate"><span class="pre">-c</span></code> (count, how many times a line was repeated), <code class="docutils literal notranslate"><span class="pre">-d</span></code> (only print the repeated lines) and <code class="docutils literal notranslate"><span class="pre">-u</span></code> (only print unique lines).</p>
 </div>
 </div>
 <div class="section" id="file-compressing">

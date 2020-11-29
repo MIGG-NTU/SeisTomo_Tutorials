@@ -1,15 +1,13 @@
-Homework
-========
+Programming
+===========
 
-``TODO``
-
-We may have some exercises to let the students to complete about Linux command lines and Python.
+**We may have some exercises to let the students to complete about Linux command lines and Python.**
 
 
 Bash
 ----
 
-Download the data for Python training: `python-training.tar.gz <https://raw.githubusercontent.com/MIGG-NTU/SeisTomo_Tutorials/main/source/computer-programming/python-training.tar.gz>`__
+Download the data for Python training: `python-training.tar.gz <https://raw.githubusercontent.com/MIGG-NTU/SeisTomo_Tutorials/main/source/homework/programming/python-training.tar.gz>`__
 
 - Use a bash script to automatically copy each of 'ISClauraw?.lst' files to a new directory with a new name 'MSUtrain?.dat'
 - Use awk to extract only the columns of latitude and longitude from 'ISClauraw?.lst' files and output to 'epicenter?.lst'

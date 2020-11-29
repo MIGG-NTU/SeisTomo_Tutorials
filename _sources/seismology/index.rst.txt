@@ -5,9 +5,9 @@ Seismology
 .. toctree::
 
    resources
-   earthquake-catalog
-   seismic-station
-   seismic-waveform
-   seismic-tools
-   homework
+   seismic-source/index
+   seismic-station/index
+   seismic-data/index
+   seismic-tools/index
+   homework/index
 

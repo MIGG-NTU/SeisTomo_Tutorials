@@ -1,0 +1,270 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Seismic Time Series Data &mdash; SeisTomo_Tutorials 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Coordinate Systems" href="coordinate-systems.html" />
+    <link rel="prev" title="Seismic Data" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> SeisTomo_Tutorials
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../computer-programming/index.html">Computer &amp; Programming</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Seismology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../resources.html">Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../seismic-source/index.html">Seismic Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../seismic-station/index.html">Seismic Station</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Seismic Data</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Seismic Time Series Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#time-series-data-formats">Time Series Data Formats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#metadata-formats">Metadata Formats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-naming-and-channels">Data Naming and Channels</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="coordinate-systems.html">Coordinate Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../seismic-tools/index.html">Seismological Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../homework/index.html">Homework</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../seismic-data/index.html">Seismic Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../seismic-BWT-tomo/index.html">Seismic Tomography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../links/index.html">Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SeisTomo_Tutorials</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Seismology</a> &raquo;</li>
+        
+          <li><a href="index.html">Seismic Data</a> &raquo;</li>
+        
+      <li>Seismic Time Series Data</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/MIGG-NTU/SeisTomo_Tutorials/blob/main/source/seismology/seismic-data/seismic-time-series-data.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="seismic-time-series-data">
+<h1>Seismic Time Series Data<a class="headerlink" href="#seismic-time-series-data" title="Permalink to this headline">¶</a></h1>
+<p>Seismic time series data is seismogram waveforms recorded at seismic stations. We mostly use digital data, which is a time series of velocity of the ground shaking.</p>
+<p>Besides the waveform itself, metadata describes critical information of the waveform data. Metadata can include station information, earthquake information, instrument response, etc.</p>
+<div class="section" id="time-series-data-formats">
+<h2>Time Series Data Formats<a class="headerlink" href="#time-series-data-formats" title="Permalink to this headline">¶</a></h2>
+<p>There are many different seismic data formats in seismology community. The most commonly used formats are SAC, miniSEED and SEED.</p>
+<ul class="simple">
+<li><p><strong>SAC</strong> is a good format for data analysis, though difficult for storing. This format is defined by the software SAC (Seismic Analysis Codes), although it is supported by many other tools</p></li>
+<li><p><strong>SEED</strong> (Standard for the Exchange of Earthquake Data) is a data format intended primarily for the archival and exchange of seismological time series data and related metadata. The latest <a class="reference external" href="http://www.fdsn.org/pdf/SEEDManual_V2.4.pdf">SEED 2.4</a> is published in 2012.</p></li>
+<li><p><strong>miniSEED</strong> is the subset of the SEED standard that is used for time series data. Very limited metadata for the time series is included in miniSEED beyond time series identification and simple state-of-health flags. In particular, geographic coordinates, response/scaling information and other information needed to interpret the data values are not included.</p></li>
+</ul>
+</div>
+<div class="section" id="metadata-formats">
+<h2>Metadata Formats<a class="headerlink" href="#metadata-formats" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.fdsn.org/xml/station/">FDSN StationXML schema</a> is a human readable XML representation of the most important and commonly used structures of <strong>SEED 2.4 metadata</strong> with enhancements. The goal is to allow mapping between <strong>SEED 2.4 dataless SEED volumes</strong> and this schema with as little transformation or loss of information as possible while at the same time simplifying station metadata representation when possible.</p></li>
+<li><p>ASCII</p></li>
+</ul>
+</div>
+<div class="section" id="data-naming-and-channels">
+<h2>Data Naming and Channels<a class="headerlink" href="#data-naming-and-channels" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Naming Convections: <a class="reference external" href="https://seisman.github.io/SAC_Docs_zh/appendix/naming-convections/">https://seisman.github.io/SAC_Docs_zh/appendix/naming-convections/</a></p></li>
+<li><p>SEED Channel Naming: <a class="reference external" href="https://ds.iris.edu/ds/nodes/dmc/data/formats/seed-channel-naming/">https://ds.iris.edu/ds/nodes/dmc/data/formats/seed-channel-naming/</a></p></li>
+<li><p>Time Series Data Channels: <a class="reference external" href="http://ds.iris.edu/ds/nodes/dmc/tools/data_channels">http://ds.iris.edu/ds/nodes/dmc/tools/data_channels</a>/#???</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="coordinate-systems.html" class="btn btn-neutral float-right" title="Coordinate Systems" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Seismic Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, MIG
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

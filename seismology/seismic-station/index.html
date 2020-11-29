@@ -1,0 +1,291 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Seismic Station &mdash; SeisTomo_Tutorials 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Seismic Data" href="../seismic-data/index.html" />
+    <link rel="prev" title="Earthquake Catalog" href="../seismic-source/earthquake-catalog.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> SeisTomo_Tutorials
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../computer-programming/index.html">Computer &amp; Programming</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Seismology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../resources.html">Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../seismic-source/index.html">Seismic Source</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Seismic Station</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#seismograph">Seismograph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#distance-and-angles">Distance and Angles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#instrument-response">Instrument Response</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#other-seismic-instruments">Other Seismic Instruments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../seismic-data/index.html">Seismic Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../seismic-tools/index.html">Seismological Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../homework/index.html">Homework</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../seismic-data/index.html">Seismic Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../seismic-BWT-tomo/index.html">Seismic Tomography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../links/index.html">Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SeisTomo_Tutorials</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Seismology</a> &raquo;</li>
+        
+      <li>Seismic Station</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/MIGG-NTU/SeisTomo_Tutorials/blob/main/source/seismology/seismic-station/index.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="seismic-station">
+<h1>Seismic Station<a class="headerlink" href="#seismic-station" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="seismograph">
+<h2>Seismograph<a class="headerlink" href="#seismograph" title="Permalink to this headline">¶</a></h2>
+<p>A <strong>seismograph</strong> is a device for measuring the movement of the earth, and consists of a ground-motion detection sensor called a <strong>seismometer</strong>, coupled with a recording system called <strong>data logger</strong>. The recorded ground motion is called a <strong>seismogram</strong>.</p>
+<p>Seismometers used in earthquake studies are highly sensitive to ground movements, so that movements as small as 1 nanometer (distances almost as small as atomic spacing) can be detected at very quiet sites.</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/seismograph-illustration.png"><img alt="seismograph" src="../../_images/seismograph-illustration.png" style="width: 50.0%;" /></a>
+<p class="caption"><span class="caption-text">Illustrations of a Seismometer (From <a class="reference external" href="https://www.iris.edu/hq/inclass/fact-sheet/how_does_a_seismometer_work">https://www.iris.edu/hq/inclass/fact-sheet/how_does_a_seismometer_work</a>)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>When seismic wave arrives at a seismometer, the ground motion is recorded and converted to digital records. These data are transmitted continuously to data processing center by cellular telephone, broadband Internet, or satellite communications systems. They will be made available via the Internet to researchers and the general public.</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/how-station-work.png"><img alt="How" src="../../_images/how-station-work.png" style="width: 95.0%;" /></a>
+<p class="caption"><span class="caption-text">How does a seismic station work? (From <a class="reference external" href="http://www.usarray.org/public/about/how#anchor1">http://www.usarray.org/public/about/how#anchor1</a>)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="distance-and-angles">
+<h2>Distance and Angles<a class="headerlink" href="#distance-and-angles" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/az-baz.png"><img alt="azimuth and back azimuth" src="../../_images/az-baz.png" style="width: 50.0%;" /></a>
+<p class="caption"><span class="caption-text">azimuth and back azimuth (From <a class="reference external" href="https://seisman.github.io/SAC_Docs_zh/fileformat/header-variables/#gcarc-dist-az-baz">https://seisman.github.io/SAC_Docs_zh/fileformat/header-variables/#gcarc-dist-az-baz</a>)</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">great</span> <span class="pre">circle</span> <span class="pre">arc</span></code>: the great circle arc at the Earth’s surface from an earthquake to a station</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">azimuth</span></code>: the direction from an earthquake to the station measured clockwise from north</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backazimuth</span></code>: the direction from the station towards an earthquake. It’s 180° off from the azimuth.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">incidence</span> <span class="pre">angle</span></code>: the angle from vertical at which an incoming ray arrives. A ray arriving from directly below the station would have an incidence of 0°.</p></li>
+</ul>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="../../_images/incidence.png"><img alt="incidence angle" src="../../_images/incidence.png" style="width: 50.0%;" /></a>
+<p class="caption"><span class="caption-text">incidence angle (From <a class="reference external" href="https://service.iris.edu/irisws/rotation/docs/1/help/">https://service.iris.edu/irisws/rotation/docs/1/help/</a>)</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="instrument-response">
+<h2>Instrument Response<a class="headerlink" href="#instrument-response" title="Permalink to this headline">¶</a></h2>
+<p>At present, we don’t need to know details about the instrument response: (1) it is a little complicated; (2) we don’t need it for local tomographic studies.</p>
+<p>Some references can be used if the future studies need it.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.iris.edu/hq/inclass/lesson/705">Data and Metadata in the Remote Online Sessions for Emerging Seismologists</a></p></li>
+<li><p><a class="reference external" href="https://blog.seisman.info/tags/%E4%BB%AA%E5%99%A8%E5%93%8D%E5%BA%94">instrument response notes in seisman’s blog</a></p></li>
+<li><p><a class="reference external" href="https://seisman.github.io/SAC_Docs_zh/appendix/resp/">instrument response in Chinese SAC Documentation</a></p></li>
+<li><p><a class="reference external" href="https://krischer.github.io/seismo_live_build/html/General%20Seismology/instrument_response_wrapper.html">instrument response in Seismo-Live</a></p></li>
+<li><p><a class="reference external" href="http://ds.iris.edu/NRL/">IRIS DMC Library of Nominal Responses for Seismic Instruments</a></p></li>
+</ul>
+</div>
+<div class="section" id="other-seismic-instruments">
+<h2>Other Seismic Instruments<a class="headerlink" href="#other-seismic-instruments" title="Permalink to this headline">¶</a></h2>
+<p>There are also some other seismic instruments which are currently widely used or under development.</p>
+<ul class="simple">
+<li><p>Ocean Bottom Seismometer (OBS)</p></li>
+<li><p>Rotational Seismology</p></li>
+<li><p>Distributed Acoustic Sensing (DAS)</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../seismic-data/index.html" class="btn btn-neutral float-right" title="Seismic Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../seismic-source/earthquake-catalog.html" class="btn btn-neutral float-left" title="Earthquake Catalog" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, MIG
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

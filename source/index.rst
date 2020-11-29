@@ -15,10 +15,33 @@ Huge thanks to `seisman <https://github.com/seisman>`__ for some suggestions and
 .. toctree::
    :maxdepth: 3
    :hidden:
+   :caption: Basis
 
    computer-programming/index
    seismology/index
-   seismic-data/index
-   seismic-BWT-tomo/index
-   links/index
-   references/index
+   seismological-tools/index
+
+.. toctree::
+   :maxdepth: 3
+   :hidden:
+   :caption: Data
+
+   data-fetch/index
+   data-process/index
+
+.. toctree::
+   :maxdepth: 3
+   :hidden:
+   :caption: Tomography
+
+   tomo-theory/index
+   tomo-workflow/index
+
+.. toctree::
+   :maxdepth: 3
+   :hidden:
+   :caption: Other
+
+   references
+   links
+

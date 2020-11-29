@@ -1,15 +1,12 @@
 SeisTomo Tutorials
 ==================
 
-**Contributors**
-
-- `core-man <https://github.com/core-man>`__
-- `HouseJaay <https://github.com/HouseJaay>`__
-- `tianjueli <https://github.com/tianjueli>`__
-- `Shucheng-Wu <https://github.com/Shucheng-Wu>`__
-
-
-Huge thanks to `seisman <https://github.com/seisman>`__ for some suggestions and instructions.
+========== =========== ======
+Date       Time        Topic
+========== =========== ======
+2020-12-07 14:00-16:00 Baisis
+2020-12-14 14:00-16:00 Data
+========== =========== ======
 
 
 .. toctree::

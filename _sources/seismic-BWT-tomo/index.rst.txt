@@ -1,5 +1,0 @@
-Seismic Tomography
-==================
-
-``TODO``
-

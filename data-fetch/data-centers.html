@@ -30,6 +30,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -97,14 +98,15 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Data Fetching</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Data Centers</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#iris">IRIS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#scedc">SCEDC</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ncedc">NCEDC</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#eida">EIDA</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#hinet">Hinet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#iris-dmc">IRIS DMC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#usa">USA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#european-integrated-data-archive">European Integrated Data Archive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#japan">Japan</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="fetch-tools.html">Fetching Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SOD/index.html">SOD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObsPy/index.html">ObsPy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="HinetPy/index.html">HinetPy</a></li>
 </ul>
 </li>
@@ -199,31 +201,45 @@
             
   <div class="section" id="data-centers">
 <h1>Data Centers<a class="headerlink" href="#data-centers" title="Permalink to this headline">¶</a></h1>
-<p><strong>Data Centers:</strong> <a class="reference external" href="https://seisman.github.io/SAC_Docs_zh/appendix/data-fetch/">https://seisman.github.io/SAC_Docs_zh/appendix/data-fetch/</a></p>
-<p>Nowadays, there are terabytes/petabytes of seismic data collected every years. Most oil &amp; gas companies have their own data centers to store this data. In academia, some institutions also have their own exclusive data centers. Most seismic data in the United States is archived at the IRIS DMC. There are also other international/regional data centers.</p>
-<div class="section" id="iris">
-<h2>IRIS<a class="headerlink" href="#iris" title="Permalink to this headline">¶</a></h2>
-<p>IRIS (Incorporated Research Institutions for Seismology) is a consortium of over 120 US universities, dedicated to the operation of science facilities for the acquisition, management, and distribution of seismological data.</p>
-<p>IRIS Data Management Center (DMC) is located near the University of Washington in Seattle. Most data at the IRIS DMC is open to public immediately or after an embargo of a period of time (e.g. 2 years).</p>
-<p>There are many ways to download data from the IRIS DMC: <a class="reference external" href="https://ds.iris.edu/ds/nodes/dmc/data/">https://ds.iris.edu/ds/nodes/dmc/data/</a>.
-IRIS has developed several tools to download data: <a class="reference external" href="https://ds.iris.edu/ds/nodes/dmc/tools/">https://ds.iris.edu/ds/nodes/dmc/tools/</a>.
-However, SOD is still one of the most popular tools we use.</p>
+<p>Nowadays, there are terabytes/petabytes of seismic data collected every years. Most oil &amp; gas companies have their own data centers to store this data. In academia, some international and regional data centers provide seismic data to researches, e.g., IRIS DMC.</p>
+<p>Different data centers provide data via different ways. Now, most data centers support <a class="reference external" href="https://www.fdsn.org/webservices/">FDSN web service</a>. Thus, we can use tools, e.g., SOD and ObsPy, to download data from those data centers.</p>
+<p><strong>Data Centers Supporting FDSN Web Services:</strong> <a class="reference external" href="https://www.fdsn.org/webservices/datacenters/">https://www.fdsn.org/webservices/datacenters/</a></p>
+<div class="section" id="iris-dmc">
+<h2>IRIS DMC<a class="headerlink" href="#iris-dmc" title="Permalink to this headline">¶</a></h2>
+<p>IRIS DMC (Data Management Center of Incorporated Research Institutions for Seismology) is the largest data center in the world and has provided a lot of seismic data to reseacheres for many years. Most data at the IRIS DMC is open to public immediately or after an embargo of a period of time (e.g. 2 years).</p>
+<ul class="simple">
+<li><p>Homepage: <a class="reference external" href="http://ds.iris.edu/ds/nodes/dmc/">http://ds.iris.edu/ds/nodes/dmc/</a></p></li>
+<li><p>Data at IRIS: <a class="reference external" href="https://ds.iris.edu/ds/nodes/dmc/data/">https://ds.iris.edu/ds/nodes/dmc/data/</a></p></li>
+<li><p>IRIS DMC web service: <a class="reference external" href="http://service.iris.edu">http://service.iris.edu</a></p></li>
+</ul>
 </div>
-<div class="section" id="scedc">
-<h2>SCEDC<a class="headerlink" href="#scedc" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+<div class="section" id="usa">
+<h2>USA<a class="headerlink" href="#usa" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Northern California Earthquake Data Center: <a class="reference external" href="http://www.ncedc.org/">Homepage</a> | <a class="reference external" href="http://service.ncedc.org/">web service</a></p></li>
+<li><p>Southern California Earthquake Data Center: <a class="reference external" href="https://scedc.caltech.edu/">Homepage</a> | <a class="reference external" href="https://service.scedc.caltech.edu/">web service</a></p></li>
+</ul>
 </div>
-<div class="section" id="ncedc">
-<h2>NCEDC<a class="headerlink" href="#ncedc" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+<div class="section" id="european-integrated-data-archive">
+<h2>European Integrated Data Archive<a class="headerlink" href="#european-integrated-data-archive" title="Permalink to this headline">¶</a></h2>
+<p>ORFEUS is the non-profit foundation to coordinate and promote digital, broadband seismology in the European-Mediterranean area.</p>
+<p>EIDA is the European Integrated Data Archive infrastructure within ORFEUS to provide access to seismic waveform data in European archives. You can think ORFEUS is IRIS, and EIDA is IRIS-DMC.</p>
+<ul class="simple">
+<li><p>ORFEUS: <a class="reference external" href="http://www.orfeus-eu.org/">Homepage</a></p></li>
+<li><p>EIDA: <a class="reference external" href="http://www.orfeus-eu.org/data/eida/">Homepage</a> | <a class="reference external" href="http://www.orfeus-eu.org/data/eida/webservices/">web service</a></p></li>
+</ul>
+<p>There are also many regional data centers in Europe. They send their data to EIDA, but they may also have some data that are sent to EIDA.</p>
+<ul class="simple">
+<li><p>Data centers in EIDA: <a class="reference external" href="http://www.orfeus-eu.org/data/eida/webservices/">http://www.orfeus-eu.org/data/eida/webservices/</a></p></li>
+<li><p>Regional data centers in Europe: <a class="reference external" href="https://www.fdsn.org/webservices/datacenters/">https://www.fdsn.org/webservices/datacenters/</a></p></li>
+</ul>
 </div>
-<div class="section" id="eida">
-<h2>EIDA<a class="headerlink" href="#eida" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
-</div>
-<div class="section" id="hinet">
-<h2>Hinet<a class="headerlink" href="#hinet" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+<div class="section" id="japan">
+<h2>Japan<a class="headerlink" href="#japan" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Hinet: <a class="reference external" href="https://www.hinet.bosai.go.jp/">https://www.hinet.bosai.go.jp/</a></p></li>
+<li><p>Fnet: <a class="reference external" href="https://www.fnet.bosai.go.jp/top.php">https://www.fnet.bosai.go.jp/top.php</a></p></li>
+</ul>
 </div>
 </div>
 

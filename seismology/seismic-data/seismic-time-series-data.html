@@ -30,6 +30,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -91,7 +92,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../computer/index.html">Computer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../programming/index.html">Programming</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Seismology</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro/index.html">Introduction to Seismology</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../seismic-source/index.html">Seismic Source</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../seismic-wave/index.html">Seismic Wave</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../seismic-station/index.html">Seismic Station</a></li>
@@ -225,11 +226,218 @@
 </div>
 <div class="section" id="data-naming-and-channels">
 <h2>Data Naming and Channels<a class="headerlink" href="#data-naming-and-channels" title="Permalink to this headline">¶</a></h2>
+<p><strong>Naming Convections:</strong> <a class="reference external" href="https://seisman.github.io/SAC_Docs_zh/appendix/naming-convections/">https://seisman.github.io/SAC_Docs_zh/appendix/naming-convections/</a></p>
+<p>The file names of seismic data are usually like, <code class="docutils literal notranslate"><span class="pre">BK.BKB.00.BHZ.SAC</span></code>.</p>
 <ul class="simple">
-<li><p>Naming Convections: <a class="reference external" href="https://seisman.github.io/SAC_Docs_zh/appendix/naming-convections/">https://seisman.github.io/SAC_Docs_zh/appendix/naming-convections/</a></p></li>
-<li><p>SEED Channel Naming: <a class="reference external" href="https://ds.iris.edu/ds/nodes/dmc/data/formats/seed-channel-naming/">https://ds.iris.edu/ds/nodes/dmc/data/formats/seed-channel-naming/</a></p></li>
-<li><p>Time Series Data Channels: <a class="reference external" href="http://ds.iris.edu/ds/nodes/dmc/tools/data_channels">http://ds.iris.edu/ds/nodes/dmc/tools/data_channels</a>/#???</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BK</span></code>: network code</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BKB</span></code>: station identifier</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">00</span></code>: location identifier</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BHZ</span></code>: channel code</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SAC</span></code>: suffix. It does not mean anything. You can even have no suffix.</p></li>
 </ul>
+<div class="section" id="location-identifier">
+<h3>Location Identifier<a class="headerlink" href="#location-identifier" title="Permalink to this headline">¶</a></h3>
+<p><strong>The Location Identifier:</strong> <a class="reference external" href="http://ds.iris.edu/ds/newsletter/vol1/no1/1/specification-of-seismograms-the-location-identifier/">http://ds.iris.edu/ds/newsletter/vol1/no1/1/specification-of-seismograms-the-location-identifier/</a></p>
+<p>IRIS DMC now need an additional parameter to uniquely identify a seismogram. The Location Identifier is a two character code that, when used in conjunction with the other data specifiers, uniquely identifies a data stream.</p>
+<p>In the case of GSN data the Location Identifier is employed to distinguish between multiple sensors with identical station and channel names. For example, several GSN stations are equipped with both STS-1 and STS-2 broadband high gain seismometers. Both sensors have channel names beginning with BH. Recently support for the Location Identifier was added resolve this issue of non-uniqueness.</p>
+<p>Valid characters for location identifiers are [space, 0-9, A-Z][space, 0-9, A-Z]. So space-space is a legitimate Location Identifier.</p>
+<p>Suggested usage of Location Identifiers for data from the GSN is as follows. Numbers [0-9][0-9] should be used for multiple instruments at one station. For instance if you have an STS-1 and and STS-2 BHZ channel the location id could be:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">00</span></code> for the STS-1 (primary stream)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">10</span></code> for the STS-2 ( the secondary stream)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">20</span></code> for other sensors, etc</p></li>
+</ul>
+</div>
+<div class="section" id="channel-code">
+<h3>Channel Code<a class="headerlink" href="#channel-code" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>SEED Channel Naming:</strong> <a class="reference external" href="https://ds.iris.edu/ds/nodes/dmc/data/formats/seed-channel-naming/">https://ds.iris.edu/ds/nodes/dmc/data/formats/seed-channel-naming/</a></p></li>
+<li><p><strong>Time Series Data Channels:</strong> <a class="reference external" href="http://ds.iris.edu/ds/nodes/dmc/tools/data_channels">http://ds.iris.edu/ds/nodes/dmc/tools/data_channels</a>/#???</p></li>
+</ul>
+<p>The Channel Code is a 3-character code that specifies the bandwidth of the recorded signal, type, and orientation of the sensor. For instance, a channel code of <code class="docutils literal notranslate"><span class="pre">BHZ</span></code> is used to indicate the signal came from a broadband (B), high gain seismometer (H) and is recording ground motion in the vertical (Z) direction.</p>
+<p><strong>Band Code:</strong> The first letter specifies the general sampling rate and the response band of the instrument.</p>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Band Code</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 24%" />
+<col style="width: 24%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Band Code</p></th>
+<th class="head"><p>Band type</p></th>
+<th class="head"><p>Sample rate (Hz)</p></th>
+<th class="head"><p>Corner period (sec)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>F</p></td>
+<td><p>…</p></td>
+<td><p>1000-5000</p></td>
+<td><p>&gt; 10</p></td>
+</tr>
+<tr class="row-odd"><td><p>G</p></td>
+<td><p>…</p></td>
+<td><p>1000-5000</p></td>
+<td><p>&lt; 10</p></td>
+</tr>
+<tr class="row-even"><td><p>D</p></td>
+<td><p>…</p></td>
+<td><p>250-1000</p></td>
+<td><p>&lt; 10</p></td>
+</tr>
+<tr class="row-odd"><td><p>C</p></td>
+<td><p>…</p></td>
+<td><p>250-1000</p></td>
+<td><p>&gt; 10</p></td>
+</tr>
+<tr class="row-even"><td><p>E</p></td>
+<td><p>Extremely Short
+Period</p></td>
+<td><p>80-250</p></td>
+<td><p>&lt; 10</p></td>
+</tr>
+<tr class="row-odd"><td><p>S</p></td>
+<td><p>Short Period</p></td>
+<td><p>10-80</p></td>
+<td><p>&lt; 10</p></td>
+</tr>
+<tr class="row-even"><td><p>H</p></td>
+<td><p>High Broad Band</p></td>
+<td><p>80-250</p></td>
+<td><p>&lt; 10</p></td>
+</tr>
+<tr class="row-odd"><td><p>B</p></td>
+<td><p>Broad Band</p></td>
+<td><p>10-80</p></td>
+<td><p>&gt; 10</p></td>
+</tr>
+<tr class="row-even"><td><p>M</p></td>
+<td><p>Mid Period</p></td>
+<td><p>1-10</p></td>
+<td><p>&gt; 10</p></td>
+</tr>
+<tr class="row-odd"><td><p>L</p></td>
+<td><p>Long Period</p></td>
+<td><p><span class="math notranslate nohighlight">\(\approx\)</span>
+1</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>V</p></td>
+<td><p>Very Long
+Period</p></td>
+<td><p><span class="math notranslate nohighlight">\(\approx\)</span>
+0.1</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>U</p></td>
+<td><p>Ultra Long
+Period</p></td>
+<td><p><span class="math notranslate nohighlight">\(\approx\)</span>
+0.01</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>R</p></td>
+<td><p>Extremely Long
+Period</p></td>
+<td><p>0.0001-0.001</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>P</p></td>
+<td><p>Order of 0.1 to
+1 days</p></td>
+<td><p>0.00001-0.0001</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>Order of 1 to
+10 days</p></td>
+<td><p>0.000001-0.0000
+1</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Q</p></td>
+<td><p>Greater than 10
+days</p></td>
+<td><p>&lt; 0.000001</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>A</p></td>
+<td><p>Administrative
+Instrument
+Channel</p></td>
+<td><p>variable</p></td>
+<td><p>NA</p></td>
+</tr>
+<tr class="row-odd"><td><p>O</p></td>
+<td><p>Opaque
+Instrument
+Channel</p></td>
+<td><p>variable</p></td>
+<td><p>NA</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Instrument Code:</strong> The second letter specifies the family to which the sensor belongs. In essence, this identifies what is being measured.</p>
+<table class="docutils align-center" id="id2">
+<caption><span class="caption-text">Instrument Code (Seismometer)</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Instrument Code</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">H</span></code></p></td>
+<td><p>High Gain Seismometer</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">L</span></code></p></td>
+<td><p>Low Gain Seismometer</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">G</span></code></p></td>
+<td><p>Gravimeter</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">M</span></code></p></td>
+<td><p>Mass position Seismometer</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">N</span></code></p></td>
+<td><p>Accelerometer</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">P</span></code></p></td>
+<td><p>Geophone</p></td>
+</tr>
+</tbody>
+</table>
+<p>We usually see high hain seismometer (<code class="docutils literal notranslate"><span class="pre">H</span></code>), which records the velocity of ground motion. For seismic tomography, low gain seismometer (<code class="docutils literal notranslate"><span class="pre">L</span></code>) and geophone (<code class="docutils literal notranslate"><span class="pre">P</span></code>) can also be used.</p>
+<p><strong>Orientation Code:</strong> The third letter indicates the directionality of the sensor measurement. See <a class="reference internal" href="coordinate-systems.html"><span class="doc">Coordinate Systems</span></a> for details.</p>
+<table class="docutils align-center" id="id3">
+<caption><span class="caption-text">Orientation Code</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Orientation Code</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">E</span> <span class="pre">Z</span></code></p></td>
+<td><p>Traditional (North-South, East-West, Vertial)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">2</span> <span class="pre">3</span></code></p></td>
+<td><p>Orthogonal components but non traditional orientations (3: vertical; 1 &amp; 2: horizontal)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">R</span> <span class="pre">T</span> <span class="pre">Z</span></code></p></td>
+<td><p>Transverse, Radial, Vertical</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 

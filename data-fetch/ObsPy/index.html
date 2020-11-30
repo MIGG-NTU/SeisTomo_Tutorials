@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Workflow &mdash; SeisTomo_Tutorials 0.1 documentation</title>
+  <title>ObsPy &mdash; SeisTomo_Tutorials 0.1 documentation</title>
   
 
   
@@ -30,14 +30,15 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Plot Seismograms" href="../plot/index.html" />
-    <link rel="prev" title="Data Processing" href="../index.html" /> 
+    <link rel="next" title="HinetPy" href="../HinetPy/index.html" />
+    <link rel="prev" title="SOD" href="../SOD/index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -95,19 +96,15 @@
 </ul>
 <p class="caption"><span class="caption-text">Data</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../data-fetch/index.html">Data Fetching</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Data Processing</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Workflow</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#format-conversion">Format Conversion</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#merge">Merge</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#file-naming">File Naming</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#adding-event-information">Adding Event Information</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#rotation">Rotation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Data Fetching</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../data-centers.html">Data Centers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fetch-tools.html">Fetching Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SOD/index.html">SOD</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ObsPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HinetPy/index.html">HinetPy</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plot/index.html">Plot Seismograms</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data-process/index.html">Data Processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../data-analysis/index.html">Data Analysis</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tomography</span></p>
@@ -173,16 +170,16 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="../index.html">Data Processing</a> &raquo;</li>
+          <li><a href="../index.html">Data Fetching</a> &raquo;</li>
         
-      <li>Workflow</li>
+      <li>ObsPy</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/MIGG-NTU/SeisTomo_Tutorials/blob/main/source/data-process/workflow/index.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/MIGG-NTU/SeisTomo_Tutorials/blob/main/source/data-fetch/ObsPy/index.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -196,34 +193,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="workflow">
-<h1>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h1>
-<p>We use jupyter-notebook to present a workflow for processing Ridgecrest earthquakes.</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://github.com/MIGG-NTU/SeisData_Tools/tree/main/workflows/Ridgecrest">https://github.com/MIGG-NTU/SeisData_Tools/tree/main/workflows/Ridgecrest</a></p></li>
-<li><p><a class="reference external" href="https://seisman.github.io/SAC_Docs_zh/call-in-script/call-sac-in-python/">https://seisman.github.io/SAC_Docs_zh/call-in-script/call-sac-in-python/</a></p></li>
-<li><p><a class="reference external" href="https://seisman.github.io/SAC_Docs_zh/data-process">https://seisman.github.io/SAC_Docs_zh/data-process</a>/#</p></li>
-</ul>
-<div class="section" id="format-conversion">
-<h2>Format Conversion<a class="headerlink" href="#format-conversion" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="obspy">
+<h1>ObsPy<a class="headerlink" href="#obspy" title="Permalink to this headline">¶</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
-</div>
-<div class="section" id="merge">
-<h2>Merge<a class="headerlink" href="#merge" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
-</div>
-<div class="section" id="file-naming">
-<h2>File Naming<a class="headerlink" href="#file-naming" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
-</div>
-<div class="section" id="adding-event-information">
-<h2>Adding Event Information<a class="headerlink" href="#adding-event-information" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
-</div>
-<div class="section" id="rotation">
-<h2>Rotation<a class="headerlink" href="#rotation" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
-</div>
 </div>
 
 
@@ -234,10 +206,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../plot/index.html" class="btn btn-neutral float-right" title="Plot Seismograms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../HinetPy/index.html" class="btn btn-neutral float-right" title="HinetPy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../index.html" class="btn btn-neutral float-left" title="Data Processing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../SOD/index.html" class="btn btn-neutral float-left" title="SOD" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

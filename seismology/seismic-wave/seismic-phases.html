@@ -30,6 +30,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -91,10 +92,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../../computer/index.html">Computer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../programming/index.html">Programming</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Seismology</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro/index.html">Introduction to Seismology</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../seismic-source/index.html">Seismic Source</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Seismic Wave</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Seismic Phases</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Seismic Phases</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#crustal-phases">Crustal Phases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#near-source-surface-reflections-depth-phases">Near Source Surface Reflections (Depth Phases)</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../seismic-station/index.html">Seismic Station</a></li>
@@ -199,7 +204,37 @@
             
   <div class="section" id="seismic-phases">
 <h1>Seismic Phases<a class="headerlink" href="#seismic-phases" title="Permalink to this headline">¶</a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+<ul class="simple">
+<li><p>IASPEI (International Association of Seismology and Physics of the Earth’s Interior) standard phase list: <a class="reference external" href="http://www.isc.ac.uk/standards/phases/">http://www.isc.ac.uk/standards/phases/</a></p></li>
+<li><p>Phase naming in TauP: <a class="reference external" href="https://docs.obspy.org/packages/obspy.taup.html#phase-naming-in-obspy-taup">https://docs.obspy.org/packages/obspy.taup.html#phase-naming-in-obspy-taup</a></p></li>
+<li><p>Notes about multiple P-phases in TauP: <a class="reference external" href="https://blog.seisman.info/taup-identify-multiple-P-phases/">https://blog.seisman.info/taup-identify-multiple-P-phases/</a></p></li>
+</ul>
+<p>Please note the IASPEI phase naming is a little different from those in TauP. So, you’d better know what you really mean when you use phase names in TauP.</p>
+<p>Below show some IASPEI phase definitions (<strong>alt</strong>: acceptable alternative name)</p>
+<div class="section" id="crustal-phases">
+<h2>Crustal Phases<a class="headerlink" href="#crustal-phases" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Pg</strong>: At short distances, either an upgoing P wave from a source in the upper crust or a P wave bottoming in the upper crust. At larger distances also arrivals caused by multiple P-wave reverberations inside the whole crust with a group velocity around 5.8 km/s.</p></li>
+<li><p><strong>Pb</strong>: (<strong>alt</strong>: P*) Either an upgoing P wave from a source in the lower crust or a P wave bottoming in the lower crust</p></li>
+<li><p><strong>Pn</strong>: Any P wave bottoming in the uppermost mantle or an upgoing P wave from a source in the uppermost mantle</p></li>
+<li><p><strong>PmP</strong>: P reflection from the outer side of the Moho</p></li>
+<li><p><strong>Sg</strong>: At short distances, either an upgoing S wave from a source in the upper crust or an S wave bottoming in the upper crust. At larger distances also arrivals caused by superposition of multiple S-wave reverberations and SV to P and/or P to SV conversions inside the whole crust.</p></li>
+<li><p><strong>Sb</strong>: (<strong>alt</strong>: S*) Either an upgoing S wave from a source in the lower crust or an S wave bottoming in the lower crust</p></li>
+<li><p><strong>Sn</strong>: Any S wave bottoming in the uppermost mantle or an upgoing S wave from a source in the uppermost mantle</p></li>
+<li><p><strong>SmS</strong>: S reflection from the outer side of the Moho</p></li>
+</ul>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/crustal-phases.png"><img alt="crustal phases" src="../../_images/crustal-phases.png" style="width: 50.0%;" /></a>
+<p class="caption"><span class="caption-text">crustal phases (From <a class="reference external" href="http://www.isc.ac.uk/standards/phases/">http://www.isc.ac.uk/standards/phases/</a>)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="near-source-surface-reflections-depth-phases">
+<h2>Near Source Surface Reflections (Depth Phases)<a class="headerlink" href="#near-source-surface-reflections-depth-phases" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>pP</strong>: Reflection of an upgoing P wave at the free surface</p></li>
+<li><p><strong>sP</strong>: Reflection of an upgoing S wave at the free surface</p></li>
+</ul>
+</div>
 </div>
 
 

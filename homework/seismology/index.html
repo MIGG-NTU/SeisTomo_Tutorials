@@ -1,0 +1,341 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Seismology &mdash; SeisTomo_Tutorials 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Data Fetching" href="../data-fetch/index.html" />
+    <link rel="prev" title="Seismological Tools" href="../seismological-tools/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> SeisTomo_Tutorials
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Basis</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../computer-programming/index.html">Computer &amp; Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../seismology/index.html">Seismology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../seismological-tools/index.html">Seismological Tools</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Data</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data-fetch/index.html">Data Fetching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data-process/index.html">Data Processing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tomography</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tomo-theory/index.html">Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tomo-workflow/index.html">Workflow</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Homework</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../programming/index.html">Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismological-tools/index.html">Seismological Tools</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Seismology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#goals">Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-0-preparation">Task 0: preparation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-1-plot-a-topography-map-for-the-glg-401-field-trip">Task 1: plot a topography map for the GLG 401 field trip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-2-plot-a-topography-map-of-michigan">Task 2: plot a topography map of Michigan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-3-plot-earthquake-epicenters-on-a-map-of-michigan">Task 3: plot earthquake epicenters on a map of Michigan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-4-plot-earthquake-epicenters-and-focal-mechanisms-on-a-map-of-california">Task 4: plot earthquake epicenters and focal mechanisms on a map of California</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data-fetch/index.html">Data Fetching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data-process/index.html">Data Processing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../links.html">Links</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SeisTomo_Tutorials</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Seismology</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/MIGG-NTU/SeisTomo_Tutorials/blob/main/source/homework/seismology/index.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="seismology">
+<h1>Seismology<a class="headerlink" href="#seismology" title="Permalink to this headline">¶</a></h1>
+<p><strong>We may need to revised the following tasks for our own purposes</strong></p>
+<div class="section" id="goals">
+<h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Plot topography maps using GMT6</p></li>
+<li><p>Plot earthquakes on a map</p></li>
+<li><p>Plot focal mechanisms of earthquakes on a map</p></li>
+</ul>
+</div>
+<div class="section" id="task-0-preparation">
+<h2>Task 0: preparation<a class="headerlink" href="#task-0-preparation" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Download the necessary materials: <code class="docutils literal notranslate"><span class="pre">beachball.zip</span></code></p></li>
+<li><p>Download and install GMT on your own computer</p></li>
+</ol>
+</div>
+<div class="section" id="task-1-plot-a-topography-map-for-the-glg-401-field-trip">
+<h2>Task 1: plot a topography map for the GLG 401 field trip<a class="headerlink" href="#task-1-plot-a-topography-map-for-the-glg-401-field-trip" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Read file <code class="docutils literal notranslate"><span class="pre">plotmap401.gmt5</span></code> using a text editor</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">./plotmap401.gmt5</span></code>, check the output file <code class="docutils literal notranslate"><span class="pre">mapGLG401.pdf</span></code></p></li>
+<li><p>Can you find Houghton, Munising, and Picture Rocks on the map?</p></li>
+</ol>
+</div>
+<div class="section" id="task-2-plot-a-topography-map-of-michigan">
+<h2>Task 2: plot a topography map of Michigan<a class="headerlink" href="#task-2-plot-a-topography-map-of-michigan" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Read file <code class="docutils literal notranslate"><span class="pre">plotmapMI.gmt5</span></code> using a text editor</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">./plotmapMI.gmt5</span></code>, check the output file <code class="docutils literal notranslate"><span class="pre">mapMI.pdf</span></code></p></li>
+<li><p>Change variables <code class="docutils literal notranslate"><span class="pre">outf</span></code>, <code class="docutils literal notranslate"><span class="pre">area</span></code>, <code class="docutils literal notranslate"><span class="pre">proj</span></code> in file <code class="docutils literal notranslate"><span class="pre">plotmapMI.gmt5</span></code> for another region. (Note the projection parameters <code class="docutils literal notranslate"><span class="pre">proj</span></code> should be consistent with the region parameters <code class="docutils literal notranslate"><span class="pre">area</span></code>. Recommended values are (longtidue of the map center)/(latitude of the map center)/(minimum latitude)/(maximum latitude)/(map width). A map width of <code class="docutils literal notranslate"><span class="pre">5c</span></code> means 5 centimeter, and <code class="docutils literal notranslate"><span class="pre">5i</span></code> means 5 inches.)</p></li>
+</ol>
+</div>
+<div class="section" id="task-3-plot-earthquake-epicenters-on-a-map-of-michigan">
+<h2>Task 3: plot earthquake epicenters on a map of Michigan<a class="headerlink" href="#task-3-plot-earthquake-epicenters-on-a-map-of-michigan" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Search earthquake catalog from the ISC website: <a class="reference external" href="http://www.isc.ac.uk/iscbulletin/search/catalogue/">http://www.isc.ac.uk/iscbulletin/search/catalogue/</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Database: Reviewed ISC Bulletin</p></li>
+<li><p>Output format: CSV formatted</p></li>
+<li><p>Rectangular search: bottom latitude: 40, top latitude: 50, left longitude: -90, right longitude: -80 (you can also try other regions)</p></li>
+<li><p>Time period: start date: 2010/01/01 00:00:00, end data: 2016/01/01 00:00:00</p></li>
+<li><p>No change for <code class="docutils literal notranslate"><span class="pre">Additional</span> <span class="pre">search</span> <span class="pre">parameters</span></code></p></li>
+<li><p>Output links in the outputs: No (check the box out)</p></li>
+<li><p>Click the bottom button <code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">event</span> <span class="pre">catalogue</span></code>. (It may take a while to create a list)</p></li>
+<li><p>You will get a catalog from a new window. Copy and paste the catalog to a local file called <code class="docutils literal notranslate"><span class="pre">ISC_MI.lst</span></code> (Note please skip the header lines, start from the first earthquake, and end at the last earthquake.)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">./plotmapEQMI.gmt5</span></code>, check the output file <code class="docutils literal notranslate"><span class="pre">mapEQMI.pdf</span></code>.</p></li>
+<li><p>Search for earthquakes in another region, download the catalog, and plot a map. You also need to change variables <code class="docutils literal notranslate"><span class="pre">outf</span></code>, <code class="docutils literal notranslate"><span class="pre">area</span></code>, <code class="docutils literal notranslate"><span class="pre">proj</span></code> in file <code class="docutils literal notranslate"><span class="pre">plotmapEQMI.gmt5</span></code> for the new region.</p></li>
+<li><p>Compare files <code class="docutils literal notranslate"><span class="pre">plotmapMI.gmt5</span></code> and <code class="docutils literal notranslate"><span class="pre">plotmapEQMI.gmt5</span></code>. What is the difference?</p></li>
+</ol>
+</div>
+<div class="section" id="task-4-plot-earthquake-epicenters-and-focal-mechanisms-on-a-map-of-california">
+<h2>Task 4: plot earthquake epicenters and focal mechanisms on a map of California<a class="headerlink" href="#task-4-plot-earthquake-epicenters-and-focal-mechanisms-on-a-map-of-california" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Search earthquake catalog from the ISC website: <a class="reference external" href="http://www.isc.ac.uk/iscbulletin/search/catalogue/">http://www.isc.ac.uk/iscbulletin/search/catalogue/</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Database: Reviewed ISC Bulletin</p></li>
+<li><p>Output format: CSV formatted</p></li>
+<li><p>Rectangular search: bottom latitude: 32, top latitude: 43, left longitude: -125, right longitude: -114</p></li>
+<li><p>Time period: start date: 2010/01/01 00:00:00, end data: 2011/01/01 00:00:00  (one year is more than enough!)</p></li>
+<li><p>No change for <code class="docutils literal notranslate"><span class="pre">Additional</span> <span class="pre">search</span> <span class="pre">parameters</span></code></p></li>
+<li><p>Output links in the outputs: No (check the box out)</p></li>
+<li><p>Click the bottom button <code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">event</span> <span class="pre">catalogue</span></code>. (It may take a while to create a list)</p></li>
+<li><p>You will get a catalog in a new window. Copy and paste the catalog to a local file called <code class="docutils literal notranslate"><span class="pre">ISC_CA.lst</span></code> (Please  skip the header lines, start from the first earthquake, and end at the last earthquake.)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Search the global CMT solutions from <a class="reference external" href="https://www.globalcmt.org/CMTsearch.html">https://www.globalcmt.org/CMTsearch.html</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Date constraints: starting data: 2010/01/01, end data: 2011/01/01</p></li>
+<li><p>Location constraints: latitude from 32 to 43, longitude from -125 to -114</p></li>
+<li><p>Output type: <code class="docutils literal notranslate"><span class="pre">GMT</span> <span class="pre">psmeca</span> <span class="pre">input</span></code></p></li>
+<li><p>Keep the other default parameters</p></li>
+<li><p>Click the bottom button <code class="docutils literal notranslate"><span class="pre">Done</span></code>.</p></li>
+<li><p>You will get a list in the same window. Copy and paste the list to a local file called <code class="docutils literal notranslate"><span class="pre">CMT_CA.lst</span></code> (Please skip the header lines, start from the first earthquake, and end at the last earthquake. Note here are only 6 parameters to represent the moment tensro: mrr mtt mpp mrt mrp mtp)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">./plotmapCMTCA.gmt5</span></code>, check the output file <code class="docutils literal notranslate"><span class="pre">mapCMTCA.pdf</span></code>.</p></li>
+<li><p>In <code class="docutils literal notranslate"><span class="pre">plotmapCMTCA.gmt5</span></code>, in the line of <code class="docutils literal notranslate"><span class="pre">psmeca</span></code>, try to replace <code class="docutils literal notranslate"><span class="pre">-Sm0.5</span></code> with <code class="docutils literal notranslate"><span class="pre">-Sd0.5</span></code>, check the new output file. What is the difference?</p></li>
+<li><p>Search for earthquakes during another time period, download the catalog, and plot a map.</p></li>
+<li><p>Compare files <code class="docutils literal notranslate"><span class="pre">plotmapEQMI.gmt5</span></code> and <code class="docutils literal notranslate"><span class="pre">plotmapCMTCA.gmt5</span></code>. What is the difference?</p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../data-fetch/index.html" class="btn btn-neutral float-right" title="Data Fetching" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../seismological-tools/index.html" class="btn btn-neutral float-left" title="Seismological Tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, MIG
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

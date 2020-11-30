@@ -8,4 +8,4 @@ Computer & Programming
    LinuxmacOS-basis
    command-lines
    programming/index
-   homework
+   file-manage

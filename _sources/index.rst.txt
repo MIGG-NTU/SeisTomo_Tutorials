@@ -37,6 +37,17 @@ Date       Time        Topic
 .. toctree::
    :maxdepth: 3
    :hidden:
+   :caption: Homework
+
+   homework/programming/index
+   homework/seismological-tools/index
+   homework/seismology/index
+   homework/data-fetch/index
+   homework/data-process/index
+
+.. toctree::
+   :maxdepth: 3
+   :hidden:
    :caption: Other
 
    references

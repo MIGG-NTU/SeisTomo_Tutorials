@@ -205,7 +205,7 @@ Slow Earthquake Catalog
 Focal Mechanism Catalog
 -----------------------
 
-- Global CMT
+- Global CMT (Global Centroid-Moment-Tensor): global earthquakes with magnitudes larger than 5
 
     - Homepage: https://www.globalcmt.org
     - Chinese Introduction: https://blog.seisman.info/global-cmt

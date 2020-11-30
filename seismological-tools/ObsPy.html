@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>File Management &mdash; SeisTomo_Tutorials 0.1 documentation</title>
+  <title>ObsPy &mdash; SeisTomo_Tutorials 0.1 documentation</title>
   
 
   
@@ -36,8 +36,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Seismology" href="../seismology/index.html" />
-    <link rel="prev" title="Scripting Languages" href="programming/scripting-languages.html" /> 
+    <link rel="next" title="Data Fetching" href="../data-fetch/index.html" />
+    <link rel="prev" title="GMT" href="GMT.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -88,21 +88,26 @@
             
               <p class="caption"><span class="caption-text">Basis</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Computer &amp; Programming</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="operating-systems.html">Operating Systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="LinuxmacOS-basis.html">Linux/macOS Basis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command-lines.html">Command Lines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="programming/index.html">Programming</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">File Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computer/index.html">Computer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../programming/index.html">Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismology/index.html">Seismology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Seismological Tools</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="SAC.html">SAC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SOD.html">SOD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TauP.html">TauP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GMT.html">GMT</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ObsPy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#resources">Resources</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../seismology/index.html">Seismology</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../seismological-tools/index.html">Seismological Tools</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Data</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../data-fetch/index.html">Data Fetching</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../data-process/index.html">Data Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data-analysis/index.html">Data Analysis</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tomography</span></p>
 <ul>
@@ -117,7 +122,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../homework/data-fetch/index.html">Data Fetching</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../homework/data-process/index.html">Data Processing</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Other</span></p>
+<p class="caption"><span class="caption-text">Appendix</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../links.html">Links</a></li>
@@ -167,16 +172,16 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="index.html">Computer &amp; Programming</a> &raquo;</li>
+          <li><a href="index.html">Seismological Tools</a> &raquo;</li>
         
-      <li>File Management</li>
+      <li>ObsPy</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/MIGG-NTU/SeisTomo_Tutorials/blob/main/source/computer-programming/file-manage.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/MIGG-NTU/SeisTomo_Tutorials/blob/main/source/seismological-tools/ObsPy.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -190,13 +195,29 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="file-management">
-<h1>File Management<a class="headerlink" href="#file-management" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="obspy">
+<h1>ObsPy<a class="headerlink" href="#obspy" title="Permalink to this headline">¶</a></h1>
+<p>ObsPy is an open-source project dedicated to provide a Python framework for processing seismological data. It provides parsers for common file formats, clients to access data centers and seismological signal processing routines which allow the manipulation of seismological time series. It is now very popular in seismological community.</p>
 <ul class="simple">
-<li><p>File Management: <a class="reference external" href="https://blog.seisman.info/file-organization/">https://blog.seisman.info/file-organization/</a></p></li>
-<li><p>File backup: <a class="reference external" href="https://core-man.github.io/blog/post/backup/">https://core-man.github.io/blog/post/backup/</a></p></li>
-<li><p>Scientific reading and writing experience: <a class="reference external" href="https://core-man.github.io/blog/post/reading-writing/">https://core-man.github.io/blog/post/reading-writing/</a></p></li>
+<li><p><strong>Homepage</strong>: <a class="reference external" href="https://github.com/obspy/obspy/">https://github.com/obspy/obspy/</a></p></li>
+<li><p><strong>Install</strong>: <a class="reference external" href="https://github.com/obspy/obspy/wiki#installation">https://github.com/obspy/obspy/wiki#installation</a></p></li>
 </ul>
+<p><strong>Checklist of what you should know about ObsPy:</strong></p>
+<ul class="simple">
+<li><p>Core classes: <a class="reference external" href="https://docs.obspy.org/packages/obspy.core.html#module-obspy.core">https://docs.obspy.org/packages/obspy.core.html#module-obspy.core</a></p></li>
+<li><p>Waveform Import/Export Plug-ins: <a class="reference external" href="https://docs.obspy.org/packages/index.html">https://docs.obspy.org/packages/index.html</a></p></li>
+<li><p>FDSN Web Services: <a class="reference external" href="https://docs.obspy.org/tutorial/code_snippets/retrieving_data_from_datacenters.html">https://docs.obspy.org/tutorial/code_snippets/retrieving_data_from_datacenters.html</a></p></li>
+<li><p>obspy.taup: <a class="reference external" href="https://docs.obspy.org/packages/obspy.taup.html#phase-naming-in-obspy-taup">https://docs.obspy.org/packages/obspy.taup.html#phase-naming-in-obspy-taup</a></p></li>
+</ul>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Documentation: <a class="reference external" href="https://docs.obspy.org/contents.html">https://docs.obspy.org/contents.html</a></p></li>
+<li><p>ObsPy official tutorial: <a class="reference external" href="https://docs.obspy.org/tutorial/">https://docs.obspy.org/tutorial/</a></p></li>
+<li><p>Remote Online Sessions for Emerging Seismologists: <a class="reference external" href="https://www.iris.edu/hq/inclass/lesson/704">https://www.iris.edu/hq/inclass/lesson/704</a></p></li>
+<li><p>Live Jupyter Notebooks for Seismology: <a class="reference external" href="http://www.seismo-live.org/">http://www.seismo-live.org/</a></p></li>
+</ul>
+</div>
 </div>
 
 
@@ -207,10 +228,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../seismology/index.html" class="btn btn-neutral float-right" title="Seismology" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../data-fetch/index.html" class="btn btn-neutral float-right" title="Data Fetching" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="programming/scripting-languages.html" class="btn btn-neutral float-left" title="Scripting Languages" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="GMT.html" class="btn btn-neutral float-left" title="GMT" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

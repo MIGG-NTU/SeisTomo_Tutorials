@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>SOD &mdash; SeisTomo_Tutorials 0.1 documentation</title>
+  <title>Data Analysis &mdash; SeisTomo_Tutorials 0.1 documentation</title>
   
 
   
@@ -36,8 +36,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="TauP" href="TauP.html" />
-    <link rel="prev" title="SAC" href="SAC.html" /> 
+    <link rel="next" title="Phase Picking" href="phase-picking/index.html" />
+    <link rel="prev" title="Plot Seismograms" href="../data-process/plot/index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -87,27 +87,20 @@
             
             
               <p class="caption"><span class="caption-text">Basis</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../computer/index.html">Computer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../programming/index.html">Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../seismology/index.html">Seismology</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Seismological Tools</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="SAC.html">SAC</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">SOD</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#resources">Resources</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="TauP.html">TauP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="GMT.html">GMT</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ObsPy.html">ObsPy</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../seismological-tools/index.html">Seismological Tools</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Data</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../data-fetch/index.html">Data Fetching</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../data-process/index.html">Data Processing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data-analysis/index.html">Data Analysis</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="phase-picking/index.html">Phase Picking</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Tomography</span></p>
 <ul>
@@ -172,16 +165,14 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="index.html">Seismological Tools</a> &raquo;</li>
-        
-      <li>SOD</li>
+      <li>Data Analysis</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/MIGG-NTU/SeisTomo_Tutorials/blob/main/source/seismological-tools/SOD.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/MIGG-NTU/SeisTomo_Tutorials/blob/main/source/data-analysis/index.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -195,33 +186,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="sod">
-<h1>SOD<a class="headerlink" href="#sod" title="Permalink to this headline">¶</a></h1>
-<p>SOD is a Java program to automatically select, download, and pre-process seismic waveform data.</p>
-<ul class="simple">
-<li><p><strong>Homepage</strong>: <a class="reference external" href="http://www.seis.sc.edu/sod/">http://www.seis.sc.edu/sod/</a></p></li>
-<li><p><strong>Install</strong>: <a class="reference external" href="https://blog.seisman.info/sod-notes/#%E5%AE%89%E8%A3%85-sod">https://blog.seisman.info/sod-notes/#%E5%AE%89%E8%A3%85-sod</a></p></li>
-</ul>
-<p><strong>Checklist of what you should know about ObsPy:</strong></p>
-<ul class="simple">
-<li><p>EventArm: How to require event catalog</p></li>
-<li><p>NetworkArm: How to require seismic stations</p></li>
-<li><p>WaveformArm: How to require seismic data and to do some basic processing</p></li>
-</ul>
-<div class="section" id="resources">
-<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="data-analysis">
+<h1>Data Analysis<a class="headerlink" href="#data-analysis" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
 <ul>
-<li><p>Documentation: <a class="reference external" href="http://www.seis.sc.edu/sod/documentation/index.html">http://www.seis.sc.edu/sod/documentation/index.html</a></p></li>
-<li><p>Getting started: <a class="reference external" href="http://www.seis.sc.edu/sod/gettingstarted.html">http://www.seis.sc.edu/sod/gettingstarted.html</a></p></li>
-<li><p>Ingredient Listing: <a class="reference external" href="http://www.seis.sc.edu/sod/ingredients/index.html">http://www.seis.sc.edu/sod/ingredients/index.html</a></p></li>
-<li><p>A Chinese introduction: <a class="reference external" href="https://blog.seisman.info/sod-notes/">https://blog.seisman.info/sod-notes/</a></p></li>
-<li><p>Some ready-to-use recipes:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p><a class="reference external" href="https://github.com/seisman/SODrecipes">https://github.com/seisman/SODrecipes</a></p></li>
-<li><p><a class="reference external" href="https://github.com/core-man/SOD.recipes">https://github.com/core-man/SOD.recipes</a></p></li>
+<li class="toctree-l1"><a class="reference internal" href="phase-picking/index.html">Phase Picking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="phase-picking/index.html#hand-picking">Hand-Picking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="phase-picking/index.html#automatic-picking">Automatic Picking</a></li>
 </ul>
-</div></blockquote>
 </li>
 </ul>
 </div>
@@ -235,10 +207,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="TauP.html" class="btn btn-neutral float-right" title="TauP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="phase-picking/index.html" class="btn btn-neutral float-right" title="Phase Picking" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="SAC.html" class="btn btn-neutral float-left" title="SAC" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../data-process/plot/index.html" class="btn btn-neutral float-left" title="Plot Seismograms" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

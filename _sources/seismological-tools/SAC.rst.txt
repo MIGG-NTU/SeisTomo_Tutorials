@@ -1,7 +1,14 @@
 SAC
 ===
 
-`Seismic Analysis Code (SAC) <http://ds.iris.edu/ds/nodes/dmc/software/downloads/sac/>`__ is one of the most commonly used seismic data processing and analysis software in seismological community.
+Seismic Analysis Code (SAC) is one of the most commonly used seismic data processing and analysis software in seismological community.
+
+- **Homepage**: http://ds.iris.edu/ds/nodes/dmc/software/downloads/sac/
+- **Install**:
+
+    - Linux: https://seisman.github.io/SAC_Docs_zh/introduction/linux-install/
+    - maxOS: https://seisman.github.io/SAC_Docs_zh/introduction/macOS-install/
+
 
 **Checklist of what you should know about SAC:**
 

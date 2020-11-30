@@ -1,7 +1,0 @@
-Plotting
-========
-
-.. toctree::
-
-   seismogram/index
-

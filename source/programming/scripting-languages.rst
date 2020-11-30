@@ -42,7 +42,7 @@ Python
 
 Python is an interpreted, high-level, general-purpose programming language. It is FREE and OPEN-SOURCE! Unlike MATLAB, the basic Python libraries have limited capability for scientific research. Seismologists need extra open-source Python libraries (e.g. numpy, scipy, matplotlib) for data analysis and plotting.
 
-Important libraries and packages
+Important Libraries and Packages
 ++++++++++++++++++++++++++++++++
 
 - `NumPy <https://numpy.org/>`__: a library for large, multi-dimensinal arrays and matrices, required by any scientific research
@@ -51,7 +51,7 @@ Important libraries and packages
 - `Pandas <https://pandas.pydata.org/>`__: a library for data structures and data analysis
 - `ObsPy <https://github.com/obspy/obspy>`__: a project specifically for processing seismic data
 
-Quick start
+Quick Start
 +++++++++++
 
 macOS and most Linux distributions have their own pre-installed Python, it's highly recommended to install the Anaconda distribution in your HOME directory.

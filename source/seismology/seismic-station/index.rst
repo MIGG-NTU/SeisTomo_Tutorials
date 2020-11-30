@@ -18,7 +18,7 @@ Seismometers used in earthquake studies are highly sensitive to ground movements
 When seismic wave arrives at a seismometer, the ground motion is recorded and converted to digital records. These data are transmitted continuously to data processing center by cellular telephone, broadband Internet, or satellite communications systems. They will be made available via the Internet to researchers and the general public.
 
 .. figure:: how-station-work.png
-   :alt: How
+   :alt: How does a station work?
    :width: 95.0%
    :align: center
 
@@ -57,9 +57,9 @@ At present, we don't need to know details about the instrument response: (1) it 
 Some references can be used if the future studies need it.
 
 - `Data and Metadata in the Remote Online Sessions for Emerging Seismologists <https://www.iris.edu/hq/inclass/lesson/705>`__
-- `instrument response notes in seisman's blog <https://blog.seisman.info/tags/%E4%BB%AA%E5%99%A8%E5%93%8D%E5%BA%94>`__
-- `instrument response in Chinese SAC Documentation <https://seisman.github.io/SAC_Docs_zh/appendix/resp/>`__
-- `instrument response in Seismo-Live <https://krischer.github.io/seismo_live_build/html/General%20Seismology/instrument_response_wrapper.html>`__
+- `Instrument response notes in seisman's blog <https://blog.seisman.info/tags/%E4%BB%AA%E5%99%A8%E5%93%8D%E5%BA%94>`__
+- `Instrument response in Chinese SAC Documentation <https://seisman.github.io/SAC_Docs_zh/appendix/resp/>`__
+- `Instrument response in Seismo-Live <https://krischer.github.io/seismo_live_build/html/General%20Seismology/instrument_response_wrapper.html>`__
 - `IRIS DMC Library of Nominal Responses for Seismic Instruments <http://ds.iris.edu/NRL/>`__
 
 

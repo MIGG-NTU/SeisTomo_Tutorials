@@ -8,3 +8,4 @@ Computer & Programming
    LinuxmacOS-basis
    command-lines
    programming/index
+   file-manage

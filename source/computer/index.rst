@@ -1,11 +1,9 @@
-Computer & Programming
-======================
-
+Computer
+========
 
 .. toctree::
 
    operating-systems
    LinuxmacOS-basis
    command-lines
-   programming/index
    file-manage

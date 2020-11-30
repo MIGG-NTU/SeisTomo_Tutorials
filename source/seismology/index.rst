@@ -4,7 +4,8 @@ Seismology
 
 .. toctree::
 
-   resources
+   intro
    seismic-source/index
+   seismic-wave/index
    seismic-station/index
    seismic-data/index

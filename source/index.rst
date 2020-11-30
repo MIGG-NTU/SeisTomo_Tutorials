@@ -9,12 +9,24 @@ Date       Time        Topic
 ========== =========== ======
 
 
+In order to follow the toturials, you need to have the following terms in your computer.
+
+- Linux or macOS system
+- Anaconda
+- ObsPy
+- SAC 101.6a
+- SOD
+- TauP
+- GMT
+
+
 .. toctree::
    :maxdepth: 3
    :hidden:
    :caption: Basis
 
-   computer-programming/index
+   computer/index
+   programming/index
    seismology/index
    seismological-tools/index
 
@@ -25,6 +37,7 @@ Date       Time        Topic
 
    data-fetch/index
    data-process/index
+   data-analysis/index
 
 .. toctree::
    :maxdepth: 3
@@ -48,7 +61,7 @@ Date       Time        Topic
 .. toctree::
    :maxdepth: 3
    :hidden:
-   :caption: Other
+   :caption: Appendix
 
    references
    links

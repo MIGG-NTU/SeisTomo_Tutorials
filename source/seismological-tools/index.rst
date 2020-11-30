@@ -9,3 +9,4 @@ This is a list of seismological tools you may use in your daily research.
    SOD
    TauP
    GMT
+   ObsPy

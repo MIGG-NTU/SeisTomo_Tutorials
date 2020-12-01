@@ -1,8 +1,5 @@
-Seismological Tools
-===================
-
 GMT
----
+====
 
 Here is a homework to help you learn how to plot a simple map in GMT (``GMT-training.tar.gz``)
 

@@ -50,13 +50,12 @@ In order to follow the toturials, you need to have the following terms in your c
 .. toctree::
    :maxdepth: 3
    :hidden:
-   :caption: Homework
+   :caption: Exercises
 
-   homework/programming/index
-   homework/seismological-tools/index
-   homework/seismology/index
-   homework/data-fetch/index
-   homework/data-process/index
+   exercises/programming/index
+   exercises/seismology/index
+   exercises/data-fetch/index
+   exercises/data-process/index
 
 .. toctree::
    :maxdepth: 3

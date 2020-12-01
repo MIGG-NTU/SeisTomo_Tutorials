@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Programming &mdash; SeisTomo_Tutorials 0.1 documentation</title>
+  <title>Seismology &mdash; SeisTomo_Tutorials 0.1 documentation</title>
   
 
   
@@ -37,8 +37,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Seismological Tools" href="../seismological-tools/index.html" />
-    <link rel="prev" title="Workflow" href="../../tomo-workflow/index.html" /> 
+    <link rel="next" title="TauP" href="taup.html" />
+    <link rel="prev" title="Programming" href="../programming/index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -105,19 +105,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../../tomo-theory/index.html">Theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tomo-workflow/index.html">Workflow</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Homework</span></p>
+<p class="caption"><span class="caption-text">Exercises</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Programming</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#bash">Bash</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#python">Python</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#task-1">Task 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#task-2">Task 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../programming/index.html">Programming</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Seismology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="taup.html">TauP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gmt.html">GMT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismology.html">Seismology</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../seismological-tools/index.html">Seismological Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../seismology/index.html">Seismology</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../data-fetch/index.html">Data Fetching</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../data-process/index.html">Data Processing</a></li>
 </ul>
@@ -171,14 +167,14 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Programming</li>
+      <li>Seismology</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/MIGG-NTU/SeisTomo_Tutorials/blob/main/source/homework/programming/index.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/MIGG-NTU/SeisTomo_Tutorials/blob/main/source/exercises/seismology/index.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -192,43 +188,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="programming">
-<h1>Programming<a class="headerlink" href="#programming" title="Permalink to this headline">¶</a></h1>
-<p><strong>We may have some exercises to let the students to complete about Linux command lines and Python.</strong></p>
-<div class="section" id="bash">
-<h2>Bash<a class="headerlink" href="#bash" title="Permalink to this headline">¶</a></h2>
-<p>Download the data for Python training: <a class="reference external" href="https://raw.githubusercontent.com/MIGG-NTU/SeisTomo_Tutorials/main/source/homework/programming/python-training.tar.gz">python-training.tar.gz</a></p>
-<ul class="simple">
-<li><p>Use a bash script to automatically copy each of ‘ISClauraw?.lst’ files to a new directory with a new name ‘MSUtrain?.dat’</p></li>
-<li><p>Use awk to extract only the columns of latitude and longitude from ‘ISClauraw?.lst’ files and output to ‘epicenter?.lst’</p></li>
-<li><p>Sort each of ‘ISClauraw?.lst’ files based on ‘mb’ (body-wave magnitude), latitude, or depth, and output to another file</p></li>
-<li><p>Use a bash script to generate 50 new files based on the first 50 earthquakes in ‘ISClauraw1.lst’. Each file should be named after the earthquake ID (e.g., 51839.info or 51844.info), and contains the earthquake information in the following format:</p></li>
+  <div class="section" id="seismology">
+<h1>Seismology<a class="headerlink" href="#seismology" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="taup.html">TauP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gmt.html">GMT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seismology.html">Seismology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="seismology.html#goals">Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismology.html#task-0-preparation">Task 0: preparation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismology.html#task-1-plot-a-topography-map-for-the-glg-401-field-trip">Task 1: plot a topography map for the GLG 401 field trip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismology.html#task-2-plot-a-topography-map-of-michigan">Task 2: plot a topography map of Michigan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismology.html#task-3-plot-earthquake-epicenters-on-a-map-of-michigan">Task 3: plot earthquake epicenters on a map of Michigan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismology.html#task-4-plot-earthquake-epicenters-and-focal-mechanisms-on-a-map-of-california">Task 4: plot earthquake epicenters and focal mechanisms on a map of California</a></li>
 </ul>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ID: 51839</span>
-<span class="go">Data: 12/08/09</span>
-<span class="go">Time: 05:55:42.37</span>
-<span class="go">Latitude: -17.8483</span>
-<span class="go">Longitude: -178.0777</span>
-<span class="go">Depth: 590.0</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="python">
-<h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="task-1">
-<h3>Task 1<a class="headerlink" href="#task-1" title="Permalink to this headline">¶</a></h3>
-<p>Use Python to do the above bash tasks again.</p>
-</div>
-<div class="section" id="task-2">
-<h3>Task 2<a class="headerlink" href="#task-2" title="Permalink to this headline">¶</a></h3>
-<p>Here are some catalogs of earthquakes in Tonga, relocated by <a class="reference external" href="https://doi.org/10.1126/sciadv.1601755">Wei et al. (2019)</a>:</p>
-<ul class="simple">
-<li><p>4 of them (<code class="docutils literal notranslate"><span class="pre">ISClauraw?.lst</span></code>) include more than 700 earthquake that were recorded by local seismic stations and relocated by Antelope (a seismic software).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ISCid.lst</span></code> is an ISC catalog which should include most of these earthquakes.</p></li>
+</li>
 </ul>
-<p>Generally speaking, we think the local catalogs (<code class="docutils literal notranslate"><span class="pre">ISClauraw?.lst</span></code>) should provide better hypocenters as the earthquakes are constained by local stations. On the other hand, the ISC catalog assigns each earthquake a unique ID which has a broader usage.</p>
-<p>Please write a Python script to associate these catalogs, i.e., create a new catalog in which each earthquake has a high-precision hypocenter from the local cataglos and a unique ISC ID. <code class="docutils literal notranslate"><span class="pre">assISCid.py</span></code> serves as a reference, but probably doesn’t work well. You can digest this Python script and write your own.</p>
-</div>
 </div>
 </div>
 
@@ -240,10 +215,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../seismological-tools/index.html" class="btn btn-neutral float-right" title="Seismological Tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="taup.html" class="btn btn-neutral float-right" title="TauP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../../tomo-workflow/index.html" class="btn btn-neutral float-left" title="Workflow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../programming/index.html" class="btn btn-neutral float-left" title="Programming" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

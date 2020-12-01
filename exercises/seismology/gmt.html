@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Data Fetching &mdash; SeisTomo_Tutorials 0.1 documentation</title>
+  <title>GMT &mdash; SeisTomo_Tutorials 0.1 documentation</title>
   
 
   
@@ -37,8 +37,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Data Processing" href="../data-process/index.html" />
-    <link rel="prev" title="Seismology" href="../seismology/index.html" /> 
+    <link rel="next" title="Seismology" href="seismology.html" />
+    <link rel="prev" title="TauP" href="taup.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -105,12 +105,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../../tomo-theory/index.html">Theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tomo-workflow/index.html">Workflow</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Homework</span></p>
+<p class="caption"><span class="caption-text">Exercises</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../programming/index.html">Programming</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../seismological-tools/index.html">Seismological Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../seismology/index.html">Seismology</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Fetching</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Seismology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="taup.html">TauP</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">GMT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismology.html">Seismology</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data-fetch/index.html">Data Fetching</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../data-process/index.html">Data Processing</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Appendix</span></p>
@@ -163,14 +167,16 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Data Fetching</li>
+          <li><a href="index.html">Seismology</a> &raquo;</li>
+        
+      <li>GMT</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/MIGG-NTU/SeisTomo_Tutorials/blob/main/source/homework/data-fetch/index.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/MIGG-NTU/SeisTomo_Tutorials/blob/main/source/exercises/seismology/gmt.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -184,13 +190,26 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="data-fetching">
-<h1>Data Fetching<a class="headerlink" href="#data-fetching" title="Permalink to this headline">¶</a></h1>
-<p><strong>We may have some exercises to let the students to download seismic data.</strong></p>
-<ul class="simple">
-<li><p>SOD</p></li>
-<li><p>ObsPy</p></li>
-</ul>
+  <div class="section" id="gmt">
+<h1>GMT<a class="headerlink" href="#gmt" title="Permalink to this headline">¶</a></h1>
+<p>Here is a homework to help you learn how to plot a simple map in GMT (<code class="docutils literal notranslate"><span class="pre">GMT-training.tar.gz</span></code>)</p>
+<p>What you need to plot with GMT in this homework:</p>
+<ol class="arabic simple">
+<li><p>Topography map of eastern US (with MI at the center)</p></li>
+<li><p>Coastlines, national boundary between US and Canada, lakes</p></li>
+<li><p>Plot triangles as locations of seismic stations and also add texts to denote station names</p></li>
+<li><p>Plot stars as locations of earthquakes</p></li>
+<li><p>Add a figure legend</p></li>
+<li><p>Add a inset map to show the geographic location of the map region</p></li>
+</ol>
+<p>The attached tarball contains fours files:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">US-stations.dat</span></code>: Information (name and coordinate) of some seismic stations</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">events.dat</span></code>: Information (origin time, coordinate, depth and magnitude) of some earthquakes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">map.pdf</span></code>: The final figure you expect to plot</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plotMap.sh</span></code>: A ready-to-use bash script to plot the figure in map.pdf. You can run the script and try to make some changes and see how the figure changes. Try your best to understand it. You can also take it as a reference and write your own script.</p></li>
+</ol>
+<p><strong>Note:</strong> GMT comes with coastline and some national boundary data, which you can use by calling the pscoast module of GMT. You will need the global topography/bathymetry data to plot the topography map, which is also available from GMT FTP site but not included in the GMT package due to the large data size. You can download the global topography/bathymetry data in different resolutions from <a class="reference external" href="ftp://ftp.soest.hawaii.edu/gmt/data/">ftp://ftp.soest.hawaii.edu/gmt/data/</a>. earth_relief_02m.grd means the grid spacing of the data is 2 arc minute, which is enough for this homework map. Remember to download earth_relief_02m.grd and put it in the same directory as your GMT script.</p>
 </div>
 
 
@@ -201,10 +220,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../data-process/index.html" class="btn btn-neutral float-right" title="Data Processing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="seismology.html" class="btn btn-neutral float-right" title="Seismology" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../seismology/index.html" class="btn btn-neutral float-left" title="Seismology" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="taup.html" class="btn btn-neutral float-left" title="TauP" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -1,6 +1,9 @@
 GMT
 ====
 
+**We may need to revised the following tasks for our own purposes for seismic tomography**
+
+
 Here is a homework to help you learn how to plot a simple map in GMT (``GMT-training.tar.gz``)
 
 What you need to plot with GMT in this homework:

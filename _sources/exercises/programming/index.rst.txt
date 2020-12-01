@@ -1,7 +1,7 @@
 Programming
 ===========
 
-**We may have some exercises to let the students to complete about Linux command lines and Python.**
+**We may need to revised the following tasks for our own purposes for seismic tomography**
 
 
 Bash

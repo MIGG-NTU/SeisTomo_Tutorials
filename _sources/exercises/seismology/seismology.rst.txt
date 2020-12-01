@@ -1,10 +1,7 @@
 Seismology
 ==========
 
-**We may need to revised the following tasks for our own purposes**
-
-- TauP
-- GMT
+**We may need to revised the following tasks for our own purposes for seismic tomography**
 
 
 Goals

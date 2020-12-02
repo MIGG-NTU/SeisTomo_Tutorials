@@ -89,8 +89,8 @@ Run following commands to install some most commonly used packages for scientifi
     $ conda install ipython numpy scipy matplotlib pandas
     $ conda install obspy --channel conda-forge
 
-Free Online Resources
-+++++++++++++++++++++
+Resources
++++++++++
 
 - `The official Python Tutorial <https://docs.python.org/3/tutorial>`__
 - `Scipy Lecture Notes <http://scipy-lectures.org/>`__

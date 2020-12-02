@@ -1,13 +1,13 @@
 Programming
 ===========
 
-**We may have some exercises to let the students to complete about Linux command lines and Python.**
+**We may need to revised the following tasks for our own purposes for seismic tomography**
 
 
 Bash
 ----
 
-Download the data for Python training: `python-training.tar.gz <https://raw.githubusercontent.com/MIGG-NTU/SeisTomo_Tutorials/main/source/homework/programming/python-training.tar.gz>`__
+Download the data for Python training: ``python-training.tar.gz``
 
 - Use a bash script to automatically copy each of 'ISClauraw?.lst' files to a new directory with a new name 'MSUtrain?.dat'
 - Use awk to extract only the columns of latitude and longitude from 'ISClauraw?.lst' files and output to 'epicenter?.lst'

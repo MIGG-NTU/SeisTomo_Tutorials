@@ -96,12 +96,15 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Command Lines</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#resources">Resources</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#data-processing">Data Processing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cat">cat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#paste">paste</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#awk">awk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#printf">printf</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#cut">cut</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#grep">grep</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#wc">wc</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#sort">sort</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#uniq">uniq</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wc">wc</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#file-compressing">File Compressing</a><ul>
@@ -111,14 +114,11 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#non-classified-commands">Non-classified Commands</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#cat">cat</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#touch">touch</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#head">head</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#tail">tail</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#which">which</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#locate">locate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#paste">paste</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#printf">printf</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#sed">sed</a></li>
 </ul>
 </li>
@@ -236,16 +236,41 @@
 </div>
 <div class="section" id="data-processing">
 <h2>Data Processing<a class="headerlink" href="#data-processing" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="awk">
-<h3>awk<a class="headerlink" href="#awk" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://man.linuxde.net/awk">awk</a> is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool. It is very convenient to extract certain columns or sections in an ASCII-format file using awk given a specified field separator. By default, fields are separated by a space. We can change that with the –field-separator option, which sets the -F‘S’ variable S to whatever you want it to be, e.g., comma <code class="docutils literal notranslate"><span class="pre">,</span></code> semicolon <code class="docutils literal notranslate"><span class="pre">;</span></code> dash <code class="docutils literal notranslate"><span class="pre">-</span></code> or other describable characters. Here are two expamles showing the way that we usually use to extract location, magnitude, and origin time from a common catalogue file.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> check a catalog file, e.g., events.csv
+<div class="section" id="cat">
+<h3>cat<a class="headerlink" href="#cat" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://man.linuxde.net/cat">cat</a> is a command used very frequently in Linux. It reads data from the file and gives their content as output. It helps us to create, view, concatenate files.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> show the content of a catalog file, e.g., events.csv
 <span class="gp">$</span> cat events.csv
 <span class="go">2019-09-01T10:30:32.320Z  32.398   90.841  39.32  6.5  MW</span>
 <span class="go">2013-03-11T12:21:01.149Z  19.691  120.933  23.83  4.5  MW</span>
 <span class="go">2010-01-09T01:01:10.921Z  51.582  110.850   9.33  3.3  MB</span>
-
-<span class="gp">#</span> extract the depth <span class="o">(</span>fourth<span class="o">)</span> and magnitude <span class="o">(</span>fifth<span class="o">)</span> columns
+</pre></div>
+</div>
+</div>
+<div class="section" id="paste">
+<h3>paste<a class="headerlink" href="#paste" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://man.linuxde.net/paste">paste</a> is one of the most useful commands in Unix or Linux operating system. It is used to join files horizontally (parallel merging) by outputting lines consisting of lines from each file specified, separated by tab as delimiter, to the standard output. When no file is specified, or put dash (“-“) instead of file name, paste reads from standard input and gives output as it is until a interrupt command [Ctrl-c] is given.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> paste two files together
+<span class="gp">$</span> cat origin.temp1
+<span class="go">20190901</span>
+<span class="go">20130311</span>
+<span class="go">20100109</span>
+<span class="gp">$</span> cat origin.temp2
+<span class="go">103032</span>
+<span class="go">122101</span>
+<span class="go">010110</span>
+<span class="gp">$</span> paste origin.temp1 origin.temp2 &gt; origin
+<span class="gp">$</span> cat origin
+<span class="go">20190901    103032</span>
+<span class="go">20130311    122101</span>
+<span class="go">20100109    010110</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="awk">
+<h3>awk<a class="headerlink" href="#awk" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://man.linuxde.net/awk">awk</a> is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool. It is very convenient to extract certain columns or sections in an ASCII-format file using awk given a specified field separator. By default, fields are separated by a space. We can change that with the –field-separator option, which sets the -F‘S’ variable S to whatever you want it to be, e.g., comma <code class="docutils literal notranslate"><span class="pre">,</span></code> semicolon <code class="docutils literal notranslate"><span class="pre">;</span></code> dash <code class="docutils literal notranslate"><span class="pre">-</span></code> or other describable characters. Here are two expamles showing the way that we usually use to extract location, magnitude, and origin time from a common catalogue file.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> extract the depth <span class="o">(</span>fourth<span class="o">)</span> and magnitude <span class="o">(</span>fifth<span class="o">)</span> columns
 <span class="gp">$</span> awk <span class="s1">&#39;{print $4,$5}&#39;</span> events.csv  <span class="c1"># Here, the division character is the default setting ``empty space``</span>
 <span class="go">39.32 6.5</span>
 <span class="go">23.83 4.5</span>
@@ -267,6 +292,17 @@
 <span class="go">20190901    103032</span>
 <span class="go">20130311    122101</span>
 <span class="go">20100109    010110</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="printf">
+<h3>printf<a class="headerlink" href="#printf" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://man.linuxde.net/printf">awk</a> is a command in Linux used to display the given string, number or any other format specifier on the terminal window. It works the same way as “printf” works in programming languages like C.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> extract the depth <span class="o">(</span>fourth<span class="o">)</span> columns with keeping one decimal place
+<span class="gp">$</span> awk <span class="s1">&#39;{printf&quot;%.1f\n&quot;,$4}&#39;</span> events.csv
+<span class="go">39.3</span>
+<span class="go">23.8</span>
+<span class="go">9.3</span>
 </pre></div>
 </div>
 </div>
@@ -302,10 +338,6 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="wc">
-<h3>wc<a class="headerlink" href="#wc" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
-</div>
 <div class="section" id="sort">
 <h3>sort<a class="headerlink" href="#sort" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://man.linuxde.net/sort">sort</a> is a command for sorting a file, arranging the records in a particular order. Often used options include <code class="docutils literal notranslate"><span class="pre">-k</span></code> (column number), <code class="docutils literal notranslate"><span class="pre">-g</span></code> (in numerical order), <code class="docutils literal notranslate"><span class="pre">-r</span></code> (in decreasing order, default is increasing order), <code class="docutils literal notranslate"><span class="pre">-u</span></code> (sort and remove duplicates) and <code class="docutils literal notranslate"><span class="pre">-o</span></code> (output to a new file). Here we show an example that sort the events in decreasing order within the catalogue according to their magnitudes.</p>
@@ -322,12 +354,16 @@
 <h3>uniq<a class="headerlink" href="#uniq" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://man.linuxde.net/uniq">uniq</a> is a command for reporting or filtering out the repeated lines in a file. Often used options include <code class="docutils literal notranslate"><span class="pre">-c</span></code> (count, how many times a line was repeated), <code class="docutils literal notranslate"><span class="pre">-d</span></code> (only print the repeated lines) and <code class="docutils literal notranslate"><span class="pre">-u</span></code> (only print unique lines).</p>
 </div>
+<div class="section" id="wc">
+<h3>wc<a class="headerlink" href="#wc" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://man.linuxde.net/wc">wc</a> is used to find out number of lines, word count, byte and characters count in the files specified in the file arguments.</p>
+</div>
 </div>
 <div class="section" id="file-compressing">
 <h2>File Compressing<a class="headerlink" href="#file-compressing" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="tar">
 <h3>tar<a class="headerlink" href="#tar" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+<p><a class="reference external" href="https://man.linuxde.net/tar">tar</a> is a command standing for tape archive, used to create archive and extract the archive files. We can use Linux tar command to create compressed or uncompressed archive files and also maintain and modify them. Often used commands include <code class="docutils literal notranslate"><span class="pre">-x</span></code> (extract the archive), <code class="docutils literal notranslate"><span class="pre">-v</span></code> (displays verbose information), <code class="docutils literal notranslate"><span class="pre">-f</span></code> (creates archive with given filename), <code class="docutils literal notranslate"><span class="pre">-z</span></code> (zip, tells tar command that create tar file using gzip), <code class="docutils literal notranslate"><span class="pre">-j</span></code> (filter archive tar file using tbzip).</p>
 <p><code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">-zxvf</span></code>
 <code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">-jxvf</span></code></p>
 </div>
@@ -342,10 +378,6 @@
 </div>
 <div class="section" id="non-classified-commands">
 <h2>Non-classified Commands<a class="headerlink" href="#non-classified-commands" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="cat">
-<h3>cat<a class="headerlink" href="#cat" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
-</div>
 <div class="section" id="touch">
 <h3>touch<a class="headerlink" href="#touch" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
@@ -364,14 +396,6 @@
 </div>
 <div class="section" id="locate">
 <h3>locate<a class="headerlink" href="#locate" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
-</div>
-<div class="section" id="paste">
-<h3>paste<a class="headerlink" href="#paste" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
-</div>
-<div class="section" id="printf">
-<h3>printf<a class="headerlink" href="#printf" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
 </div>
 <div class="section" id="sed">

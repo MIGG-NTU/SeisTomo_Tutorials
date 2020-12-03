@@ -13,8 +13,45 @@ Resources
 - `Linux 命令大全 <https://www.runoob.com/linux/linux-command-manual.html>`__
 
 
+Commands for files and directories
+----------------------------------
+
+
+pwd
++++
+`pwd <https://man.linuxde.net/pwd>`__ is a command to find out the path of the current working directory (folder) you’re in. The command will return an absolute (full) path, which is basically a path of all the directories that starts with a forward slash (/).
+
+.. code-block:: console
+
+    $pwd 
+    /Users/litianjue/Documents/EOS/help/Tutorial/Example
+
+
+cd 
++++
+`cd <https://man.linuxde.net/cd>`__ is a command to navigate through the Linux files and directories. It requires either the full path or the name of the directory, depending on the current working directory that you’re in.
+
+.. code-block:: console
+
+    $cd /Users/litianjue/Documents/EOS/help/Tutorial/Example  #Your destination folder.
+    $pwd
+    /Users/litianjue/Documents/EOS/help/Tutorial/Example
+
+
+ls
++++
+`ls <https://man.linuxde.net/ls>`__ is a command to view the contents of a directory. By default, this command will display the contents of your current working directory.
+
+.. code-block:: console
+
+    $ls
+    events.csv
+
+
+
 Data Processing
 ---------------
+
 
 cat
 +++
@@ -46,7 +83,7 @@ paste
     103032
     122101
     010110
-    $ paste origin.temp1 origin.temp2 > origin
+    $ paste origin.temp1 origin.temp2 > origin   #Here, ``>`` is Standard Output, it redirects the output content to a file.
     $ cat origin 
     20190901	103032
     20130311	122101
@@ -67,7 +104,7 @@ awk
     9.33 3.3
 
     # extract the origin time (first) column and reformat it into yyyymmdd hhmmsss
-    $ awk '{print $1}' events.csv | awk -F'T' '{print $1}' | awk -F'-' '{print $1$2$3}' > origin.temp1
+    $ awk '{print $1}' events.csv | awk -F'T' '{print $1}' | awk -F'-' '{print $1$2$3}' > origin.temp1   #Here, ``|`` is pipelines, using it, the standard output of one command is fed into the standard input of another.
     $ cat origin.temp1
     20190901
     20130311
@@ -87,7 +124,7 @@ awk
 printf
 ++++++
 
-`awk <https://man.linuxde.net/printf>`__ is a command in Linux used to display the given string, number or any other format specifier on the terminal window. It works the same way as “printf” works in programming languages like C.
+`printf <https://man.linuxde.net/printf>`__ is a command in Linux used to display the given string, number or any other format specifier on the terminal window. It works the same way as “printf” works in programming languages like C.
 
 .. code-block:: console
 
@@ -116,7 +153,7 @@ cut
     103032
     122101
     010110
-    $ paste origin.temp1 origin.temp2 > origin  # Merge two files into one: column addition
+    $ paste origin.temp1 origin.temp2 > origin
     $ cat origin 
     20190901	103032
     20130311	122101
@@ -193,17 +230,35 @@ Non-classified Commands
 
 touch
 +++++
-``TODO``
+
+`touch <https://man.linuxde.net/touch>`__ is a command used to create a file without any content (empty file).
+
 
 
 head
 ++++
-``TODO``
+
+`head <https://man.linuxde.net/head>`__ is the complementary of Tail command, as the name implies, it prints the top N number of data of the given input. By default, it prints the first 10 lines of the specified files. Often used option is ``-n num`` (Prints the first ‘num’ lines instead of first 10 lines. num is mandatory to be specified in command otherwise it displays an error). 
+
+.. code-block:: console
+
+    # show the first two lines of content of a catalog file, e.g., events.csv
+    $ cat events.csv | head -n 2
+    2019-09-01T10:30:32.320Z  32.398   90.841  39.32  6.5  MW
+    2013-03-11T12:21:01.149Z  19.691  120.933  23.83  4.5  MW
 
 
 tail
 ++++
-``TODO``
+
+`tail <https://man.linuxde.net/tail>`__ is the complementary of Head command, as the name implies, it prints the last N number of data of the given input. By default it prints the last 10 lines of the specified files. Often used option is ``-n num`` (Prints the last ‘num’ lines instead of last 10 lines. num is mandatory to be specified in command otherwise it displays an error). 
+
+.. code-block:: console
+
+    # show the last two lines of content of a catalog file, e.g., events.csv
+    $ cat events.csv | tail -n 2
+    2013-03-11T12:21:01.149Z  19.691  120.933  23.83  4.5  MW
+    2010-01-09T01:01:10.921Z  51.582  110.850   9.33  3.3  MB
 
 
 which

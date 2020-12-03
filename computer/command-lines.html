@@ -95,6 +95,12 @@
 <li class="toctree-l2"><a class="reference internal" href="file-manage.html">File Management</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Command Lines</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#resources">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#commands-for-files-and-directories">Commands for files and directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pwd">pwd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cd">cd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ls">ls</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#data-processing">Data Processing</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#cat">cat</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#paste">paste</a></li>
@@ -234,6 +240,34 @@
 <li><p><a class="reference external" href="https://www.runoob.com/linux/linux-command-manual.html">Linux 命令大全</a></p></li>
 </ul>
 </div>
+<div class="section" id="commands-for-files-and-directories">
+<h2>Commands for files and directories<a class="headerlink" href="#commands-for-files-and-directories" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pwd">
+<h3>pwd<a class="headerlink" href="#pwd" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://man.linuxde.net/pwd">pwd</a> is a command to find out the path of the current working directory (folder) you’re in. The command will return an absolute (full) path, which is basically a path of all the directories that starts with a forward slash (/).</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span><span class="nb">pwd</span>
+<span class="go">/Users/litianjue/Documents/EOS/help/Tutorial/Example</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="cd">
+<h3>cd<a class="headerlink" href="#cd" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://man.linuxde.net/cd">cd</a> is a command to navigate through the Linux files and directories. It requires either the full path or the name of the directory, depending on the current working directory that you’re in.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span><span class="nb">cd</span> /Users/litianjue/Documents/EOS/help/Tutorial/Example  <span class="c1">#Your destination folder.</span>
+<span class="gp">$</span><span class="nb">pwd</span>
+<span class="go">/Users/litianjue/Documents/EOS/help/Tutorial/Example</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ls">
+<h3>ls<a class="headerlink" href="#ls" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://man.linuxde.net/ls">ls</a> is a command to view the contents of a directory. By default, this command will display the contents of your current working directory.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span>ls
+<span class="go">events.csv</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="data-processing">
 <h2>Data Processing<a class="headerlink" href="#data-processing" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="cat">
@@ -259,7 +293,7 @@
 <span class="go">103032</span>
 <span class="go">122101</span>
 <span class="go">010110</span>
-<span class="gp">$</span> paste origin.temp1 origin.temp2 &gt; origin
+<span class="gp">$</span> paste origin.temp1 origin.temp2 &gt; origin   <span class="c1">#Here, ``&gt;`` is Standard Output, it redirects the output content to a file.</span>
 <span class="gp">$</span> cat origin
 <span class="go">20190901    103032</span>
 <span class="go">20130311    122101</span>
@@ -277,7 +311,7 @@
 <span class="go">9.33 3.3</span>
 
 <span class="gp">#</span> extract the origin <span class="nb">time</span> <span class="o">(</span>first<span class="o">)</span> column and reformat it into yyyymmdd hhmmsss
-<span class="gp">$</span> awk <span class="s1">&#39;{print $1}&#39;</span> events.csv <span class="p">|</span> awk -F<span class="s1">&#39;T&#39;</span> <span class="s1">&#39;{print $1}&#39;</span> <span class="p">|</span> awk -F<span class="s1">&#39;-&#39;</span> <span class="s1">&#39;{print $1$2$3}&#39;</span> &gt; origin.temp1
+<span class="gp">$</span> awk <span class="s1">&#39;{print $1}&#39;</span> events.csv <span class="p">|</span> awk -F<span class="s1">&#39;T&#39;</span> <span class="s1">&#39;{print $1}&#39;</span> <span class="p">|</span> awk -F<span class="s1">&#39;-&#39;</span> <span class="s1">&#39;{print $1$2$3}&#39;</span> &gt; origin.temp1   <span class="c1">#Here, ``|`` is pipelines, using it, the standard output of one command is fed into the standard input of another.</span>
 <span class="gp">$</span> cat origin.temp1
 <span class="go">20190901</span>
 <span class="go">20130311</span>
@@ -297,7 +331,7 @@
 </div>
 <div class="section" id="printf">
 <h3>printf<a class="headerlink" href="#printf" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://man.linuxde.net/printf">awk</a> is a command in Linux used to display the given string, number or any other format specifier on the terminal window. It works the same way as “printf” works in programming languages like C.</p>
+<p><a class="reference external" href="https://man.linuxde.net/printf">printf</a> is a command in Linux used to display the given string, number or any other format specifier on the terminal window. It works the same way as “printf” works in programming languages like C.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> extract the depth <span class="o">(</span>fourth<span class="o">)</span> columns with keeping one decimal place
 <span class="gp">$</span> awk <span class="s1">&#39;{printf&quot;%.1f\n&quot;,$4}&#39;</span> events.csv
 <span class="go">39.3</span>
@@ -320,7 +354,7 @@
 <span class="go">103032</span>
 <span class="go">122101</span>
 <span class="go">010110</span>
-<span class="gp">$</span> paste origin.temp1 origin.temp2 &gt; origin  <span class="c1"># Merge two files into one: column addition</span>
+<span class="gp">$</span> paste origin.temp1 origin.temp2 &gt; origin
 <span class="gp">$</span> cat origin
 <span class="go">20190901    103032</span>
 <span class="go">20130311    122101</span>
@@ -380,15 +414,27 @@
 <h2>Non-classified Commands<a class="headerlink" href="#non-classified-commands" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="touch">
 <h3>touch<a class="headerlink" href="#touch" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+<p><a class="reference external" href="https://man.linuxde.net/touch">touch</a> is a command used to create a file without any content (empty file).</p>
 </div>
 <div class="section" id="head">
 <h3>head<a class="headerlink" href="#head" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+<p><a class="reference external" href="https://man.linuxde.net/head">head</a> is the complementary of Tail command, as the name implies, it prints the top N number of data of the given input. By default, it prints the first 10 lines of the specified files. Often used option is <code class="docutils literal notranslate"><span class="pre">-n</span> <span class="pre">num</span></code> (Prints the first ‘num’ lines instead of first 10 lines. num is mandatory to be specified in command otherwise it displays an error).</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> show the first two lines of content of a catalog file, e.g., events.csv
+<span class="gp">$</span> cat events.csv <span class="p">|</span> head -n <span class="m">2</span>
+<span class="go">2019-09-01T10:30:32.320Z  32.398   90.841  39.32  6.5  MW</span>
+<span class="go">2013-03-11T12:21:01.149Z  19.691  120.933  23.83  4.5  MW</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="tail">
 <h3>tail<a class="headerlink" href="#tail" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+<p><a class="reference external" href="https://man.linuxde.net/tail">tail</a> is the complementary of Head command, as the name implies, it prints the last N number of data of the given input. By default it prints the last 10 lines of the specified files. Often used option is <code class="docutils literal notranslate"><span class="pre">-n</span> <span class="pre">num</span></code> (Prints the last ‘num’ lines instead of last 10 lines. num is mandatory to be specified in command otherwise it displays an error).</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> show the last two lines of content of a catalog file, e.g., events.csv
+<span class="gp">$</span> cat events.csv <span class="p">|</span> tail -n <span class="m">2</span>
+<span class="go">2013-03-11T12:21:01.149Z  19.691  120.933  23.83  4.5  MW</span>
+<span class="go">2010-01-09T01:01:10.921Z  51.582  110.850   9.33  3.3  MB</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="which">
 <h3>which<a class="headerlink" href="#which" title="Permalink to this headline">¶</a></h3>

@@ -25,6 +25,36 @@ When seismic wave arrives at a seismometer, the ground motion is recorded and co
    How does a seismic station work? (From http://www.usarray.org/public/about/how#anchor1)
 
 
+Station Metadata Formats
+------------------------
+
+Station metadata includes information such instrument coordinates, instrument responses, data availablity and quality etc..
+
+- `FDSN StationXML schema <http://www.fdsn.org/xml/station/>`__ is a human readable XML representation of the most important and commonly used structures of **SEED 2.4 metadata** (dataless SEED) with enhancements.
+- `Dataless SEED <http://ds.iris.edu/ds/nodes/dmc/data/formats/dataless-seed/>`__ contains only station and channel metadata, without any time series values. It is the metadata counterpart to miniSEED, which contain seismic time series data.
+- text
+
+**Convertion Tools:**
+
+- Dataless SEED and FDSN StationXML: https://seiscode.iris.washington.edu/projects/stationxml-converter
+- read_inventory: https://docs.obspy.org/packages/autogen/obspy.core.inventory.inventory.read_inventory.html#obspy.core.inventory.inventory.read_inventory
+- inventory.write: https://docs.obspy.org/packages/autogen/obspy.core.inventory.inventory.Inventory.write.html#obspy.core.inventory.inventory.Inventory.write
+
+
+Instrument Response
+-------------------
+
+At present, we don't need to know details about the instrument response: (1) it is a little complicated; (2) we don't need it for local tomographic studies.
+
+Some references can be used if the future studies need it.
+
+- `Data and Metadata in the Remote Online Sessions for Emerging Seismologists <https://www.iris.edu/hq/inclass/lesson/705>`__
+- `Instrument response notes in seisman's blog <https://blog.seisman.info/tags/%E4%BB%AA%E5%99%A8%E5%93%8D%E5%BA%94>`__
+- `Instrument response in Chinese SAC Documentation <https://seisman.github.io/SAC_Docs_zh/appendix/resp/>`__
+- `Instrument response in Seismo-Live <https://krischer.github.io/seismo_live_build/html/General%20Seismology/instrument_response_wrapper.html>`__
+- `IRIS DMC Library of Nominal Responses for Seismic Instruments <http://ds.iris.edu/NRL/>`__
+
+
 Distance and Angles
 -------------------
 
@@ -47,20 +77,6 @@ Distance and Angles
    :align: center
 
    incidence angle (From https://service.iris.edu/irisws/rotation/docs/1/help/)
-
-
-Instrument Response
--------------------
-
-At present, we don't need to know details about the instrument response: (1) it is a little complicated; (2) we don't need it for local tomographic studies.
-
-Some references can be used if the future studies need it.
-
-- `Data and Metadata in the Remote Online Sessions for Emerging Seismologists <https://www.iris.edu/hq/inclass/lesson/705>`__
-- `Instrument response notes in seisman's blog <https://blog.seisman.info/tags/%E4%BB%AA%E5%99%A8%E5%93%8D%E5%BA%94>`__
-- `Instrument response in Chinese SAC Documentation <https://seisman.github.io/SAC_Docs_zh/appendix/resp/>`__
-- `Instrument response in Seismo-Live <https://krischer.github.io/seismo_live_build/html/General%20Seismology/instrument_response_wrapper.html>`__
-- `IRIS DMC Library of Nominal Responses for Seismic Instruments <http://ds.iris.edu/NRL/>`__
 
 
 Other Seismic Instruments

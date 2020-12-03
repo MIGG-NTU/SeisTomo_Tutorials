@@ -16,13 +16,6 @@ There are many different seismic data formats in seismology community. The most 
 - **miniSEED** is the subset of the SEED standard that is used for time series data. Very limited metadata for the time series is included in miniSEED beyond time series identification and simple state-of-health flags. In particular, geographic coordinates, response/scaling information and other information needed to interpret the data values are not included.
 
 
-Metadata Formats
-----------------
-
-- `FDSN StationXML schema <http://www.fdsn.org/xml/station/>`__ is a human readable XML representation of the most important and commonly used structures of **SEED 2.4 metadata** with enhancements. The goal is to allow mapping between **SEED 2.4 dataless SEED volumes** and this schema with as little transformation or loss of information as possible while at the same time simplifying station metadata representation when possible.
-- ASCII
-
-
 Data Naming and Channels
 ------------------------
 

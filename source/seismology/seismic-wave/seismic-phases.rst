@@ -13,6 +13,13 @@ Below show some IASPEI phase definitions (**alt**: acceptable alternative name)
 Crustal Phases
 --------------
 
+.. figure:: Fig4.14-Introduction-to-seismology.png
+   :alt: Ray geometries and names for crustal P phases
+   :width: 95.0%
+   :align: center
+
+   Ray geometries and names for crustal P phases.
+
 - **Pg**: At short distances, either an upgoing P wave from a source in the upper crust or a P wave bottoming in the upper crust. At larger distances also arrivals caused by multiple P-wave reverberations inside the whole crust with a group velocity around 5.8 km/s.
 - **Pb**: (**alt**: P*) Either an upgoing P wave from a source in the lower crust or a P wave bottoming in the lower crust
 - **Pn**: Any P wave bottoming in the uppermost mantle or an upgoing P wave from a source in the uppermost mantle

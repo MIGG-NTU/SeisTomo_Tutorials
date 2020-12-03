@@ -1,5 +1,5 @@
-Earthquake Catalog
-==================
+Earthquake Catalogs
+===================
 
 Global Earthquake Catalog
 -------------------------

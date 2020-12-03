@@ -50,3 +50,21 @@ Sometimes, the two horizontal components may be not aligned with North and East.
 
    12Z coordinate system (From https://service.iris.edu/irisws/rotation/docs/1/help/)
 
+
+Component Rotation
+------------------
+
+IRISWS Rotation: https://service.iris.edu/irisws/rotation/docs/1/help/
+SAC rotate: https://seisman.github.io/SAC_Docs_zh/data-process/rotate/
+
+We can rotate seismic waveform in one coordinate system to anther one so that we can better analyize the data.
+
+Here is an example of rotating seismic data in NEZ to RTZ. We can see noticeable P waves in R and Z components and S waves in all three components. We can also see noticeable Love wave in T component and Rayleigh wave in R and Z components.
+
+.. figure:: rotate-SAC_Docs_zh.png
+   :alt: rotate from NEZ to RTZ
+   :width: 95.0%
+   :align: center
+
+   Rotation from NEZ to RTZ (From https://seisman.github.io/SAC_Docs_zh/data-process/rotate/)
+

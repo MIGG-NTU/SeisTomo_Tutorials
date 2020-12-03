@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Seismic Wave &mdash; SeisTomo_Tutorials 0.1 documentation</title>
+  <title>Introduction &mdash; SeisTomo_Tutorials 0.1 documentation</title>
   
 
   
@@ -37,8 +37,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Introduction" href="intro.html" />
-    <link rel="prev" title="Earthquake Catalogs" href="../seismic-source/earthquake-catalogs.html" /> 
+    <link rel="next" title="Earthquake Catalogs" href="earthquake-catalogs.html" />
+    <link rel="prev" title="Seismic Source" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,12 +93,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../../programming/index.html">Programming</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Seismology</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../intro/index.html">Introduction to Seismology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../seismic-source/index.html">Seismic Source</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Seismic Wave</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="intro.html">Introduction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="seismic-phases.html">Seismic Phases</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Seismic Source</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#event-metadata-formats">Event Metadata Formats</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="earthquake-catalogs.html">Earthquake Catalogs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../seismic-wave/index.html">Seismic Wave</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../seismic-station/index.html">Seismic Station</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../seismic-data/index.html">Seismic Data</a></li>
 </ul>
@@ -176,14 +179,16 @@
         
           <li><a href="../index.html">Seismology</a> &raquo;</li>
         
-      <li>Seismic Wave</li>
+          <li><a href="index.html">Seismic Source</a> &raquo;</li>
+        
+      <li>Introduction</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/MIGG-NTU/SeisTomo_Tutorials/blob/main/source/seismology/seismic-wave/index.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/MIGG-NTU/SeisTomo_Tutorials/blob/main/source/seismology/seismic-source/intro.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -197,16 +202,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="seismic-wave">
-<h1>Seismic Wave<a class="headerlink" href="#seismic-wave" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="seismic-phases.html">Seismic Phases</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="seismic-phases.html#crustal-phases">Crustal Phases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="seismic-phases.html#near-source-surface-reflections-depth-phases">Near Source Surface Reflections (Depth Phases)</a></li>
-</ul>
-</li>
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>Seismic source is the source that can cause ground motion recorded by seismic stations. Earthquake is one of the most common seismic sources.</p>
+<p>The three most fundamental source parameters of an earthquake is its origin time (when it occurs), location or hypocenter (longitude, latitude and depth), and magnitude (how big it is).</p>
+<div class="section" id="event-metadata-formats">
+<h2>Event Metadata Formats<a class="headerlink" href="#event-metadata-formats" title="Permalink to this headline">¶</a></h2>
+<p>There are many metadata formats to record source paramters.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code>: plain text</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">csv</span></code>: “comma separated values” ASCII text</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">quakeml</span></code>: a flexible, extensible and modular XML representation of seismological data</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">geojson</span></code>: a format for encoding a variety of geographic data structures uses the JSON standard</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kml</span></code>: Google’s Keyhole Markup Language</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">xml</span></code>: Extensible Markup Language</p></li>
 </ul>
 </div>
 </div>
@@ -219,10 +228,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="intro.html" class="btn btn-neutral float-right" title="Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="earthquake-catalogs.html" class="btn btn-neutral float-right" title="Earthquake Catalogs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../seismic-source/earthquake-catalogs.html" class="btn btn-neutral float-left" title="Earthquake Catalogs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Seismic Source" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

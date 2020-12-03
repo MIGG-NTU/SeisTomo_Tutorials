@@ -3,4 +3,5 @@ Seismic Source
 
 .. toctree::
 
-   earthquake-catalog
+   intro
+   earthquake-catalogs

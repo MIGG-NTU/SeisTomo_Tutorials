@@ -87,7 +87,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Basis</span></p>
+              <p class="caption"><span class="caption-text">Basics</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../computer/index.html">Computer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../programming/index.html">Programming</a></li>
@@ -97,8 +97,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../seismic-wave/index.html">Seismic Wave</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Seismic Station</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#seismograph">Seismograph</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#distance-and-angles">Distance and Angles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#station-metadata-formats">Station Metadata Formats</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#instrument-response">Instrument Response</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#distance-and-angles">Distance and Angles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#other-seismic-instruments">Other Seismic Instruments</a></li>
 </ul>
 </li>
@@ -124,6 +125,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/seismology/index.html">Seismology</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/data-fetch/index.html">Data Fetching</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/data-process/index.html">Data Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/data-analysis/index.html">Data Analysis</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Appendix</span></p>
 <ul>
@@ -214,6 +216,33 @@
 <p class="caption"><span class="caption-text">How does a seismic station work? (From <a class="reference external" href="http://www.usarray.org/public/about/how#anchor1">http://www.usarray.org/public/about/how#anchor1</a>)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 </div>
+<div class="section" id="station-metadata-formats">
+<h2>Station Metadata Formats<a class="headerlink" href="#station-metadata-formats" title="Permalink to this headline">¶</a></h2>
+<p>Station metadata includes information such instrument coordinates, instrument responses, data availablity and quality etc..</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.fdsn.org/xml/station/">FDSN StationXML schema</a> is a human readable XML representation of the most important and commonly used structures of <strong>SEED 2.4 metadata</strong> (dataless SEED) with enhancements.</p></li>
+<li><p><a class="reference external" href="http://ds.iris.edu/ds/nodes/dmc/data/formats/dataless-seed/">Dataless SEED</a> contains only station and channel metadata, without any time series values. It is the metadata counterpart to miniSEED, which contain seismic time series data.</p></li>
+<li><p>text</p></li>
+</ul>
+<p><strong>Convertion Tools:</strong></p>
+<ul class="simple">
+<li><p>Dataless SEED and FDSN StationXML: <a class="reference external" href="https://seiscode.iris.washington.edu/projects/stationxml-converter">https://seiscode.iris.washington.edu/projects/stationxml-converter</a></p></li>
+<li><p>read_inventory: <a class="reference external" href="https://docs.obspy.org/packages/autogen/obspy.core.inventory.inventory.read_inventory.html#obspy.core.inventory.inventory.read_inventory">https://docs.obspy.org/packages/autogen/obspy.core.inventory.inventory.read_inventory.html#obspy.core.inventory.inventory.read_inventory</a></p></li>
+<li><p>inventory.write: <a class="reference external" href="https://docs.obspy.org/packages/autogen/obspy.core.inventory.inventory.Inventory.write.html#obspy.core.inventory.inventory.Inventory.write">https://docs.obspy.org/packages/autogen/obspy.core.inventory.inventory.Inventory.write.html#obspy.core.inventory.inventory.Inventory.write</a></p></li>
+</ul>
+</div>
+<div class="section" id="instrument-response">
+<h2>Instrument Response<a class="headerlink" href="#instrument-response" title="Permalink to this headline">¶</a></h2>
+<p>At present, we don’t need to know details about the instrument response: (1) it is a little complicated; (2) we don’t need it for local tomographic studies.</p>
+<p>Some references can be used if the future studies need it.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.iris.edu/hq/inclass/lesson/705">Data and Metadata in the Remote Online Sessions for Emerging Seismologists</a></p></li>
+<li><p><a class="reference external" href="https://blog.seisman.info/tags/%E4%BB%AA%E5%99%A8%E5%93%8D%E5%BA%94">Instrument response notes in seisman’s blog</a></p></li>
+<li><p><a class="reference external" href="https://seisman.github.io/SAC_Docs_zh/appendix/resp/">Instrument response in Chinese SAC Documentation</a></p></li>
+<li><p><a class="reference external" href="https://krischer.github.io/seismo_live_build/html/General%20Seismology/instrument_response_wrapper.html">Instrument response in Seismo-Live</a></p></li>
+<li><p><a class="reference external" href="http://ds.iris.edu/NRL/">IRIS DMC Library of Nominal Responses for Seismic Instruments</a></p></li>
+</ul>
+</div>
 <div class="section" id="distance-and-angles">
 <h2>Distance and Angles<a class="headerlink" href="#distance-and-angles" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center" id="id3">
@@ -230,18 +259,6 @@
 <a class="reference internal image-reference" href="../../_images/incidence.png"><img alt="incidence angle" src="../../_images/incidence.png" style="width: 50.0%;" /></a>
 <p class="caption"><span class="caption-text">incidence angle (From <a class="reference external" href="https://service.iris.edu/irisws/rotation/docs/1/help/">https://service.iris.edu/irisws/rotation/docs/1/help/</a>)</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
-</div>
-<div class="section" id="instrument-response">
-<h2>Instrument Response<a class="headerlink" href="#instrument-response" title="Permalink to this headline">¶</a></h2>
-<p>At present, we don’t need to know details about the instrument response: (1) it is a little complicated; (2) we don’t need it for local tomographic studies.</p>
-<p>Some references can be used if the future studies need it.</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://www.iris.edu/hq/inclass/lesson/705">Data and Metadata in the Remote Online Sessions for Emerging Seismologists</a></p></li>
-<li><p><a class="reference external" href="https://blog.seisman.info/tags/%E4%BB%AA%E5%99%A8%E5%93%8D%E5%BA%94">Instrument response notes in seisman’s blog</a></p></li>
-<li><p><a class="reference external" href="https://seisman.github.io/SAC_Docs_zh/appendix/resp/">Instrument response in Chinese SAC Documentation</a></p></li>
-<li><p><a class="reference external" href="https://krischer.github.io/seismo_live_build/html/General%20Seismology/instrument_response_wrapper.html">Instrument response in Seismo-Live</a></p></li>
-<li><p><a class="reference external" href="http://ds.iris.edu/NRL/">IRIS DMC Library of Nominal Responses for Seismic Instruments</a></p></li>
-</ul>
 </div>
 <div class="section" id="other-seismic-instruments">
 <h2>Other Seismic Instruments<a class="headerlink" href="#other-seismic-instruments" title="Permalink to this headline">¶</a></h2>

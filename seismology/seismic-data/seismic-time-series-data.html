@@ -87,7 +87,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Basis</span></p>
+              <p class="caption"><span class="caption-text">Basics</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../computer/index.html">Computer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../programming/index.html">Programming</a></li>
@@ -99,7 +99,6 @@
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Seismic Data</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Seismic Time Series Data</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#time-series-data-formats">Time Series Data Formats</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#metadata-formats">Metadata Formats</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#data-naming-and-channels">Data Naming and Channels</a></li>
 </ul>
 </li>
@@ -127,6 +126,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/seismology/index.html">Seismology</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/data-fetch/index.html">Data Fetching</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/data-process/index.html">Data Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/data-analysis/index.html">Data Analysis</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Appendix</span></p>
 <ul>
@@ -214,13 +214,6 @@
 <li><p><strong>SAC</strong> is a good format for data analysis, though difficult for storing. This format is defined by the software SAC (Seismic Analysis Codes), although it is supported by many other tools</p></li>
 <li><p><strong>SEED</strong> (Standard for the Exchange of Earthquake Data) is a data format intended primarily for the archival and exchange of seismological time series data and related metadata. The latest <a class="reference external" href="http://www.fdsn.org/pdf/SEEDManual_V2.4.pdf">SEED 2.4</a> is published in 2012.</p></li>
 <li><p><strong>miniSEED</strong> is the subset of the SEED standard that is used for time series data. Very limited metadata for the time series is included in miniSEED beyond time series identification and simple state-of-health flags. In particular, geographic coordinates, response/scaling information and other information needed to interpret the data values are not included.</p></li>
-</ul>
-</div>
-<div class="section" id="metadata-formats">
-<h2>Metadata Formats<a class="headerlink" href="#metadata-formats" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="http://www.fdsn.org/xml/station/">FDSN StationXML schema</a> is a human readable XML representation of the most important and commonly used structures of <strong>SEED 2.4 metadata</strong> with enhancements. The goal is to allow mapping between <strong>SEED 2.4 dataless SEED volumes</strong> and this schema with as little transformation or loss of information as possible while at the same time simplifying station metadata representation when possible.</p></li>
-<li><p>ASCII</p></li>
 </ul>
 </div>
 <div class="section" id="data-naming-and-channels">

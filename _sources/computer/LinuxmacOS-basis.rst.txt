@@ -22,18 +22,18 @@ Checklist
 
 Below is a checklist of what you should know about Linux/macOS and command lines:
 
-- Familiar with the file system, and especially the **HOME** directory
-- Commands ``cd``, ``ls``, ``pwd``, ``mkdir``, ``rmdir``, ``cp``, ``rm``, ``mv``
-- What is a Shell (bash/csh) script? https://www.tutorialspoint.com/unix/unix-what-is-shell.htm
-- Absolute paths and relative paths
-- the environment variable ``PATH``
-- meaning of file permissions ``rwx`` and ``chmod`` command
-- Commands: ``cat``, ``touch``, ``head``, ``tail``, ``which``
-- Understand what's purpose of file ``~/.bashrc``
-- how to use input/output redirection ``>``, ``>>``, ``<<``
-- how to use PIPE ``|``
-- how to use wildcards ``?``, ``*``, ``[]`` to match mutiple files or directories
-- how to compress and uncompress files using ``tar``, ``gzip``, ``bzip2``
-- Command for data processing ``awk``, ``cut``, ``grep``, ``wc``, ``sort``, ``uniq``
-- learn the vim editor, which is the only text editor available on Linux servers.
+1. Familiar with the file system, and especially the **HOME** directory
+2. Commands for files and directories: ``cd``, ``ls``, ``pwd``, ``mkdir``, ``rmdir``, ``cp``, ``rm``, ``mv``
+3. Commands for files: ``cat``, ``touch``, ``head``, ``tail``, ``which``
+4. Meaning of file permissions ``rwx`` and ``chmod`` command
+5. Absolute paths and relative paths
+6. The environment variable ``PATH``
+7. Understand what's purpose of file ``~/.bashrc``
+8. How to use input/output redirection ``>``, ``>>``, ``<<``
+9. How to use PIPE ``|``
+10. How to use wildcards ``?``, ``*``, ``[]`` to match mutiple files or directories
+11. How to compress and uncompress files using ``tar``, ``gzip``, ``bzip2``
+12. Command for data processing ``awk``, ``cut``, ``grep``, ``wc``, ``sort``, ``uniq``
+13. What is a Shell (bash/csh) script? https://www.tutorialspoint.com/unix/unix-what-is-shell.htm
+14. Learn the vim editor, which is the only text editor available on Linux servers.
 

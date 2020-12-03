@@ -22,10 +22,36 @@ On 1994 Jan. 17, a magnitude 6.9 earthquake near Northridge, California released
 
 Although the seismic waves are generated together, they travel at different speeds. Shear waves (S waves), for example, travel through the Earth at approximately one-half the speed of compressional waves (P waves). Stations close the earthquake record strong P, S and Surface waves in quick succession just after the earthquake occurred. Stations farther away record the arrival of these waves after a few minutes, and the times between the arrivals are greater.
 
-
 At about 100 degrees distance from the earthquake, the travel paths of P and S waves start to touch the edge of the Earth's outer core. Beyond this distance, the first arriving wave, i.e., the P wave, decreases in size and then disappears. P waves that travel through the outer are called the PKP waves. They start to appear beyond 140 degrees. The distance between 100 and 140 degrees is often referred to as the "Shadow zone".
 
 We do not see shear (S) waves passing through the outer core. Because liquids can not be sheared, we infer that the outer core is molten. We do, however, see waves that travel through the outer core as P waves, and then transform into S waves as they go through the inner core. Because the inner core does transmit shear energy, we assume it is solid.
+
+
+Key Information in Seismic Data
+-------------------------------
+
+The most commonly used seismic data is arrival times which are the most robust observations. Meanwhile, seismologist have also been trying to use amplitudes and waveforms to obtain more contrains on seismic sources and strutures.
+
+
+.. figure:: seismic-key-obs.png
+   :alt: key information in seismic data
+   :width: 95.0%
+   :align: center
+
+   Three key information in seismic data (Fig. 1.1 in Modern Global Seismology)
+
+
+Global Earthquakes and Stations
+-------------------------------
+
+Global earthquakes and stations are not evenly distributed. Most earthquakes occur along the plate boundaries. The seismic stations are mostly installed on the continent.
+
+.. figure:: global-eqs-station.png
+   :alt: global earthquakes and seismic stations
+   :width: 95.0%
+   :align: center
+
+   All seismic stations (blue) from IRIS-DMC and events (yellow) in ISC-EHB catalog (1960-2014)
 
 
 Resources

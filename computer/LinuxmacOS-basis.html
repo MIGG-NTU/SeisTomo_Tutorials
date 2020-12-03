@@ -37,7 +37,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Command Lines" href="command-lines.html" />
+    <link rel="next" title="File Management" href="file-manage.html" />
     <link rel="prev" title="Operating Systems" href="operating-systems.html" /> 
 </head>
 
@@ -87,7 +87,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Basis</span></p>
+              <p class="caption"><span class="caption-text">Basics</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Computer</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="operating-systems.html">Operating Systems</a></li>
@@ -96,8 +96,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#checklist">Checklist</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="command-lines.html">Command Lines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file-manage.html">File Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command-lines.html">Command Lines</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../programming/index.html">Programming</a></li>
@@ -121,6 +121,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../exercises/seismology/index.html">Seismology</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../exercises/data-fetch/index.html">Data Fetching</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../exercises/data-process/index.html">Data Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/data-analysis/index.html">Data Analysis</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Appendix</span></p>
 <ul>
@@ -215,22 +216,22 @@
 <div class="section" id="checklist">
 <h2>Checklist<a class="headerlink" href="#checklist" title="Permalink to this headline">¶</a></h2>
 <p>Below is a checklist of what you should know about Linux/macOS and command lines:</p>
-<ul class="simple">
+<ol class="arabic simple">
 <li><p>Familiar with the file system, and especially the <strong>HOME</strong> directory</p></li>
-<li><p>Commands <code class="docutils literal notranslate"><span class="pre">cd</span></code>, <code class="docutils literal notranslate"><span class="pre">ls</span></code>, <code class="docutils literal notranslate"><span class="pre">pwd</span></code>, <code class="docutils literal notranslate"><span class="pre">mkdir</span></code>, <code class="docutils literal notranslate"><span class="pre">rmdir</span></code>, <code class="docutils literal notranslate"><span class="pre">cp</span></code>, <code class="docutils literal notranslate"><span class="pre">rm</span></code>, <code class="docutils literal notranslate"><span class="pre">mv</span></code></p></li>
-<li><p>What is a Shell (bash/csh) script? <a class="reference external" href="https://www.tutorialspoint.com/unix/unix-what-is-shell.htm">https://www.tutorialspoint.com/unix/unix-what-is-shell.htm</a></p></li>
+<li><p>Commands for files and directories: <code class="docutils literal notranslate"><span class="pre">cd</span></code>, <code class="docutils literal notranslate"><span class="pre">ls</span></code>, <code class="docutils literal notranslate"><span class="pre">pwd</span></code>, <code class="docutils literal notranslate"><span class="pre">mkdir</span></code>, <code class="docutils literal notranslate"><span class="pre">rmdir</span></code>, <code class="docutils literal notranslate"><span class="pre">cp</span></code>, <code class="docutils literal notranslate"><span class="pre">rm</span></code>, <code class="docutils literal notranslate"><span class="pre">mv</span></code></p></li>
+<li><p>Commands for files: <code class="docutils literal notranslate"><span class="pre">cat</span></code>, <code class="docutils literal notranslate"><span class="pre">touch</span></code>, <code class="docutils literal notranslate"><span class="pre">head</span></code>, <code class="docutils literal notranslate"><span class="pre">tail</span></code>, <code class="docutils literal notranslate"><span class="pre">which</span></code></p></li>
+<li><p>Meaning of file permissions <code class="docutils literal notranslate"><span class="pre">rwx</span></code> and <code class="docutils literal notranslate"><span class="pre">chmod</span></code> command</p></li>
 <li><p>Absolute paths and relative paths</p></li>
-<li><p>the environment variable <code class="docutils literal notranslate"><span class="pre">PATH</span></code></p></li>
-<li><p>meaning of file permissions <code class="docutils literal notranslate"><span class="pre">rwx</span></code> and <code class="docutils literal notranslate"><span class="pre">chmod</span></code> command</p></li>
-<li><p>Commands: <code class="docutils literal notranslate"><span class="pre">cat</span></code>, <code class="docutils literal notranslate"><span class="pre">touch</span></code>, <code class="docutils literal notranslate"><span class="pre">head</span></code>, <code class="docutils literal notranslate"><span class="pre">tail</span></code>, <code class="docutils literal notranslate"><span class="pre">which</span></code></p></li>
+<li><p>The environment variable <code class="docutils literal notranslate"><span class="pre">PATH</span></code></p></li>
 <li><p>Understand what’s purpose of file <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code></p></li>
-<li><p>how to use input/output redirection <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;&lt;</span></code></p></li>
-<li><p>how to use PIPE <code class="docutils literal notranslate"><span class="pre">|</span></code></p></li>
-<li><p>how to use wildcards <code class="docutils literal notranslate"><span class="pre">?</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">[]</span></code> to match mutiple files or directories</p></li>
-<li><p>how to compress and uncompress files using <code class="docutils literal notranslate"><span class="pre">tar</span></code>, <code class="docutils literal notranslate"><span class="pre">gzip</span></code>, <code class="docutils literal notranslate"><span class="pre">bzip2</span></code></p></li>
+<li><p>How to use input/output redirection <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;&lt;</span></code></p></li>
+<li><p>How to use PIPE <code class="docutils literal notranslate"><span class="pre">|</span></code></p></li>
+<li><p>How to use wildcards <code class="docutils literal notranslate"><span class="pre">?</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">[]</span></code> to match mutiple files or directories</p></li>
+<li><p>How to compress and uncompress files using <code class="docutils literal notranslate"><span class="pre">tar</span></code>, <code class="docutils literal notranslate"><span class="pre">gzip</span></code>, <code class="docutils literal notranslate"><span class="pre">bzip2</span></code></p></li>
 <li><p>Command for data processing <code class="docutils literal notranslate"><span class="pre">awk</span></code>, <code class="docutils literal notranslate"><span class="pre">cut</span></code>, <code class="docutils literal notranslate"><span class="pre">grep</span></code>, <code class="docutils literal notranslate"><span class="pre">wc</span></code>, <code class="docutils literal notranslate"><span class="pre">sort</span></code>, <code class="docutils literal notranslate"><span class="pre">uniq</span></code></p></li>
-<li><p>learn the vim editor, which is the only text editor available on Linux servers.</p></li>
-</ul>
+<li><p>What is a Shell (bash/csh) script? <a class="reference external" href="https://www.tutorialspoint.com/unix/unix-what-is-shell.htm">https://www.tutorialspoint.com/unix/unix-what-is-shell.htm</a></p></li>
+<li><p>Learn the vim editor, which is the only text editor available on Linux servers.</p></li>
+</ol>
 </div>
 </div>
 
@@ -242,7 +243,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="command-lines.html" class="btn btn-neutral float-right" title="Command Lines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="file-manage.html" class="btn btn-neutral float-right" title="File Management" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="operating-systems.html" class="btn btn-neutral float-left" title="Operating Systems" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

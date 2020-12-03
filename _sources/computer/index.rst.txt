@@ -5,5 +5,5 @@ Computer
 
    operating-systems
    LinuxmacOS-basis
-   command-lines
    file-manage
+   command-lines

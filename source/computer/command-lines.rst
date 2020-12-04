@@ -23,11 +23,12 @@ pwd
 
 .. code-block:: console
 
-    $pwd 
+    # show the absolute (full) path where you are
+    $pwd
     /Users/litianjue/Documents/EOS/help/Tutorial/Example
 
 
-cd 
+cd
 +++
 `cd <https://man.linuxde.net/cd>`__ is a command to navigate through the Linux files and directories. It requires either the full path or the name of the directory, depending on the current working directory that you’re in.
 
@@ -44,9 +45,61 @@ ls
 
 .. code-block:: console
 
+    # show the contents under the current folder
     $ls
     events.csv
 
+
+mkdir
++++
+`mkdir <https://man.linuxde.net/mkdir>`__ is a command allowing the user to create directories (also referred to as folders in some operating systems).
+
+.. code-block:: console
+
+    $mkdir temp
+    $ls
+    events.csv temp
+
+
+cp
++++
+`cp <https://man.linuxde.net/cp>`__ is a command standing for copy. It is used to copy files (as default) or group of files or directory (with ``-R``). ``cp`` command require at least two filenames in its arguments.
+
+.. code-block:: console
+
+    $mkdir temp2
+    $cp events.csv temp/events   # copy file events.csv into folder temp renamed as events
+    $cp -R temp2 temp/  # copy folder temp2 into folder temp
+    $cd temp
+    $ls
+    events temp2
+
+
+mv
++++
+`mv <https://man.linuxde.net/mv>`__ is a command standing for move. mv is used to move one or more files or directories from one place to another. It has two distinct functions:(i) It rename a file or folder; (ii) It moves group of files to different directory.
+
+.. code-block:: console
+
+    $mkdir temp2
+    $mv events.csv temp/events   # move file events.csv into folder temp renamed as events
+    $mv temp2 temp/  # move folder temp2 into folder temp
+    $cd temp
+    $ls
+    events temp2
+
+
+rm
++++
+`rm <https://man.linuxde.net/rm>`__ is a command standing for remove. It is used to remove objects such as files (default) and directories (with ``-R``).
+
+.. code-block:: console
+
+    $cd temp
+    $ls
+    events temp2
+    $rm events
+    $rm -r temp2
 
 
 Data Processing
@@ -84,7 +137,7 @@ paste
     122101
     010110
     $ paste origin.temp1 origin.temp2 > origin   #Here, ``>`` is Standard Output, it redirects the output content to a file.
-    $ cat origin 
+    $ cat origin
     20190901	103032
     20130311	122101
     20100109	010110
@@ -93,12 +146,12 @@ paste
 awk
 +++
 
-`awk <https://man.linuxde.net/awk>`__ is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool. It is very convenient to extract certain columns or sections in an ASCII-format file using awk given a specified field separator. By default, fields are separated by a space. We can change that with the --field-separator option, which sets the -F‘S’ variable S to whatever you want it to be, e.g., comma ``,`` semicolon ``;`` dash ``-`` or other describable characters. Here are two expamles showing the way that we usually use to extract location, magnitude, and origin time from a common catalogue file. 
+`awk <https://man.linuxde.net/awk>`__ is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool. It is very convenient to extract certain columns or sections in an ASCII-format file using awk given a specified field separator. By default, fields are separated by a space. We can change that with the --field-separator option, which sets the -F‘S’ variable S to whatever you want it to be, e.g., comma ``,`` semicolon ``;`` dash ``-`` or other describable characters. Here are two expamles showing the way that we usually use to extract location, magnitude, and origin time from a common catalogue file.
 
 .. code-block:: console
 
     # extract the depth (fourth) and magnitude (fifth) columns
-    $ awk '{print $4,$5}' events.csv  # Here, the division character is the default setting ``empty space`` 
+    $ awk '{print $4,$5}' events.csv  # Here, the division character is the default setting ``empty space``
     39.32 6.5
     23.83 4.5
     9.33 3.3
@@ -115,7 +168,7 @@ awk
     122101
     010110
     $ paste origin.temp1 origin.temp2 > origin
-    $ cat origin 
+    $ cat origin
     20190901	103032
     20130311	122101
     20100109	010110
@@ -129,7 +182,7 @@ printf
 .. code-block:: console
 
     # extract the depth (fourth) columns with keeping one decimal place
-    $ awk '{printf"%.1f\n",$4}' events.csv  
+    $ awk '{printf"%.1f\n",$4}' events.csv
     39.3
     23.8
     9.3
@@ -154,7 +207,7 @@ cut
     122101
     010110
     $ paste origin.temp1 origin.temp2 > origin
-    $ cat origin 
+    $ cat origin
     20190901	103032
     20130311	122101
     20100109	010110
@@ -191,7 +244,7 @@ sort
 uniq
 ++++
 
-`uniq <https://man.linuxde.net/uniq>`__ is a command for reporting or filtering out the repeated lines in a file. Often used options include ``-c`` (count, how many times a line was repeated), ``-d`` (only print the repeated lines) and ``-u`` (only print unique lines). 
+`uniq <https://man.linuxde.net/uniq>`__ is a command for reporting or filtering out the repeated lines in a file. Often used options include ``-c`` (count, how many times a line was repeated), ``-d`` (only print the repeated lines) and ``-u`` (only print unique lines).
 
 
 wc
@@ -207,21 +260,82 @@ File Compressing
 tar
 +++
 
-`tar <https://man.linuxde.net/tar>`__ is a command standing for tape archive, used to create archive and extract the archive files. We can use Linux tar command to create compressed or uncompressed archive files and also maintain and modify them. Often used commands include ``-x`` (extract the archive), ``-v`` (displays verbose information), ``-f`` (creates archive with given filename), ``-z`` (zip, tells tar command that create tar file using gzip), ``-j`` (filter archive tar file using tbzip).
+`tar <https://man.linuxde.net/tar>`__ is a command standing for tape archive, used to create archive and extract the archive files. We can use Linux tar command to create compressed or uncompressed archive files and also maintain and modify them. Often used commands include ``-x`` (extract the archive), ``-c`` (create the archive), ``-v`` (displays verbose information), ``-f`` (creates archive with given filename), ``-z`` (zip, tells tar command that create tar file using gzip), ``-j`` (filter archive tar file using tbzip).
 
+.. code-block:: console
 
-``tar -zxvf``
-``tar -jxvf``
+    #decompress a file
+    $cd temp
+    $ls
+    TauP-2.4.5.tar
+    $tar -zxvf TauP-2.4.5.tar
+    #or use the following command line
+    $tar -jxvf TauP-2.4.5.tar
+    $ls
+    TauP-2.4.5     TauP-2.4.5.tar
+
+.. code-block:: console
+
+    #compress a file
+    $cd temp
+    $ls
+    TauP-2.4.5
+    $tar -zcvf TauP-2.4.5
+    #or use the following command line
+    $tar -jcvf TauP-2.4.5.tar
+    $ls
+    TauP-2.4.5     TauP-2.4.5.tar
 
 
 gzip
 ++++
-``TODO``
+`gzip <https://man.linuxde.net/gzip>`__ is a command for compressing files. Often used commands include ``-k``(compression but does not deletes the original file); ``-r`` (compress every file in a folder and its subfolders); ``-d`` (decompress a file using the “gzip” command); ``-v`` (displays the name and percentage reduction for each file compressed or decompressed).
+
+.. code-block:: console
+
+    $cd temp
+    $ls
+    events.csv
+    #compress the file
+    $gzip events.csv
+    events.csv:	   19.0% -- replaced with events.csv.gz
+    $ls
+    events.csv.gz
+
+.. code-block:: console
+
+    #or compress the file while keeping the original one
+    $gzip -kv events.csv
+    events.csv:	   19.0% -- replaced with events.csv.gz
+    $ls
+    events.csv    events.csv.gz
+
+.. code-block:: console
+
+    #decompress the file
+    $gzip -dv events.csv.gz
+    events.csv.gz:	   19.0% -- replaced with events.csv
+    $ls
+    events.csv
+
+.. code-block:: console
+    $cd temp
+    $ls
+    events.csv
+    $cd ../
+    #compress each file in folder temp
+    $gzip -rv temp
+    gzip: temp/.DS_Store.gz already has .gz suffix -- unchanged
+    temp/events.csv:	   19.0% -- replaced with temp/events.csv.gz
+    $ls
+    events.csv.gz
+
 
 
 bzip2
 +++++
-``TODO``
+
+`bzip2 <https://man.linuxde.net/bzip2>`__ is a command used to compress and decompress the files i.e. it helps in binding the files into a single file which takes less storage space as the original file use to take. It has a slower decompression time and higher memory use.
 
 
 Non-classified Commands
@@ -238,7 +352,7 @@ touch
 head
 ++++
 
-`head <https://man.linuxde.net/head>`__ is the complementary of Tail command, as the name implies, it prints the top N number of data of the given input. By default, it prints the first 10 lines of the specified files. Often used option is ``-n num`` (Prints the first ‘num’ lines instead of first 10 lines. num is mandatory to be specified in command otherwise it displays an error). 
+`head <https://man.linuxde.net/head>`__ is the complementary of Tail command, as the name implies, it prints the top N number of data of the given input. By default, it prints the first 10 lines of the specified files. Often used option is ``-n num`` (Prints the first ‘num’ lines instead of first 10 lines. num is mandatory to be specified in command otherwise it displays an error).
 
 .. code-block:: console
 
@@ -251,7 +365,7 @@ head
 tail
 ++++
 
-`tail <https://man.linuxde.net/tail>`__ is the complementary of Head command, as the name implies, it prints the last N number of data of the given input. By default it prints the last 10 lines of the specified files. Often used option is ``-n num`` (Prints the last ‘num’ lines instead of last 10 lines. num is mandatory to be specified in command otherwise it displays an error). 
+`tail <https://man.linuxde.net/tail>`__ is the complementary of Head command, as the name implies, it prints the last N number of data of the given input. By default it prints the last 10 lines of the specified files. Often used option is ``-n num`` (Prints the last ‘num’ lines instead of last 10 lines. num is mandatory to be specified in command otherwise it displays an error).
 
 .. code-block:: console
 
@@ -263,16 +377,44 @@ tail
 
 which
 +++++
-``TODO``
+`which <https://man.linuxde.net/which>`__ is the command used to locate the executable file associated with the given command by searching it in the path environment variable.
+
+.. code-block:: console
+
+    # show the location of installed sac
+    $ which sac
+    /usr/local/MyCode/sac/bin/sac
 
 
 locate
 ++++++
-``TODO``
+`locate <https://man.linuxde.net/locate>`__ is the command used to find the files by name. There is two most widely used file searching utilities accessible to users are called find and locate. The locate utility works better and faster than find command counterpart.
 
 
 sed
 +++
-``TODO``
+`sed <https://man.linuxde.net/sed>`__ is the command standing for stream editor and it can perform lot’s of function on file like, searching, find and replace, insertion or deletion.
+
+.. code-block:: console
+
+    # delete the line containing 120.933
+    $cat events.csv
+    2019-09-01T10:30:32.320Z  32.398   90.841  39.32  6.5  MW
+    2013-03-11T12:21:01.149Z  19.691  120.933  23.83  4.5  MW
+    2010-01-09T01:01:10.921Z  51.582  110.850   9.33  3.3  MB
+    $ sed '/120.933/d' events.csv
+    2019-09-01T10:30:32.320Z  32.398   90.841  39.32  6.5  MW
+    2010-01-09T01:01:10.921Z  51.582  110.850   9.33  3.3  MB
+
+.. code-block:: console
+
+    # replace MW or MB with M in the whole file
+    $sed 's/M[WB]/M/g' events.csv
+    2019-09-01T10:30:32.320Z  32.398   90.841  39.32  6.5  M
+    2013-03-11T12:21:01.149Z  19.691  120.933  23.83  4.5  M
+    2010-01-09T01:01:10.921Z  51.582  110.850   9.33  3.3  M
 
 
+diff
+++++
+`diff <https://man.linuxde.net/diff>`__ is the command standing for difference. It is used to display the differences in the files by comparing the files line by line.

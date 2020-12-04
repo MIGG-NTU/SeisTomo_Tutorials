@@ -19,7 +19,7 @@ Commands for files and directories
 
 pwd
 +++
-`pwd <https://man.linuxde.net/pwd>`__ is a command to find out the path of the current working directory (folder) you’re in. The command will return an absolute (full) path, which is basically a path of all the directories that starts with a forward slash (/).
+`pwd <https://man.linuxde.net/pwd>`__ is a command to find out the path of the current working directory (folder) you’re in. The command will return an absolute (full) path.
 
 .. code-block:: console
 
@@ -63,7 +63,7 @@ mkdir
 
 cp
 +++
-`cp <https://man.linuxde.net/cp>`__ is a command standing for copy. It is used to copy files (as default) or group of files or directory (with ``-R``). ``cp`` command require at least two filenames in its arguments.
+`cp <https://man.linuxde.net/cp>`__ is a command standing for copy. It is used to copy files (as default) or group of files or directory (with ``-R``).
 
 .. code-block:: console
 
@@ -77,7 +77,7 @@ cp
 
 mv
 +++
-`mv <https://man.linuxde.net/mv>`__ is a command standing for move. mv is used to move one or more files or directories from one place to another. It has two distinct functions:(i) It rename a file or folder; (ii) It moves group of files to different directory.
+`mv <https://man.linuxde.net/mv>`__ is a command standing for move. It is used to move one or more files or directories from one place to another. It has two distinct functions:(i) It rename a file or folder; (ii) It moves group of files to different directory.
 
 .. code-block:: console
 
@@ -102,6 +102,7 @@ rm
     $rm -r temp2
 
 
+
 Data Processing
 ---------------
 
@@ -123,7 +124,7 @@ cat
 paste
 +++++
 
-`paste <https://man.linuxde.net/paste>`__ is one of the most useful commands in Unix or Linux operating system. It is used to join files horizontally (parallel merging) by outputting lines consisting of lines from each file specified, separated by tab as delimiter, to the standard output. When no file is specified, or put dash (“-“) instead of file name, paste reads from standard input and gives output as it is until a interrupt command [Ctrl-c] is given.
+`paste <https://man.linuxde.net/paste>`__ is one of the most useful commands used to join files horizontally (parallel merging) by outputting lines consisting of lines from each file specified, separated by tab as delimiter, to the standard output.
 
 .. code-block:: console
 
@@ -146,7 +147,7 @@ paste
 awk
 +++
 
-`awk <https://man.linuxde.net/awk>`__ is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool. It is very convenient to extract certain columns or sections in an ASCII-format file using awk given a specified field separator. By default, fields are separated by a space. We can change that with the --field-separator option, which sets the -F‘S’ variable S to whatever you want it to be, e.g., comma ``,`` semicolon ``;`` dash ``-`` or other describable characters. Here are two expamles showing the way that we usually use to extract location, magnitude, and origin time from a common catalogue file.
+`awk <https://man.linuxde.net/awk>`__ is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool. It is used to extract certain columns or sections in an ASCII-format file given a specified field separator. By default, fields are separated by a space. We can change that with the --field-separator option, which sets the ``-F``‘S’ variable S to whatever you want it to be.
 
 .. code-block:: console
 
@@ -155,6 +156,8 @@ awk
     39.32 6.5
     23.83 4.5
     9.33 3.3
+
+.. code-block:: console
 
     # extract the origin time (first) column and reformat it into yyyymmdd hhmmsss
     $ awk '{print $1}' events.csv | awk -F'T' '{print $1}' | awk -F'-' '{print $1$2$3}' > origin.temp1   #Here, ``|`` is pipelines, using it, the standard output of one command is fed into the standard input of another.
@@ -191,7 +194,7 @@ printf
 cut
 +++
 
-`cut <https://man.linuxde.net/cut>`__ is a command for cutting out the sections from each line of files and writing the result to standard output. It can be used to cut parts of a line by byte position, character and field. It provides us more freedom to rename a file than ``awk``. Often used options include column indicator ``-c``, and combination of ``-d`` (seperator) and ``-f`` (field number) to realize the extraction of certain sections in the ASCII-format file. Here we use command ``cut`` to extract the origin time agian showing its powerfulness compared to command ``awk``.
+`cut <https://man.linuxde.net/cut>`__ is a command for cutting out the sections from each line of files and writing the result to standard output. It can be used to cut parts of a line by byte position, character and field. Often used options include column indicator ``-c``, and combination of ``-d`` (seperator) and ``-f`` (field number) to realise the extraction of certain sections in the ASCII-format file.
 
 .. code-block:: console
 
@@ -216,7 +219,7 @@ cut
 grep
 ++++
 
-`grep <https://man.linuxde.net/grep>`__ is a filter command for searching for a particular pattern of characters in a file, and displaying all lines that contain that pattern. Here we show an example that searches the lines containing ``Mw`` in a catalogue file.
+`grep <https://man.linuxde.net/grep>`__ is a filter command for searching for a particular pattern of characters in a file, and displaying all lines that contain that pattern.
 
 .. code-block:: console
 
@@ -229,7 +232,7 @@ grep
 sort
 ++++
 
-`sort <https://man.linuxde.net/sort>`__ is a command for sorting a file, arranging the records in a particular order. Often used options include ``-k`` (column number), ``-g`` (in numerical order), ``-r`` (in decreasing order, default is increasing order), ``-u`` (sort and remove duplicates) and ``-o`` (output to a new file). Here we show an example that sort the events in decreasing order within the catalogue according to their magnitudes.
+`sort <https://man.linuxde.net/sort>`__ is a command for sorting a file, arranging the records in a particular order. Often used options include ``-k`` (column number), ``-g`` (in numerical order), ``-r`` (in decreasing order, default is increasing order), ``-u`` (sort and remove duplicates) and ``-o`` (output to a new file).
 
 .. code-block:: console
 
@@ -260,7 +263,7 @@ File Compressing
 tar
 +++
 
-`tar <https://man.linuxde.net/tar>`__ is a command standing for tape archive, used to create archive and extract the archive files. We can use Linux tar command to create compressed or uncompressed archive files and also maintain and modify them. Often used commands include ``-x`` (extract the archive), ``-c`` (create the archive), ``-v`` (displays verbose information), ``-f`` (creates archive with given filename), ``-z`` (zip, tells tar command that create tar file using gzip), ``-j`` (filter archive tar file using tbzip).
+`tar <https://man.linuxde.net/tar>`__ is a command standing for tape archive, used to create compressed or uncompressed archive files and also maintain and modify them. Often used commands include ``-x`` (extract the archive), ``-c`` (create the archive), ``-v`` (displays verbose information), ``-f`` (creates archive with given filename), ``-z`` (zip, tells tar command that create tar file using gzip), ``-j`` (filter archive tar file using tbzip).
 
 .. code-block:: console
 
@@ -289,7 +292,7 @@ tar
 
 gzip
 ++++
-`gzip <https://man.linuxde.net/gzip>`__ is a command for compressing files. Often used commands include ``-k``(compression but does not deletes the original file); ``-r`` (compress every file in a folder and its subfolders); ``-d`` (decompress a file using the “gzip” command); ``-v`` (displays the name and percentage reduction for each file compressed or decompressed).
+`gzip <https://man.linuxde.net/gzip>`__ is a command for compressing files. Often used commands include ``-k`` (compression while keep the original file); ``-r`` (compress every file in a folder and its subfolders); ``-d`` (decompress a file using the “gzip” command); ``-v`` (display the name and percentage reduction for each file compressed or decompressed).
 
 .. code-block:: console
 
@@ -352,7 +355,7 @@ touch
 head
 ++++
 
-`head <https://man.linuxde.net/head>`__ is the complementary of Tail command, as the name implies, it prints the top N number of data of the given input. By default, it prints the first 10 lines of the specified files. Often used option is ``-n num`` (Prints the first ‘num’ lines instead of first 10 lines. num is mandatory to be specified in command otherwise it displays an error).
+`head <https://man.linuxde.net/head>`__ is the complementary of Tail command, it prints the top N number of data of the given input. By default, it prints the first 10 lines of the specified files. Often used option is ``-n num`` (Prints the first ‘num’ lines instead of first 10 lines. num is mandatory to be specified in command otherwise it displays an error).
 
 .. code-block:: console
 
@@ -365,7 +368,7 @@ head
 tail
 ++++
 
-`tail <https://man.linuxde.net/tail>`__ is the complementary of Head command, as the name implies, it prints the last N number of data of the given input. By default it prints the last 10 lines of the specified files. Often used option is ``-n num`` (Prints the last ‘num’ lines instead of last 10 lines. num is mandatory to be specified in command otherwise it displays an error).
+`tail <https://man.linuxde.net/tail>`__ is the complementary of Head command, it prints the last N number of data of the given input. By default it prints the last 10 lines of the specified files. Often used option is ``-n num`` (Prints the last ‘num’ lines instead of last 10 lines. num is mandatory to be specified in command otherwise it displays an error).
 
 .. code-block:: console
 
@@ -388,12 +391,12 @@ which
 
 locate
 ++++++
-`locate <https://man.linuxde.net/locate>`__ is the command used to find the files by name. There is two most widely used file searching utilities accessible to users are called find and locate. The locate utility works better and faster than find command counterpart.
+`locate <https://man.linuxde.net/locate>`__ is the command used to find the files by name. There're two most widely used file searching utilities accessible to users are called find and locate. The locate utility works better and faster than find command counterpart.
 
 
 sed
 +++
-`sed <https://man.linuxde.net/sed>`__ is the command standing for stream editor and it can perform lot’s of function on file like, searching, find and replace, insertion or deletion.
+`sed <https://man.linuxde.net/sed>`__ is the command standing for stream editor and it can perform lots of functions on file, e.g., searching, find and replace, insertion or deletion.
 
 .. code-block:: console
 

@@ -14,6 +14,9 @@ Bash
 
 Python
 ------
+Task 0
+++++++
+We will do Task 0 at Tutorial, download the 
 
 Task 1
 ++++++

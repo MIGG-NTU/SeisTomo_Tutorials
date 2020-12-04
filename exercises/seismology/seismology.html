@@ -111,7 +111,15 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Seismology</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="taup.html">TauP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gmt.html">GMT</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Seismology</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Seismology</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#goals">Goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-0-preparation">Task 0: preparation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-1-plot-a-topography-map-for-the-glg-401-field-trip">Task 1: plot a topography map for the GLG 401 field trip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-2-plot-a-topography-map-of-michigan">Task 2: plot a topography map of Michigan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-3-plot-earthquake-epicenters-on-a-map-of-michigan">Task 3: plot earthquake epicenters on a map of Michigan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-4-plot-earthquake-epicenters-and-focal-mechanisms-on-a-map-of-california">Task 4: plot earthquake epicenters and focal mechanisms on a map of California</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../data-fetch/index.html">Data Fetching</a></li>
@@ -193,7 +201,95 @@
             
   <div class="section" id="seismology">
 <h1>Seismology<a class="headerlink" href="#seismology" title="Permalink to this headline">¶</a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+<p><strong>We may need to revised the following tasks for our own purposes for seismic tomography</strong></p>
+<div class="section" id="goals">
+<h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Plot topography maps using GMT6</p></li>
+<li><p>Plot earthquakes on a map</p></li>
+<li><p>Plot focal mechanisms of earthquakes on a map</p></li>
+</ul>
+</div>
+<div class="section" id="task-0-preparation">
+<h2>Task 0: preparation<a class="headerlink" href="#task-0-preparation" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Download the necessary materials: <code class="docutils literal notranslate"><span class="pre">beachball.zip</span></code></p></li>
+<li><p>Download and install GMT on your own computer</p></li>
+</ol>
+</div>
+<div class="section" id="task-1-plot-a-topography-map-for-the-glg-401-field-trip">
+<h2>Task 1: plot a topography map for the GLG 401 field trip<a class="headerlink" href="#task-1-plot-a-topography-map-for-the-glg-401-field-trip" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Read file <code class="docutils literal notranslate"><span class="pre">plotmap401.gmt5</span></code> using a text editor</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">./plotmap401.gmt5</span></code>, check the output file <code class="docutils literal notranslate"><span class="pre">mapGLG401.pdf</span></code></p></li>
+<li><p>Can you find Houghton, Munising, and Picture Rocks on the map?</p></li>
+</ol>
+</div>
+<div class="section" id="task-2-plot-a-topography-map-of-michigan">
+<h2>Task 2: plot a topography map of Michigan<a class="headerlink" href="#task-2-plot-a-topography-map-of-michigan" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Read file <code class="docutils literal notranslate"><span class="pre">plotmapMI.gmt5</span></code> using a text editor</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">./plotmapMI.gmt5</span></code>, check the output file <code class="docutils literal notranslate"><span class="pre">mapMI.pdf</span></code></p></li>
+<li><p>Change variables <code class="docutils literal notranslate"><span class="pre">outf</span></code>, <code class="docutils literal notranslate"><span class="pre">area</span></code>, <code class="docutils literal notranslate"><span class="pre">proj</span></code> in file <code class="docutils literal notranslate"><span class="pre">plotmapMI.gmt5</span></code> for another region. (Note the projection parameters <code class="docutils literal notranslate"><span class="pre">proj</span></code> should be consistent with the region parameters <code class="docutils literal notranslate"><span class="pre">area</span></code>. Recommended values are (longtidue of the map center)/(latitude of the map center)/(minimum latitude)/(maximum latitude)/(map width). A map width of <code class="docutils literal notranslate"><span class="pre">5c</span></code> means 5 centimeter, and <code class="docutils literal notranslate"><span class="pre">5i</span></code> means 5 inches.)</p></li>
+</ol>
+</div>
+<div class="section" id="task-3-plot-earthquake-epicenters-on-a-map-of-michigan">
+<h2>Task 3: plot earthquake epicenters on a map of Michigan<a class="headerlink" href="#task-3-plot-earthquake-epicenters-on-a-map-of-michigan" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Search earthquake catalog from the ISC website: <a class="reference external" href="http://www.isc.ac.uk/iscbulletin/search/catalogue/">http://www.isc.ac.uk/iscbulletin/search/catalogue/</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Database: Reviewed ISC Bulletin</p></li>
+<li><p>Output format: CSV formatted</p></li>
+<li><p>Rectangular search: bottom latitude: 40, top latitude: 50, left longitude: -90, right longitude: -80 (you can also try other regions)</p></li>
+<li><p>Time period: start date: 2010/01/01 00:00:00, end data: 2016/01/01 00:00:00</p></li>
+<li><p>No change for <code class="docutils literal notranslate"><span class="pre">Additional</span> <span class="pre">search</span> <span class="pre">parameters</span></code></p></li>
+<li><p>Output links in the outputs: No (check the box out)</p></li>
+<li><p>Click the bottom button <code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">event</span> <span class="pre">catalogue</span></code>. (It may take a while to create a list)</p></li>
+<li><p>You will get a catalog from a new window. Copy and paste the catalog to a local file called <code class="docutils literal notranslate"><span class="pre">ISC_MI.lst</span></code> (Note please skip the header lines, start from the first earthquake, and end at the last earthquake.)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">./plotmapEQMI.gmt5</span></code>, check the output file <code class="docutils literal notranslate"><span class="pre">mapEQMI.pdf</span></code>.</p></li>
+<li><p>Search for earthquakes in another region, download the catalog, and plot a map. You also need to change variables <code class="docutils literal notranslate"><span class="pre">outf</span></code>, <code class="docutils literal notranslate"><span class="pre">area</span></code>, <code class="docutils literal notranslate"><span class="pre">proj</span></code> in file <code class="docutils literal notranslate"><span class="pre">plotmapEQMI.gmt5</span></code> for the new region.</p></li>
+<li><p>Compare files <code class="docutils literal notranslate"><span class="pre">plotmapMI.gmt5</span></code> and <code class="docutils literal notranslate"><span class="pre">plotmapEQMI.gmt5</span></code>. What is the difference?</p></li>
+</ol>
+</div>
+<div class="section" id="task-4-plot-earthquake-epicenters-and-focal-mechanisms-on-a-map-of-california">
+<h2>Task 4: plot earthquake epicenters and focal mechanisms on a map of California<a class="headerlink" href="#task-4-plot-earthquake-epicenters-and-focal-mechanisms-on-a-map-of-california" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Search earthquake catalog from the ISC website: <a class="reference external" href="http://www.isc.ac.uk/iscbulletin/search/catalogue/">http://www.isc.ac.uk/iscbulletin/search/catalogue/</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Database: Reviewed ISC Bulletin</p></li>
+<li><p>Output format: CSV formatted</p></li>
+<li><p>Rectangular search: bottom latitude: 32, top latitude: 43, left longitude: -125, right longitude: -114</p></li>
+<li><p>Time period: start date: 2010/01/01 00:00:00, end data: 2011/01/01 00:00:00  (one year is more than enough!)</p></li>
+<li><p>No change for <code class="docutils literal notranslate"><span class="pre">Additional</span> <span class="pre">search</span> <span class="pre">parameters</span></code></p></li>
+<li><p>Output links in the outputs: No (check the box out)</p></li>
+<li><p>Click the bottom button <code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">event</span> <span class="pre">catalogue</span></code>. (It may take a while to create a list)</p></li>
+<li><p>You will get a catalog in a new window. Copy and paste the catalog to a local file called <code class="docutils literal notranslate"><span class="pre">ISC_CA.lst</span></code> (Please  skip the header lines, start from the first earthquake, and end at the last earthquake.)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Search the global CMT solutions from <a class="reference external" href="https://www.globalcmt.org/CMTsearch.html">https://www.globalcmt.org/CMTsearch.html</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Date constraints: starting data: 2010/01/01, end data: 2011/01/01</p></li>
+<li><p>Location constraints: latitude from 32 to 43, longitude from -125 to -114</p></li>
+<li><p>Output type: <code class="docutils literal notranslate"><span class="pre">GMT</span> <span class="pre">psmeca</span> <span class="pre">input</span></code></p></li>
+<li><p>Keep the other default parameters</p></li>
+<li><p>Click the bottom button <code class="docutils literal notranslate"><span class="pre">Done</span></code>.</p></li>
+<li><p>You will get a list in the same window. Copy and paste the list to a local file called <code class="docutils literal notranslate"><span class="pre">CMT_CA.lst</span></code> (Please skip the header lines, start from the first earthquake, and end at the last earthquake. Note here are only 6 parameters to represent the moment tensro: mrr mtt mpp mrt mrp mtp)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">./plotmapCMTCA.gmt5</span></code>, check the output file <code class="docutils literal notranslate"><span class="pre">mapCMTCA.pdf</span></code>.</p></li>
+<li><p>In <code class="docutils literal notranslate"><span class="pre">plotmapCMTCA.gmt5</span></code>, in the line of <code class="docutils literal notranslate"><span class="pre">psmeca</span></code>, try to replace <code class="docutils literal notranslate"><span class="pre">-Sm0.5</span></code> with <code class="docutils literal notranslate"><span class="pre">-Sd0.5</span></code>, check the new output file. What is the difference?</p></li>
+<li><p>Search for earthquakes during another time period, download the catalog, and plot a map.</p></li>
+<li><p>Compare files <code class="docutils literal notranslate"><span class="pre">plotmapEQMI.gmt5</span></code> and <code class="docutils literal notranslate"><span class="pre">plotmapCMTCA.gmt5</span></code>. What is the difference?</p></li>
+</ol>
+</div>
 </div>
 
 

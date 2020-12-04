@@ -138,9 +138,9 @@ In order to follow the toturials, you have to install the following terms in you
 
 .. code-block:: console
 
-   echo 'export TAUPHOME=/opt/TauP-2.4.5' >> ~/.bashrc
-   echo 'export PATH=${TAUPHOME}/bin:${PATH}' >> ~/.bashrc
-   source ~/.bashrc
+   $ echo 'export TAUPHOME=/opt/TauP-2.4.5' >> ~/.bashrc
+   $ echo 'export PATH=${TAUPHOME}/bin:${PATH}' >> ~/.bashrc
+   $ source ~/.bashrc
 
 - Run ``taup`` to test if TauP is installed
 
@@ -148,6 +148,13 @@ In order to follow the toturials, you have to install the following terms in you
 7. Install GMT: https://docs.gmt-china.org/latest/install/
 
     - I'd like to recommend installation via ``conda``
+    
+8. Install gcc
+
+- For Ubuntu, run the following command:
+.. code-block:: console
+
+   $ sudo apt install gcc
 
 
 .. toctree::

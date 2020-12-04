@@ -16,16 +16,9 @@ Python
 ------
 Task 0
 ++++++
-We will do Task 0 at Tutorial, download the 
+We will do Task 0 at Tutorial, please download the `File <https://raw.githubusercontent.com/MIGG-NTU/SeisTomo_Tutorials/HouseJaay-patch-3/source/exercises/programming/exercise_programming.tar>`__.
 
 Task 1
 ++++++
 
 Use Python to do the above bash tasks again.
-
-
-Task 2
-++++++
-
-``TODO``
-

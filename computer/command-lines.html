@@ -99,6 +99,9 @@
 <li class="toctree-l4"><a class="reference internal" href="#pwd">pwd</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#cd">cd</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ls">ls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cp">cp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mv">mv</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rm">rm</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#data-processing">Data Processing</a><ul>
@@ -126,6 +129,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#which">which</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#locate">locate</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#sed">sed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#diff">diff</a></li>
 </ul>
 </li>
 </ul>
@@ -245,7 +249,8 @@
 <div class="section" id="pwd">
 <h3>pwd<a class="headerlink" href="#pwd" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://man.linuxde.net/pwd">pwd</a> is a command to find out the path of the current working directory (folder) you’re in. The command will return an absolute (full) path, which is basically a path of all the directories that starts with a forward slash (/).</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span><span class="nb">pwd</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> show the absolute <span class="o">(</span>full<span class="o">)</span> path where you are
+<span class="gp">$</span><span class="nb">pwd</span>
 <span class="go">/Users/litianjue/Documents/EOS/help/Tutorial/Example</span>
 </pre></div>
 </div>
@@ -262,8 +267,52 @@
 <div class="section" id="ls">
 <h3>ls<a class="headerlink" href="#ls" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://man.linuxde.net/ls">ls</a> is a command to view the contents of a directory. By default, this command will display the contents of your current working directory.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span>ls
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> show the contents under the current folder
+<span class="gp">$</span>ls
 <span class="go">events.csv</span>
+</pre></div>
+</div>
+<p>mkdir
++++
+<a class="reference external" href="https://man.linuxde.net/mkdir">mkdir</a> is a command allowing the user to create directories (also referred to as folders in some operating systems).</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span>mkdir temp
+<span class="gp">$</span>ls
+<span class="go">events.csv temp</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="cp">
+<h3>cp<a class="headerlink" href="#cp" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://man.linuxde.net/cp">cp</a> is a command standing for copy. It is used to copy files (as default) or group of files or directory (with <code class="docutils literal notranslate"><span class="pre">-R</span></code>). <code class="docutils literal notranslate"><span class="pre">cp</span></code> command require at least two filenames in its arguments.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span>mkdir temp2
+<span class="gp">$</span>cp events.csv temp/events   <span class="c1"># copy file events.csv into folder temp renamed as events</span>
+<span class="gp">$</span>cp -R temp2 temp/  <span class="c1"># copy folder temp2 into folder temp</span>
+<span class="gp">$</span><span class="nb">cd</span> temp
+<span class="gp">$</span>ls
+<span class="go">events temp2</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="mv">
+<h3>mv<a class="headerlink" href="#mv" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://man.linuxde.net/mv">mv</a> is a command standing for move. mv is used to move one or more files or directories from one place to another. It has two distinct functions:(i) It rename a file or folder; (ii) It moves group of files to different directory.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span>mkdir temp2
+<span class="gp">$</span>mv events.csv temp/events   <span class="c1"># move file events.csv into folder temp renamed as events</span>
+<span class="gp">$</span>mv temp2 temp/  <span class="c1"># move folder temp2 into folder temp</span>
+<span class="gp">$</span><span class="nb">cd</span> temp
+<span class="gp">$</span>ls
+<span class="go">events temp2</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rm">
+<h3>rm<a class="headerlink" href="#rm" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://man.linuxde.net/rm">rm</a> is a command standing for remove. It is used to remove objects such as files (default) and directories (with <code class="docutils literal notranslate"><span class="pre">-R</span></code>).</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span><span class="nb">cd</span> temp
+<span class="gp">$</span>ls
+<span class="go">events temp2</span>
+<span class="gp">$</span>rm events
+<span class="gp">$</span>rm -r temp2
 </pre></div>
 </div>
 </div>
@@ -397,17 +446,61 @@
 <h2>File Compressing<a class="headerlink" href="#file-compressing" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="tar">
 <h3>tar<a class="headerlink" href="#tar" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://man.linuxde.net/tar">tar</a> is a command standing for tape archive, used to create archive and extract the archive files. We can use Linux tar command to create compressed or uncompressed archive files and also maintain and modify them. Often used commands include <code class="docutils literal notranslate"><span class="pre">-x</span></code> (extract the archive), <code class="docutils literal notranslate"><span class="pre">-v</span></code> (displays verbose information), <code class="docutils literal notranslate"><span class="pre">-f</span></code> (creates archive with given filename), <code class="docutils literal notranslate"><span class="pre">-z</span></code> (zip, tells tar command that create tar file using gzip), <code class="docutils literal notranslate"><span class="pre">-j</span></code> (filter archive tar file using tbzip).</p>
-<p><code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">-zxvf</span></code>
-<code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">-jxvf</span></code></p>
+<p><a class="reference external" href="https://man.linuxde.net/tar">tar</a> is a command standing for tape archive, used to create archive and extract the archive files. We can use Linux tar command to create compressed or uncompressed archive files and also maintain and modify them. Often used commands include <code class="docutils literal notranslate"><span class="pre">-x</span></code> (extract the archive), <code class="docutils literal notranslate"><span class="pre">-c</span></code> (create the archive), <code class="docutils literal notranslate"><span class="pre">-v</span></code> (displays verbose information), <code class="docutils literal notranslate"><span class="pre">-f</span></code> (creates archive with given filename), <code class="docutils literal notranslate"><span class="pre">-z</span></code> (zip, tells tar command that create tar file using gzip), <code class="docutils literal notranslate"><span class="pre">-j</span></code> (filter archive tar file using tbzip).</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span>decompress a file
+<span class="gp">$</span><span class="nb">cd</span> temp
+<span class="gp">$</span>ls
+<span class="go">TauP-2.4.5.tar</span>
+<span class="gp">$</span>tar -zxvf TauP-2.4.5.tar
+<span class="gp">#</span>or use the following <span class="nb">command</span> line
+<span class="gp">$</span>tar -jxvf TauP-2.4.5.tar
+<span class="gp">$</span>ls
+<span class="go">TauP-2.4.5     TauP-2.4.5.tar</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span>compress a file
+<span class="gp">$</span><span class="nb">cd</span> temp
+<span class="gp">$</span>ls
+<span class="go">TauP-2.4.5</span>
+<span class="gp">$</span>tar -zcvf TauP-2.4.5
+<span class="gp">#</span>or use the following <span class="nb">command</span> line
+<span class="gp">$</span>tar -jcvf TauP-2.4.5.tar
+<span class="gp">$</span>ls
+<span class="go">TauP-2.4.5     TauP-2.4.5.tar</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="gzip">
 <h3>gzip<a class="headerlink" href="#gzip" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+<p><a class="reference external" href="https://man.linuxde.net/gzip">gzip</a> is a command for compressing files. Often used commands include <code class="docutils literal notranslate"><span class="pre">-k``(compression</span> <span class="pre">but</span> <span class="pre">does</span> <span class="pre">not</span> <span class="pre">deletes</span> <span class="pre">the</span> <span class="pre">original</span> <span class="pre">file);</span> <span class="pre">``-r</span></code> (compress every file in a folder and its subfolders); <code class="docutils literal notranslate"><span class="pre">-d</span></code> (decompress a file using the “gzip” command); <code class="docutils literal notranslate"><span class="pre">-v</span></code> (displays the name and percentage reduction for each file compressed or decompressed).</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span><span class="nb">cd</span> temp
+<span class="gp">$</span>ls
+<span class="go">events.csv</span>
+<span class="gp">#</span>compress the file
+<span class="gp">$</span>gzip events.csv
+<span class="go">events.csv:    19.0% -- replaced with events.csv.gz</span>
+<span class="gp">$</span>ls
+<span class="go">events.csv.gz</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span>or compress the file <span class="k">while</span> keeping the original one
+<span class="gp">$</span>gzip -kv events.csv
+<span class="go">events.csv:    19.0% -- replaced with events.csv.gz</span>
+<span class="gp">$</span>ls
+<span class="go">events.csv    events.csv.gz</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span>decompress the file
+<span class="gp">$</span>gzip -dv events.csv.gz
+<span class="go">events.csv.gz:         19.0% -- replaced with events.csv</span>
+<span class="gp">$</span>ls
+<span class="go">events.csv</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="bzip2">
 <h3>bzip2<a class="headerlink" href="#bzip2" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+<p><a class="reference external" href="https://man.linuxde.net/bzip2">bzip2</a> is a command used to compress and decompress the files i.e. it helps in binding the files into a single file which takes less storage space as the original file use to take. It has a slower decompression time and higher memory use.</p>
 </div>
 </div>
 <div class="section" id="non-classified-commands">
@@ -438,15 +531,41 @@
 </div>
 <div class="section" id="which">
 <h3>which<a class="headerlink" href="#which" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+<p><a class="reference external" href="https://man.linuxde.net/which">which</a> is the command used to locate the executable file associated with the given command by searching it in the path environment variable.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> show the location of installed sac
+<span class="gp">$</span> which sac
+<span class="go">/usr/local/MyCode/sac/bin/sac</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="locate">
 <h3>locate<a class="headerlink" href="#locate" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+<p><a class="reference external" href="https://man.linuxde.net/locate">locate</a> is the command used to find the files by name. There is two most widely used file searching utilities accessible to users are called find and locate. The locate utility works better and faster than find command counterpart.</p>
 </div>
 <div class="section" id="sed">
 <h3>sed<a class="headerlink" href="#sed" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">TODO</span></code></p>
+<p><a class="reference external" href="https://man.linuxde.net/sed">sed</a> is the command standing for stream editor and it can perform lot’s of function on file like, searching, find and replace, insertion or deletion.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> delete the line containing <span class="m">120</span>.933
+<span class="gp">$</span>cat events.csv
+<span class="go">2019-09-01T10:30:32.320Z  32.398   90.841  39.32  6.5  MW</span>
+<span class="go">2013-03-11T12:21:01.149Z  19.691  120.933  23.83  4.5  MW</span>
+<span class="go">2010-01-09T01:01:10.921Z  51.582  110.850   9.33  3.3  MB</span>
+<span class="gp">$</span> sed <span class="s1">&#39;/120.933/d&#39;</span> events.csv
+<span class="go">2019-09-01T10:30:32.320Z  32.398   90.841  39.32  6.5  MW</span>
+<span class="go">2010-01-09T01:01:10.921Z  51.582  110.850   9.33  3.3  MB</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> replace MW or MB with M in the whole file
+<span class="gp">$</span>sed <span class="s1">&#39;s/M[WB]/M/g&#39;</span> events.csv
+<span class="go">2019-09-01T10:30:32.320Z  32.398   90.841  39.32  6.5  M</span>
+<span class="go">2013-03-11T12:21:01.149Z  19.691  120.933  23.83  4.5  M</span>
+<span class="go">2010-01-09T01:01:10.921Z  51.582  110.850   9.33  3.3  M</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="diff">
+<h3>diff<a class="headerlink" href="#diff" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://man.linuxde.net/diff">diff</a> is the command standing for difference. It is used to display the differences in the files by comparing the files line by line.</p>
 </div>
 </div>
 </div>

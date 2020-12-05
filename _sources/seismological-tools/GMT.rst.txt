@@ -9,6 +9,7 @@ GMT (Generic Mapping Tools) is the most commonly used software in geophysics com
     - Official: https://www.generic-mapping-tools.org/download/
     - GMT-China: https://docs.gmt-china.org/latest/install/
 
+The GMT-China community has developed a very good documentation which you can follow to learn GMT.
 
 Resources
 ---------

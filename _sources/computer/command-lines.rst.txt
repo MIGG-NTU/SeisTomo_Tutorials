@@ -278,18 +278,18 @@ tar
     # or use the following command line
     $ tar -jxvf TauP-2.4.5.tar
     $ ls
-    TauP-2.4.5     TauP-2.4.5.tar
+    TauP-2.4.5
 
 .. code-block:: console
 
     # compress a file
     $ ls
     TauP-2.4.5
-    $ tar -zcvf TauP-2.4.5
+    $ tar -zcvf TauP-2.4.5.tar TauP-2.4.5
     # or use the following command line
-    $ tar -jcvf TauP-2.4.5.tar
+    $ tar -jcvf TauP-2.4.5.tar TauP-2.4.5
     $ ls
-    TauP-2.4.5     TauP-2.4.5.tar
+    TauP-2.4.5.tar
 
 
 gzip

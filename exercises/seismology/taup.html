@@ -37,7 +37,7 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="GMT" href="gmt.html" />
+    <link rel="next" title="Seismology" href="seismology.html" />
     <link rel="prev" title="Seismology" href="index.html" /> 
 </head>
 
@@ -110,7 +110,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../programming/index.html">Programming</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Seismology</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">TauP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gmt.html">GMT</a></li>
 <li class="toctree-l2"><a class="reference internal" href="seismology.html">Seismology</a></li>
 </ul>
 </li>
@@ -193,9 +192,22 @@
             
   <div class="section" id="taup">
 <h1>TauP<a class="headerlink" href="#taup" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p>travel time</p></li>
-<li><p>ray path</p></li>
+<p>Here is a exercise to help you learn how to calculate the travle time of different seismic phases using TauP (<a class="reference external" href="https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/exercises/seismology/taup_time.sh">solution</a>).</p>
+<ul>
+<li><p>command: <code class="docutils literal notranslate"><span class="pre">taup_time</span></code></p></li>
+<li><p>1D Earthquake velocity model: <code class="docutils literal notranslate"><span class="pre">ak135</span></code></p></li>
+<li><p>earthquake depth: <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">km</span></code></p></li>
+<li><p>earthuake-station distance: <code class="docutils literal notranslate"><span class="pre">50</span> <span class="pre">km</span></code></p></li>
+<li><p>seismic phases:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ttp</span></code>: a list of standard P phases</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ttp+</span></code>: a list of standard P phases including depth phases</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tts</span></code>: a list of standard S phases</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tts+</span></code>: a list of standard S phases including depth phases</p></li>
+</ul>
+</div></blockquote>
+</li>
 </ul>
 </div>
 
@@ -207,7 +219,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="gmt.html" class="btn btn-neutral float-right" title="GMT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="seismology.html" class="btn btn-neutral float-right" title="Seismology" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral float-left" title="Seismology" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

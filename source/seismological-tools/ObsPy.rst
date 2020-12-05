@@ -7,19 +7,23 @@ ObsPy is an open-source project dedicated to provide a Python framework for proc
 - **Install**: https://github.com/obspy/obspy/wiki#installation
 
 
-**Checklist of what you should know about ObsPy:**
+Checklist
+---------
 
 - Core classes: https://docs.obspy.org/packages/obspy.core.html#module-obspy.core
-- Waveform Import/Export Plug-ins: https://docs.obspy.org/packages/index.html
-- FDSN Web Services: https://docs.obspy.org/tutorial/code_snippets/retrieving_data_from_datacenters.html
 - obspy.taup: https://docs.obspy.org/packages/obspy.taup.html#phase-naming-in-obspy-taup
+- FDSN Web Services: https://docs.obspy.org/tutorial/code_snippets/retrieving_data_from_datacenters.html#the-fdsn-web-services
+- Waveform Import/Export Plug-ins: https://docs.obspy.org/packages/index.html
 
 
 Resources
 ---------
 
-- Documentation: https://docs.obspy.org/contents.html
-- ObsPy official tutorial: https://docs.obspy.org/tutorial/
+- ObsPy Documentation: https://docs.obspy.org/contents.html
+
+    - ObsPy tutorial: https://docs.obspy.org/tutorial/
+    - ObsPy Library Reference: https://docs.obspy.org/packages/
+
 - Remote Online Sessions for Emerging Seismologists: https://www.iris.edu/hq/inclass/lesson/704
-- Live Jupyter Notebooks for Seismology: http://www.seismo-live.org/
+- Jupyter Notebooks in Seismo-Live: http://www.seismo-live.org/
 

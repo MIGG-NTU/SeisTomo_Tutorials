@@ -6,7 +6,9 @@ SOD is a Java program to automatically select, download, and pre-process seismic
 - **Homepage**: http://www.seis.sc.edu/sod/
 - **Install**: https://blog.seisman.info/sod-notes/#%E5%AE%89%E8%A3%85-sod
 
-**Checklist of what you should know about ObsPy:**
+
+Checklist
+---------
 
 - EventArm: How to require event catalog
 - NetworkArm: How to require seismic stations
@@ -19,7 +21,7 @@ Resources
 - Documentation: http://www.seis.sc.edu/sod/documentation/index.html
 - Getting started: http://www.seis.sc.edu/sod/gettingstarted.html
 - Ingredient Listing: http://www.seis.sc.edu/sod/ingredients/index.html
-- A Chinese introduction: https://blog.seisman.info/sod-notes/
+- Chinese introduction: https://blog.seisman.info/sod-notes/
 - Some ready-to-use recipes:
 
     - https://github.com/seisman/SODrecipes

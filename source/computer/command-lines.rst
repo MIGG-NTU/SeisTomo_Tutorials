@@ -24,7 +24,7 @@ pwd
 .. code-block:: console
 
     # show the absolute (full) path where you are
-    $pwd
+    $ pwd
     /Users/litianjue/Documents/EOS/help/Tutorial/Example
 
 
@@ -34,9 +34,9 @@ cd
 
 .. code-block:: console
 
-    $cd /Users/litianjue/Documents/EOS/help/Tutorial/Example  #Your destination folder.
-    $pwd
-    /Users/litianjue/Documents/EOS/help/Tutorial/Example
+    $ cd /Users/litianjue/Documents/EOS/help/Tutorial/Example  # Your destination folder.
+    $ pwd
+    /Users/litianjue/Documents/EOS/Help/Tutorial/Example
 
 
 ls
@@ -46,8 +46,8 @@ ls
 .. code-block:: console
 
     # show the contents under the current folder
-    $ls
-    events.csv
+    $ ls
+    TauP-2.4.5.tar  Time.temp1   Time.temp2   events-selected.dat
 
 
 mkdir
@@ -56,9 +56,9 @@ mkdir
 
 .. code-block:: console
 
-    $mkdir temp
-    $ls
-    events.csv temp
+    $ mkdir temp
+    $ ls
+    TauP-2.4.5.tar  Time.temp1   Time.temp2   events-selected.dat temp
 
 
 cp
@@ -67,11 +67,11 @@ cp
 
 .. code-block:: console
 
-    $mkdir temp2
-    $cp events.csv temp/events   # copy file events.csv into folder temp renamed as events
-    $cp -R temp2 temp/  # copy folder temp2 into folder temp
-    $cd temp
-    $ls
+    $ mkdir temp2
+    $ cp events-selected.dat temp/events   # copy file events-selected.dat into folder temp renamed as events
+    $ cp -R temp2 temp/  # copy folder temp2 into folder temp
+    $ cd temp
+    $ ls
     events temp2
 
 
@@ -81,12 +81,12 @@ mv
 
 .. code-block:: console
 
-    $mkdir temp2
-    $mv events.csv temp/events   # move file events.csv into folder temp renamed as events
-    $mv temp2 temp/  # move folder temp2 into folder temp
-    $cd temp
-    $ls
-    events temp2
+    $ mkdir temp3
+    $ mv events-selected.dat temp/events   # move file events-selected.dat into folder temp renamed as events
+    $ mv temp3 temp/  # move folder temp3 into folder temp
+    $ cd temp
+    $ ls
+    events  events-selected.dat  temp2   temp3
 
 
 rm
@@ -95,11 +95,13 @@ rm
 
 .. code-block:: console
 
-    $cd temp
-    $ls
-    events temp2
-    $rm events
-    $rm -r temp2
+    $ cd temp
+    $ ls
+    events  events-selected.dat  temp2   temp3
+    $ rm events
+    $ rm -r temp2
+    $ ls
+    events-selected.dat temp3
 
 
 
@@ -114,11 +116,12 @@ cat
 
 .. code-block:: console
 
-    # show the content of a catalog file, e.g., events.csv
-    $ cat events.csv
-    2019-09-01T10:30:32.320Z  32.398   90.841  39.32  6.5  MW
-    2013-03-11T12:21:01.149Z  19.691  120.933  23.83  4.5  MW
-    2010-01-09T01:01:10.921Z  51.582  110.850   9.33  3.3  MB
+    # show the content of a catalog file, e.g., events-selected.dat
+    $ cat events-selected.dat
+    year month day hour minute second event ID latitude (decimal degrees), longitude (decimal degrees), depth (km) event magnitude
+    2019 07 06 03 47 52.980  38457687  35.90800 -117.74833   7.290  5.50  57  2.700   0.100   0.300   0.090  le   3d
+    2019 07 06 03 19 52.260  38457511  35.76883 -117.59717   1.860  7.10  48  4.800   0.100   0.400   0.090  le   3d
+    2019 07 04 17 33 48.530  38443183  35.70750 -117.50150  11.780  6.40  58  7.400   0.100   0.300   0.080  le   3d
 
 
 paste
@@ -129,19 +132,19 @@ paste
 .. code-block:: console
 
     # paste two files together
-    $ cat origin.temp1
-    20190901
-    20130311
-    20100109
-    $ cat origin.temp2
-    103032
-    122101
-    010110
-    $ paste origin.temp1 origin.temp2 > origin   #Here, ``>`` is Standard Output, it redirects the output content to a file.
-    $ cat origin
-    20190901	103032
-    20130311	122101
-    20100109	010110
+    $ cat Time.temp1
+    20190706
+    20190706
+    20190704
+    $ cat Time.temp2
+    0347
+    0319
+    1733
+    $ paste Time.temp1 Time.temp2 > Time   # Here, ``>`` is Standard Output, it redirects the output content to a file.
+    $ cat Time
+    20190706 0347
+    20190706 0319
+    20190704 1733
 
 
 awk
@@ -152,29 +155,29 @@ awk
 .. code-block:: console
 
     # extract the depth (fourth) and magnitude (fifth) columns
-    $ awk '{print $4,$5}' events.csv  # Here, the division character is the default setting ``empty space``
-    39.32 6.5
-    23.83 4.5
-    9.33 3.3
+    $ awk 'FNR>1{print $10,$11}' events-selected.dat  # Here, the division character is the default setting ``empty space``; ``FNR > 1`` means skipping the first line.
+    7.290 5.50
+    1.860 7.10
+    11.780 6.40
 
 .. code-block:: console
 
-    # extract the origin time (first) column and reformat it into yyyymmdd hhmmsss
-    $ awk '{print $1}' events.csv | awk -F'T' '{print $1}' | awk -F'-' '{print $1$2$3}' > origin.temp1   #Here, ``|`` is pipelines, using it, the standard output of one command is fed into the standard input of another.
+    # extract the origin time (first) column and reformat it into yyyymmdd hhmmss.sss
+    $ awk 'FNR>1{print $1$2$3}' events-selected.dat > origin.temp1   # Here, ``|`` is pipelines, using it, the standard output of one command is fed into the standard input of another.
     $ cat origin.temp1
-    20190901
-    20130311
-    20100109
-    $ awk '{print $1}' events.csv | awk -F'T' '{print $2}' | awk -F':' '{print $1$2$3}' | awk -F'Z' '{print $1}' | awk -F'.' '{print $1}'  > origin.temp2
+    20190706
+    20190706
+    20190704
+    $ awk 'FNR>1{print $4$5$6}' events-selected.dat  > origin.temp2
     $ cat origin.temp2
-    103032
-    122101
-    010110
+    034752.980
+    031952.260
+    173348.530
     $ paste origin.temp1 origin.temp2 > origin
     $ cat origin
-    20190901	103032
-    20130311	122101
-    20100109	010110
+    20190706	034752.980
+    20190706	031952.260
+    20190704	173348.530
 
 
 printf
@@ -185,10 +188,10 @@ printf
 .. code-block:: console
 
     # extract the depth (fourth) columns with keeping one decimal place
-    $ awk '{printf"%.1f\n",$4}' events.csv
-    39.3
-    23.8
-    9.3
+    $ awk 'FNR>1{printf"%.1f\n",$10}' events-selected.dat
+    7.3
+    1.9
+    11.8
 
 
 cut
@@ -198,22 +201,22 @@ cut
 
 .. code-block:: console
 
-    # extract the origin time (first) column and reformat it into yyyymmdd hhmmss
-    $ cat events.csv | cut -d" " -f 1 | cut -c 1-4,6-7,9-10 > origin.temp1
+    # extract the origin time (first) column and reformat it into yyyymmdd hhmmss.sss
+    $ awk 'FNR>1{print}' events-selected.dat | cut -c 1-4,6-7,9-10 > origin.temp1
     $ cat origin.temp1
-    20190901
-    20130311
-    20100109
-    $ cat events.csv | cut -d" " -f 1 | cut -c 12-13,15-16,18-19  > origin.temp2
+    20190706
+    20190706
+    20190704
+    $ awk 'FNR>1{print}' events-selected.dat | cut -c 12-13,15-16,18-23 > origin.temp2
     $ cat origin.temp2
-    103032
-    122101
-    010110
+    034752.980
+    031952.260
+    173348.530
     $ paste origin.temp1 origin.temp2 > origin
     $ cat origin
-    20190901	103032
-    20130311	122101
-    20100109	010110
+    20190706	034752.980
+    20190706	031952.260
+    20190704	173348.530
 
 
 grep
@@ -223,10 +226,11 @@ grep
 
 .. code-block:: console
 
-    # extract the lines containing ``Mw`` in catalog file events.csv
-    $ cat events.csv | grep "MW"  # Note the capital case is different from the lower case.
-    2019-09-01T10:30:32.320Z  32.398   90.841  39.32  6.5  MW
-    2013-03-11T12:21:01.149Z  19.691  120.933  23.83  4.5  MW
+    # extract the lines containing ``3d`` in catalog file events-selected.dat
+    $ cat events-selected.dat | grep "3d"  # Note the capital case is different from the lower case.
+    2019 07 06 03 47 52.980  38457687  35.90800 -117.74833   7.290  5.50  57  2.700   0.100   0.300   0.090  le   3d
+    2019 07 06 03 19 52.260  38457511  35.76883 -117.59717   1.860  7.10  48  4.800   0.100   0.400   0.090  le   3d
+    2019 07 04 17 33 48.530  38443183  35.70750 -117.50150  11.780  6.40  58  7.400   0.100   0.300   0.080  le   3d
 
 
 sort
@@ -236,12 +240,12 @@ sort
 
 .. code-block:: console
 
-    # sort the events in decreasing order within the catalog file events.csv according to their magnitudes.
-    $ cat events.csv | sort -k5 -g -r -o events_ordered.csv
-    $ cat events_ordered.csv
-    2019-09-01T10:30:32.320Z  32.398   90.841  39.32  6.5  MW
-    2013-03-11T12:21:01.149Z  19.691  120.933  23.83  4.5  MW
-    2010-01-09T01:01:10.921Z  51.582  110.850   9.33  3.3  MB
+    # sort the events in decreasing order within the catalog file events-selected.dat according to their magnitudes.
+    $ awk 'FNR>1{print}' events-selected.dat | sort -nk11,11 -r -o events-ordered.dat
+    $ cat events-ordered.dat
+    2019 07 06 03 19 52.260  38457511  35.76883 -117.59717   1.860  7.10  48  4.800   0.100   0.400   0.090  le   3d
+    2019 07 04 17 33 48.530  38443183  35.70750 -117.50150  11.780  6.40  58  7.400   0.100   0.300   0.080  le   3d
+    2019 07 06 03 47 52.980  38457687  35.90800 -117.74833   7.290  5.50  57  2.700   0.100   0.300   0.090  le   3d
 
 
 uniq
@@ -267,26 +271,24 @@ tar
 
 .. code-block:: console
 
-    #decompress a file
-    $cd temp
-    $ls
+    # decompress a file
+    $ ls
     TauP-2.4.5.tar
-    $tar -zxvf TauP-2.4.5.tar
-    #or use the following command line
-    $tar -jxvf TauP-2.4.5.tar
-    $ls
+    $ tar -zxvf TauP-2.4.5.tar
+    # or use the following command line
+    $ tar -jxvf TauP-2.4.5.tar
+    $ ls
     TauP-2.4.5     TauP-2.4.5.tar
 
 .. code-block:: console
 
-    #compress a file
-    $cd temp
-    $ls
+    # compress a file
+    $ ls
     TauP-2.4.5
-    $tar -zcvf TauP-2.4.5
-    #or use the following command line
-    $tar -jcvf TauP-2.4.5.tar
-    $ls
+    $ tar -zcvf TauP-2.4.5
+    # or use the following command line
+    $ tar -jcvf TauP-2.4.5.tar
+    $ ls
     TauP-2.4.5     TauP-2.4.5.tar
 
 
@@ -296,42 +298,44 @@ gzip
 
 .. code-block:: console
 
-    $cd temp
-    $ls
-    events.csv
-    #compress the file
-    $gzip events.csv
-    events.csv:	   19.0% -- replaced with events.csv.gz
-    $ls
-    events.csv.gz
+    # compress the file
+    $ ls
+    events-selected.dat
+    $ gzip -v events-selected.dat
+    events-selected.dat:	   57.3% -- replaced with events-selected.dat.gz
+    $ ls
+    events-selected.dat.gz
 
 .. code-block:: console
 
-    #or compress the file while keeping the original one
-    $gzip -kv events.csv
-    events.csv:	   19.0% -- replaced with events.csv.gz
-    $ls
-    events.csv    events.csv.gz
+    # or compress the file while keeping the original one
+    $ gzip -kv events-selected.dat
+    events-selected.dat:	   57.3% -- replaced with events-selected.dat.gz
+    $ ls
+    events-selected.dat	     events-selected.dat.gz
 
 .. code-block:: console
 
-    #decompress the file
-    $gzip -dv events.csv.gz
-    events.csv.gz:	   19.0% -- replaced with events.csv
-    $ls
-    events.csv
+    # decompress the file
+    $ gzip -dv events-selected.dat.gz
+    events-selected.dat.gz:	   57.3% -- replaced with events-selected.dat
+    $ ls
+    events-selected.dat
 
 .. code-block:: console
-    $cd temp
-    $ls
-    events.csv
-    $cd ../
-    #compress each file in folder temp
-    $gzip -rv temp
-    gzip: temp/.DS_Store.gz already has .gz suffix -- unchanged
-    temp/events.csv:	   19.0% -- replaced with temp/events.csv.gz
-    $ls
-    events.csv.gz
+
+    # compress each file in folder temp
+    $ mkdir temp
+    $ cp events-selected.dat ./temp/
+    $ cd ./temp/
+    $ ls
+    events-selected.dat
+    $ cd ../
+    $ gzip -rv temp
+    temp/events-selected.dat:	   57.3% -- replaced with temp/events-selected.dat.gz
+    $ cd ./temp
+    $ ls
+    events-selected.dat.gz
 
 
 
@@ -359,10 +363,10 @@ head
 
 .. code-block:: console
 
-    # show the first two lines of content of a catalog file, e.g., events.csv
-    $ cat events.csv | head -n 2
-    2019-09-01T10:30:32.320Z  32.398   90.841  39.32  6.5  MW
-    2013-03-11T12:21:01.149Z  19.691  120.933  23.83  4.5  MW
+    # show the first two lines of content of a catalog file, e.g., events-selected.dat
+    $ cat events-selected.dat | head -n 2
+    year month day hour minute second event ID latitude (decimal degrees), longitude (decimal degrees), depth (km) event magnitude
+    2019 07 06 03 47 52.980  38457687  35.90800 -117.74833   7.290  5.50  57  2.700   0.100   0.300   0.090  le   3d
 
 
 tail
@@ -372,10 +376,10 @@ tail
 
 .. code-block:: console
 
-    # show the last two lines of content of a catalog file, e.g., events.csv
-    $ cat events.csv | tail -n 2
-    2013-03-11T12:21:01.149Z  19.691  120.933  23.83  4.5  MW
-    2010-01-09T01:01:10.921Z  51.582  110.850   9.33  3.3  MB
+    # show the last two lines of content of a catalog file, e.g., events-selected.dat
+    $ cat events-selected.dat | tail -n 2
+    2019 07 06 03 19 52.260  38457511  35.76883 -117.59717   1.860  7.10  48  4.800   0.100   0.400   0.090  le   3d
+    2019 07 04 17 33 48.530  38443183  35.70750 -117.50150  11.780  6.40  58  7.400   0.100   0.300   0.080  le   3d
 
 
 which
@@ -400,22 +404,25 @@ sed
 
 .. code-block:: console
 
-    # delete the line containing 120.933
-    $cat events.csv
-    2019-09-01T10:30:32.320Z  32.398   90.841  39.32  6.5  MW
-    2013-03-11T12:21:01.149Z  19.691  120.933  23.83  4.5  MW
-    2010-01-09T01:01:10.921Z  51.582  110.850   9.33  3.3  MB
-    $ sed '/120.933/d' events.csv
-    2019-09-01T10:30:32.320Z  32.398   90.841  39.32  6.5  MW
-    2010-01-09T01:01:10.921Z  51.582  110.850   9.33  3.3  MB
+    # delete the line containing 11.780
+    $ cat events-selected.dat
+    year month day hour minute second event ID latitude (decimal degrees), longitude (decimal degrees), depth (km) event magnitude
+    2019 07 06 03 47 52.980  38457687  35.90800 -117.74833   7.290  5.50  57  2.700   0.100   0.300   0.090  le   3d
+    2019 07 06 03 19 52.260  38457511  35.76883 -117.59717   1.860  7.10  48  4.800   0.100   0.400   0.090  le   3d
+    2019 07 04 17 33 48.530  38443183  35.70750 -117.50150  11.780  6.40  58  7.400   0.100   0.300   0.080  le   3d
+    $ sed '/11.780/d' events-selected.dat
+    year month day hour minute second event ID latitude (decimal degrees), longitude (decimal degrees), depth (km) event magnitude
+    2019 07 06 03 47 52.980  38457687  35.90800 -117.74833   7.290  5.50  57  2.700   0.100   0.300   0.090  le   3d
+    2019 07 06 03 19 52.260  38457511  35.76883 -117.59717   1.860  7.10  48  4.800   0.100   0.400   0.090  le   3d
 
 .. code-block:: console
 
-    # replace MW or MB with M in the whole file
-    $sed 's/M[WB]/M/g' events.csv
-    2019-09-01T10:30:32.320Z  32.398   90.841  39.32  6.5  M
-    2013-03-11T12:21:01.149Z  19.691  120.933  23.83  4.5  M
-    2010-01-09T01:01:10.921Z  51.582  110.850   9.33  3.3  M
+    # replace le with LOCEVT in the whole file
+    $ sed 's/le/LOCEVT/g' events-selected.dat
+    year month day hour minute second event ID latitude (decimal degrees), longitude (decimal degrees), depth (km) event magnitude
+    2019 07 06 03 47 52.980  38457687  35.90800 -117.74833   7.290  5.50  57  2.700   0.100   0.300   0.090  LOCEVT   3d
+    2019 07 06 03 19 52.260  38457511  35.76883 -117.59717   1.860  7.10  48  4.800   0.100   0.400   0.090  LOCEVT   3d
+    2019 07 04 17 33 48.530  38443183  35.70750 -117.50150  11.780  6.40  58  7.400   0.100   0.300   0.080  LOCEVT   3d
 
 
 diff

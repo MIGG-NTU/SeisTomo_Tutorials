@@ -10,7 +10,8 @@ Seismic Analysis Code (SAC) is one of the most commonly used seismic data proces
     - maxOS: https://seisman.github.io/SAC_Docs_zh/introduction/macOS-install/
 
 
-**Checklist of what you should know about SAC:**
+Checklist
+---------
 
 - Understand the file format of a SAC file
 - Understand the meaning of important SAC headers

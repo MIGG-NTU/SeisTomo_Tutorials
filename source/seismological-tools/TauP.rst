@@ -6,7 +6,9 @@ TauP is a software to calculate traveltimes of seismic waves trough the interior
 - **Homepage:** https://www.seis.sc.edu/taup/
 - **Install:** https://blog.seisman.info/taup-install/
 
-**Checklist of what you should know about TauP:**
+
+Checklist
+---------
 
 - ``taup_time``: https://blog.seisman.info/taup-calculate-traveltime/
 - ``Phase naming in TauP``: https://docs.obspy.org/packages/obspy.taup.html#phase-naming-in-obspy-taup

@@ -17,8 +17,8 @@ Basics
 **Lectures:**
 
 - **Linux & File Management**: Jiayuan YAO
-- **Command Lines**: Tianjue LI
-- **Programming**: Shijie HAO
+- **Command Lines**: Tianjue LI | lecture resources (TODO)
+- **Programming**: Shijie HAO | `lecture resources <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/programming.tar>`__
 - **Seismology**: Jiayuan YAO
 - **Seismological Tools**: Jiayuan YAO
 
@@ -148,7 +148,7 @@ In order to follow the toturials, you have to install the following terms in you
 7. Install GMT: https://docs.gmt-china.org/latest/install/
 
     - I'd like to recommend installation via ``conda``
-    
+
 8. Install gcc, gfortran, make
 
 - For Ubuntu, run the following command:

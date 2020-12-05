@@ -9,19 +9,17 @@ This section is still **UNDER CONSTRUCTION**.
 Bash
 ----
 
+Task 1
+++++++
+
 ``TODO``
 
 
 Python
 ------
 
-Task 0
-++++++
-
-We will do Task 0 at Tutorial, please download the `File <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/exercises/programming/exercise_programming.tar>`__.
-
 Task 1
 ++++++
 
-Use Python to do the above bash tasks again.
+Use Python to do the above bash tasks again (`solution <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/exercises/programming/python-solution.tar>`__).
 

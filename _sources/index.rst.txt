@@ -149,13 +149,14 @@ In order to follow the toturials, you have to install the following terms in you
 
     - I'd like to recommend installation via ``conda``
     
-8. Install gcc, gfortran
+8. Install gcc, gfortran, make
 
 - For Ubuntu, run the following command:
 .. code-block:: console
 
    $ sudo apt install gcc
    $ sudo apt install gfortran
+   $ sudo apt install make
 
 
 .. toctree::

@@ -130,7 +130,7 @@ In order to follow the toturials, you have to install the following terms in you
 
 6. Install TauP
 
-- Java Runtime Environment has to be installed. Run `java -version` to check. If it is not installed, please refer to `seisman's blog <https://blog.seisman.info/taup-install/>`__
+- Java Runtime Environment has to be installed. Run ``java -version`` to check it. If it is not installed, please refer to `seisman's blog <https://blog.seisman.info/taup-install/>`__
 - Download TauP: https://www.seis.sc.edu/taup/
 - Extract TauP: ``tar -xvf TauP-2.4.5.tgz``
 - Install TauP: ``sudo mv TauP-2.4.5 /opt``

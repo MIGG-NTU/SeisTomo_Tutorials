@@ -145,9 +145,7 @@ In order to follow the toturials, you have to install the following terms in you
 - Run ``taup`` to test if TauP is installed
 
 
-7. Install GMT: https://docs.gmt-china.org/latest/install/
-
-    - I'd like to recommend installation via ``conda``
+7. Install GMT: https://docs.gmt-china.org/latest/install/ (I'd like to recommend installation via ``conda``)
 
 8. Install gcc, gfortran, make
 

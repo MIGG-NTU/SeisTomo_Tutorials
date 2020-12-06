@@ -50,5 +50,5 @@ Task 3: plot earthquakes on a map
 2. Plot the three largest earthquakes in the sequence on the map (``stars``)
 
 
-Please download the `solution <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/exercises/seismology/seismology-solution.tar>`__.
+Please download the `solution <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/exercises/seismology/seismic-source-solution.tar>`__.
 

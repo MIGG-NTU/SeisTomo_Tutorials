@@ -29,7 +29,7 @@ pwd
 
 
 cd
-+++
+++
 `cd <https://man.linuxde.net/cd>`__ is a command to navigate through the Linux files and directories. It requires either the full path or the name of the directory, depending on the current working directory that you’re in.
 
 .. code-block:: console
@@ -40,7 +40,7 @@ cd
 
 
 ls
-+++
+++
 `ls <https://man.linuxde.net/ls>`__ is a command to view the contents of a directory. By default, this command will display the contents of your current working directory.
 
 .. code-block:: console
@@ -51,7 +51,7 @@ ls
 
 
 mkdir
-+++
++++++
 `mkdir <https://man.linuxde.net/mkdir>`__ is a command allowing the user to create directories (also referred to as folders in some operating systems).
 
 .. code-block:: console
@@ -289,12 +289,12 @@ tar
     # or use the following command line
     $ tar -jcvf TauP-2.4.5.tar TauP-2.4.5
     $ ls
-    TauP-2.4.5.tar
+    TauP-2.4.5    TauP-2.4.5.tar
 
 
 gzip
 ++++
-`gzip <https://man.linuxde.net/gzip>`__ is a command for compressing files. Often used commands include ``-k`` (compression while keep the original file); ``-r`` (compress every file in a folder and its subfolders); ``-d`` (decompress a file using the “gzip” command); ``-v`` (display the name and percentage reduction for each file compressed or decompressed).
+`gzip <https://man.linuxde.net/gzip>`__ is a command for compressing files. Often used commands include ``-k`` (compression while keep the original file), ``-r`` (compress every file in a folder and its subfolders), ``-d`` (decompress a file using the “gzip” command), ``-v`` (display the name and percentage reduction for each file compressed or decompressed).
 
 .. code-block:: console
 
@@ -428,3 +428,8 @@ sed
 diff
 ++++
 `diff <https://man.linuxde.net/diff>`__ is the command standing for difference. It is used to display the differences in the files by comparing the files line by line.
+
+
+echo
+++++
+`echo <https://man.linuxde.net/echo>`__ is the command in Linux used to display line of text/string that are passed as an argument . This is a built in command that is mostly used in shell scripts and batch files to output status text to the screen or a file.

@@ -9,8 +9,8 @@ Schedule
 ===============  ============ ===================
 Topic            Instructor   Lecture Resources
 ===============  ============ ===================
-Seismology       Jiayuan YAO
-File Management  Jiayuan YAO
+Seismology       Jiayuan YAO  `pptx <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/seismology-file-management.pptx>`__
+File Management  Jiayuan YAO  pptx is included in the above pptx
 Command Lines    Tianjue LI   `command lines <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/command-lines.tar>`__
 Programming      Shijie HAO   `programming <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/programming.tar>`__
 ===============  ============ ===================

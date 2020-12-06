@@ -17,7 +17,7 @@ Basics
 **Lectures:**
 
 - **Linux & File Management**: Jiayuan YAO
-- **Command Lines**: Tianjue LI | lecture resources (TODO)
+- **Command Lines**: Tianjue LI | `lecture resources <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/Exercise_Bash_Commandline.tar>`__
 - **Programming**: Shijie HAO | `lecture resources <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/programming.tar>`__
 - **Seismology**: Jiayuan YAO
 - **Seismological Tools**: Jiayuan YAO
@@ -202,4 +202,3 @@ In order to follow the toturials, you have to install the following terms in you
 
    references
    links
-

@@ -4,38 +4,26 @@ SeisTomo Tutorials
 Schedule
 --------
 
-========== =========== ==========
-Date       Time        Topic
-========== =========== ==========
-2020-12-07 14:00-16:00 Basics
-2020-12-14 14:00-16:00 Data
-========== =========== ==========
+**Basics: 2020-12-07 14:00-16:00**
 
-Basics
-+++++++
+===============  ============ ===================
+Topic            Instructor   Lecture Resources
+===============  ============ ===================
+File Management  Jiayuan YAO
+Command Lines    Tianjue LI   `command lines <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/Exercise_Bash_Commandline.tar>`__
+Programming      Shijie HAO   `programming <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/programming.tar>`__
+Seismology       Jiayuan YAO
+===============  ============ ===================
 
-**Lectures:**
+**Data: 2020-12-14 14:00-16:00**
 
-- **Linux & File Management**: Jiayuan YAO
-- **Command Lines**: Tianjue LI | `lecture resources <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/Exercise_Bash_Commandline.tar>`__
-- **Programming**: Shijie HAO | `lecture resources <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/programming.tar>`__
-- **Seismology**: Jiayuan YAO
-- **Seismological Tools**: Jiayuan YAO
-
-**Exercises:**
-
-- **Programming**: Tianjue LI & Shijie HAO
-- **Seismology**: **TBA**
-
-
-Data
-++++
-
-**Lectures & Exercises:**
-
-- **Data Fetching**: **TBA**
-- **Data Processing**: **TBA**
-- **Data Analysis**: **TBA**
+===============  ============ ========================
+Topic            Instructor   Lecture Resources
+===============  ============ ========================
+Data Fetching    **TBA**
+Data Processing  **TBA**
+Data Analysis    **TBA**
+===============  ============ ========================
 
 
 Requirements
@@ -150,6 +138,7 @@ In order to follow the toturials, you have to install the following terms in you
 8. Install gcc, gfortran, make
 
 - For Ubuntu, run the following command:
+
 .. code-block:: console
 
    $ sudo apt install gcc
@@ -165,7 +154,6 @@ In order to follow the toturials, you have to install the following terms in you
    computer/index
    programming/index
    seismology/index
-   seismological-tools/index
 
 .. toctree::
    :maxdepth: 3

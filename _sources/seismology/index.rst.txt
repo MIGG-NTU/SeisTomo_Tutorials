@@ -9,3 +9,4 @@ Seismology
    seismic-wave/index
    seismic-station/index
    seismic-data/index
+   seismological-tools/index

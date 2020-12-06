@@ -1,5 +1,5 @@
-Seismology
-==========
+Seismic Source
+===============
 
 Goals
 -----

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Seismology &mdash; SeisTomo_Tutorials 0.1 documentation</title>
+  <title>Seismic Wave &mdash; SeisTomo_Tutorials 0.1 documentation</title>
   
 
   
@@ -38,7 +38,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Data Fetching" href="../data-fetch/index.html" />
-    <link rel="prev" title="TauP" href="taup.html" /> 
+    <link rel="prev" title="Seismic Source" href="seismic-source.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -92,7 +92,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../../computer/index.html">Computer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../programming/index.html">Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../seismology/index.html">Seismology</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../seismological-tools/index.html">Seismological Tools</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Data</span></p>
 <ul>
@@ -109,13 +108,11 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../programming/index.html">Programming</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Seismology</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="taup.html">TauP</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Seismology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="seismic-source.html">Seismic Source</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Seismic Wave</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#goals">Goals</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#task-0-preparation">Task 0: preparation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#task-1-download-earthquake-catalog">Task 1: download earthquake catalog</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#task-2-find-ridgecrest-earthquake-sequence">Task 2: find Ridgecrest earthquake sequence</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#task-3-plot-earthquakes-on-a-map">Task 3: plot earthquakes on a map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-0-preparation">Task 0:  preparation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-1-calculate-travel-time">Task 1: calculate travel time</a></li>
 </ul>
 </li>
 </ul>
@@ -176,14 +173,14 @@
         
           <li><a href="index.html">Seismology</a> &raquo;</li>
         
-      <li>Seismology</li>
+      <li>Seismic Wave</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/MIGG-NTU/SeisTomo_Tutorials/blob/main/source/exercises/seismology/seismology.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/MIGG-NTU/SeisTomo_Tutorials/blob/main/source/exercises/seismology/seismic-wave.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -197,66 +194,40 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="seismology">
-<h1>Seismology<a class="headerlink" href="#seismology" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="seismic-wave">
+<h1>Seismic Wave<a class="headerlink" href="#seismic-wave" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="goals">
 <h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>download earthquake catalog</p></li>
-<li><p>find Ridgecrest earthquake sequence</p></li>
-<li><p>plot Ridgecrest earthquake sequence on a map</p></li>
+<li><p>learn how to calculate travle time of different seismic phases uing TauP</p></li>
+<li><p>learn different seismic phases</p></li>
 </ul>
 </div>
 <div class="section" id="task-0-preparation">
-<h2>Task 0: preparation<a class="headerlink" href="#task-0-preparation" title="Permalink to this headline">¶</a></h2>
+<h2>Task 0:  preparation<a class="headerlink" href="#task-0-preparation" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li><p>Download and install GMT6 on your own computer</p></li>
+<li><p>Download and install TauP on your own computer</p></li>
 </ol>
 </div>
-<div class="section" id="task-1-download-earthquake-catalog">
-<h2>Task 1: download earthquake catalog<a class="headerlink" href="#task-1-download-earthquake-catalog" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic">
-<li><p>Download waveform relocated earthquake catalog for Southern California: <a class="reference external" href="https://scedc.caltech.edu/research-tools/alt-2011-dd-hauksson-yang-shearer.html">https://scedc.caltech.edu/research-tools/alt-2011-dd-hauksson-yang-shearer.html</a></p>
+<div class="section" id="task-1-calculate-travel-time">
+<h2>Task 1: calculate travel time<a class="headerlink" href="#task-1-calculate-travel-time" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>command: <code class="docutils literal notranslate"><span class="pre">taup_time</span></code></p></li>
+<li><p>1D Earthquake velocity model: <code class="docutils literal notranslate"><span class="pre">ak135</span></code></p></li>
+<li><p>earthquake depth: <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">km</span></code></p></li>
+<li><p>earthuake-station distance: <code class="docutils literal notranslate"><span class="pre">50</span> <span class="pre">km</span></code></p></li>
+<li><p>seismic phases:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>1981-2019: <code class="docutils literal notranslate"><span class="pre">1981-2019</span> <span class="pre">Catalog</span> <span class="pre">file</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ttp</span></code>: a list of standard P phases</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ttp+</span></code>: a list of standard P phases including depth phases</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tts</span></code>: a list of standard S phases</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tts+</span></code>: a list of standard S phases including depth phases</p></li>
 </ul>
 </div></blockquote>
 </li>
-<li><p>Read format information: <code class="docutils literal notranslate"><span class="pre">Format</span> <span class="pre">and</span> <span class="pre">catalog</span> <span class="pre">information</span> <span class="pre">(2019</span> <span class="pre">dataset)</span></code>. Important points are indicated below.</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>columns <cite>1-6</cite>: <code class="docutils literal notranslate"><span class="pre">year</span></code>, <code class="docutils literal notranslate"><span class="pre">month</span></code>, <code class="docutils literal notranslate"><span class="pre">day</span></code>, <code class="docutils literal notranslate"><span class="pre">hour</span></code>, <code class="docutils literal notranslate"><span class="pre">minute</span></code>, <code class="docutils literal notranslate"><span class="pre">second</span></code></p></li>
-<li><p>column <cite>7</cite>: <code class="docutils literal notranslate"><span class="pre">event</span> <span class="pre">ID</span></code></p></li>
-<li><p>column <cite>8-10</cite>: <code class="docutils literal notranslate"><span class="pre">latitude</span> <span class="pre">(decimal</span> <span class="pre">degrees)</span></code>, <code class="docutils literal notranslate"><span class="pre">longitude</span> <span class="pre">(decimal</span> <span class="pre">degrees)</span></code>, <code class="docutils literal notranslate"><span class="pre">depth</span> <span class="pre">(km)</span></code></p></li>
-<li><p>column <cite>11</cite>: <code class="docutils literal notranslate"><span class="pre">event</span> <span class="pre">magnitude</span></code></p></li>
 </ul>
-</div></blockquote>
-</li>
-</ol>
-</div>
-<div class="section" id="task-2-find-ridgecrest-earthquake-sequence">
-<h2>Task 2: find Ridgecrest earthquake sequence<a class="headerlink" href="#task-2-find-ridgecrest-earthquake-sequence" title="Permalink to this headline">¶</a></h2>
-<p>The main shock of Ridgecrest earthquake sequence occurs on <code class="docutils literal notranslate"><span class="pre">2019-07-06T03:19:52.260</span></code>.</p>
-<ol class="arabic">
-<li><p>Find Ridgecrest earthquake sequence</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>location: <code class="docutils literal notranslate"><span class="pre">35.5</span></code> &lt; latitude &lt; <code class="docutils literal notranslate"><span class="pre">36</span></code> | <code class="docutils literal notranslate"><span class="pre">-118</span></code> &lt; longitude &lt; <code class="docutils literal notranslate"><span class="pre">-117.3</span></code></p></li>
-<li><p>time: <code class="docutils literal notranslate"><span class="pre">2019-07-01T00:00:00.000</span></code> ~ <code class="docutils literal notranslate"><span class="pre">2019-08-01T00:00:00.000</span></code></p></li>
-</ul>
-</div></blockquote>
-</li>
-<li><p>Find the three largest (magnitude) earthquakes in the sequence</p></li>
-</ol>
-</div>
-<div class="section" id="task-3-plot-earthquakes-on-a-map">
-<h2>Task 3: plot earthquakes on a map<a class="headerlink" href="#task-3-plot-earthquakes-on-a-map" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic simple">
-<li><p>Plot the Ridgecrest earthquake sequence on a map (<code class="docutils literal notranslate"><span class="pre">points</span></code>)</p></li>
-<li><p>Plot the three largest earthquakes in the sequence on the map (<code class="docutils literal notranslate"><span class="pre">stars</span></code>)</p></li>
-</ol>
-<p>Please download the <a class="reference external" href="https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/exercises/seismology/seismology-solution.tar">solution</a>.</p>
+<p>Please download the <a class="reference external" href="https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/exercises/seismology/taup_time.sh">solution</a>.</p>
 </div>
 </div>
 
@@ -271,7 +242,7 @@
         <a href="../data-fetch/index.html" class="btn btn-neutral float-right" title="Data Fetching" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="taup.html" class="btn btn-neutral float-left" title="TauP" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="seismic-source.html" class="btn btn-neutral float-left" title="Seismic Source" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

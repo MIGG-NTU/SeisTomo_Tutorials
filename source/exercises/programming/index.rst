@@ -33,7 +33,7 @@ Here, we have downloaded a raw earthquake catalog online (e.g., events-selected.
 
 Using the bash command lines to reformat the raw catalog events-selected.dat into a suitable input to ``SOD``.
 
-Please download the `solution <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/exercises/programming/Bash_Solution.tar>`__.
+Please download the `solution <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/exercises/programming/bash-solution.tar>`__.
 
 Python
 ------

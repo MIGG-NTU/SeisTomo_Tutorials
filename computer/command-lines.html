@@ -99,6 +99,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#pwd">pwd</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#cd">cd</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ls">ls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mkdir">mkdir</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#cp">cp</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#mv">mv</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#rm">rm</a></li>
@@ -130,6 +131,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#locate">locate</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#sed">sed</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#diff">diff</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#echo">echo</a></li>
 </ul>
 </li>
 </ul>
@@ -271,9 +273,10 @@
 <span class="go">TauP-2.4.5.tar  Time.temp1   Time.temp2   events-selected.dat</span>
 </pre></div>
 </div>
-<p>mkdir
-+++
-<a class="reference external" href="https://man.linuxde.net/mkdir">mkdir</a> is a command allowing the user to create directories (also referred to as folders in some operating systems).</p>
+</div>
+<div class="section" id="mkdir">
+<h3>mkdir<a class="headerlink" href="#mkdir" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://man.linuxde.net/mkdir">mkdir</a> is a command allowing the user to create directories (also referred to as folders in some operating systems).</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> mkdir temp
 <span class="gp">$</span> ls
 <span class="go">TauP-2.4.5.tar  Time.temp1   Time.temp2   events-selected.dat temp</span>
@@ -468,13 +471,13 @@
 <span class="gp">#</span> or use the following <span class="nb">command</span> line
 <span class="gp">$</span> tar -jcvf TauP-2.4.5.tar TauP-2.4.5
 <span class="gp">$</span> ls
-<span class="go">TauP-2.4.5.tar</span>
+<span class="go">TauP-2.4.5    TauP-2.4.5.tar</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="gzip">
 <h3>gzip<a class="headerlink" href="#gzip" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://man.linuxde.net/gzip">gzip</a> is a command for compressing files. Often used commands include <code class="docutils literal notranslate"><span class="pre">-k</span></code> (compression while keep the original file); <code class="docutils literal notranslate"><span class="pre">-r</span></code> (compress every file in a folder and its subfolders); <code class="docutils literal notranslate"><span class="pre">-d</span></code> (decompress a file using the “gzip” command); <code class="docutils literal notranslate"><span class="pre">-v</span></code> (display the name and percentage reduction for each file compressed or decompressed).</p>
+<p><a class="reference external" href="https://man.linuxde.net/gzip">gzip</a> is a command for compressing files. Often used commands include <code class="docutils literal notranslate"><span class="pre">-k</span></code> (compression while keep the original file), <code class="docutils literal notranslate"><span class="pre">-r</span></code> (compress every file in a folder and its subfolders), <code class="docutils literal notranslate"><span class="pre">-d</span></code> (decompress a file using the “gzip” command), <code class="docutils literal notranslate"><span class="pre">-v</span></code> (display the name and percentage reduction for each file compressed or decompressed).</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> compress the file
 <span class="gp">$</span> ls
 <span class="go">events-selected.dat</span>
@@ -584,6 +587,10 @@
 <div class="section" id="diff">
 <h3>diff<a class="headerlink" href="#diff" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://man.linuxde.net/diff">diff</a> is the command standing for difference. It is used to display the differences in the files by comparing the files line by line.</p>
+</div>
+<div class="section" id="echo">
+<h3>echo<a class="headerlink" href="#echo" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://man.linuxde.net/echo">echo</a> is the command in Linux used to display line of text/string that are passed as an argument . This is a built in command that is mostly used in shell scripts and batch files to output status text to the screen or a file.</p>
 </div>
 </div>
 </div>

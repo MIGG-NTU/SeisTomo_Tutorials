@@ -9,10 +9,10 @@ Schedule
 ===============  ============ ===================
 Topic            Instructor   Lecture Resources
 ===============  ============ ===================
-File Management  Jiayuan YAO
-Command Lines    Tianjue LI   `command lines <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/Exercise_Bash_Commandline.tar>`__
-Programming      Shijie HAO   `programming <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/programming.tar>`__
 Seismology       Jiayuan YAO
+File Management  Jiayuan YAO
+Command Lines    Tianjue LI   `command lines <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/command-lines.tar>`__
+Programming      Shijie HAO   `programming <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/programming.tar>`__
 ===============  ============ ===================
 
 **Data: 2020-12-14 14:00-16:00**

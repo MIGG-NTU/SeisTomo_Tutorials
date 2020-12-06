@@ -130,7 +130,7 @@ In order to follow the toturials, you have to install the following terms in you
 
 6. Install TauP
 
-- Java Runtime Environment has to be installed. Run `java -version` to check. If it is not installed, please refer to `seisman's blog <https://blog.seisman.info/taup-install/>`__
+- Java Runtime Environment has to be installed. Run ``java -version`` to check it. If it is not installed, please refer to `seisman's blog <https://blog.seisman.info/taup-install/>`__
 - Download TauP: https://www.seis.sc.edu/taup/
 - Extract TauP: ``tar -xvf TauP-2.4.5.tgz``
 - Install TauP: ``sudo mv TauP-2.4.5 /opt``
@@ -145,9 +145,7 @@ In order to follow the toturials, you have to install the following terms in you
 - Run ``taup`` to test if TauP is installed
 
 
-7. Install GMT: https://docs.gmt-china.org/latest/install/
-
-    - I'd like to recommend installation via ``conda``
+7. Install GMT: https://docs.gmt-china.org/latest/install/ (I'd like to recommend installation via ``conda``)
 
 8. Install gcc, gfortran, make
 

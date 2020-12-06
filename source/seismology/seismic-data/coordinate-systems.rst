@@ -54,8 +54,8 @@ Sometimes, the two horizontal components may be not aligned with North and East.
 Component Rotation
 ------------------
 
-IRISWS Rotation: https://service.iris.edu/irisws/rotation/docs/1/help/
-SAC rotate: https://seisman.github.io/SAC_Docs_zh/data-process/rotate/
+- IRISWS Rotation: https://service.iris.edu/irisws/rotation/docs/1/help/
+- SAC rotate: https://seisman.github.io/SAC_Docs_zh/data-process/rotate/
 
 We can rotate seismic waveform in one coordinate system to anther one so that we can better analyize the data.
 

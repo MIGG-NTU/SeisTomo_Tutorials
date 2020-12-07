@@ -8,7 +8,7 @@ Bash
 Task 1
 ++++++
 
-Here, we have downloaded a raw earthquake catalog online (e.g., events-selected.dat). Our goal is, based on this catalog, to extract waveform files using the seismic data download tool ``SOD``. To make the catalog as a suitable input to ``SOD``, we need to reformat it into including seven columns, i.e., ``time`` ``latitude`` ``longitude`` ``depth`` ``depthUnits`` ``magnitude`` ``magnitudeType``.
+We have a raw earthquake catalog (``events-selected.dat``). The goal is to reformat this catalog so that it can be used in some seismological tools (e.g., ``SOD``). In this exercise, the final file has be to a csv file with seven columns, i.e., ``time``, ``latitude``, ``longitude``, ``depth``, ``depthUnits``, ``magnitude``, ``magnitudeType``.
 
 .. code-block:: console
 
@@ -21,15 +21,14 @@ Here, we have downloaded a raw earthquake catalog online (e.g., events-selected.
 
 .. code-block:: console
 
-  # Example of a reformatted catalog suitable as an input to ``SOD``, e.g., events.csv
+  # An example of a reformatted catalog suitable as an input to SOD
   $ cat  events.csv
-  time latitude longitude depth depthUnits magnitude magnitudeType
+  time, latitude, longitude, depth, depthUnits, magnitude, magnitudeType
   20190706T03:19:52.260Z, 35.76883, -117.59717, 1.860, KILOMETER, 7.10, mww
   20190704T17:33:48.530Z, 35.70750, -117.50150, 11.780, KILOMETER, 6.40, mww
 
-Using the bash command lines to reformat the raw catalog events-selected.dat into a suitable input to ``SOD``.
+Please download the `solution <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/exercises/bash-solution.tar>`__.
 
-Please download the `solution <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/exercises/programming/bash-solution.tar>`__.
 
 Python
 ------
@@ -37,4 +36,4 @@ Python
 Task 1
 ++++++
 
-Use Python to do the above bash tasks again (`solution <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/exercises/programming/python-solution.tar>`__).
+Use Python to do the above bash tasks again (`solution <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/exercises/python-solution.tar>`__).

@@ -9,10 +9,10 @@ Schedule
 ===============  ============ ===================
 Topic            Instructor   Lecture Resources
 ===============  ============ ===================
-Seismology       Jiayuan YAO  `pptx <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/seismology-file-management.pptx>`__
+Seismology       Jiayuan YAO  `pptx <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/lectures/20201207-seismology-file-management.pptx>`__
 File Management  Jiayuan YAO  pptx is included in the above pptx
-Command Lines    Tianjue LI   `command lines <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/command-lines.tar>`__
-Programming      Shijie HAO   `programming <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/programming.tar>`__, `pptx <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/2020-12-07-programming.pptx>`__
+Command Lines    Tianjue LI   `command lines <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/lectures/command-lines.tar>`__
+Programming      Shijie HAO   `programming <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/lectures/programming.tar>`__ | `pptx <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/lectures/20201207-programming.pptx>`__
 ===============  ============ ===================
 
 **Data: 2020-12-14 14:00-16:00**

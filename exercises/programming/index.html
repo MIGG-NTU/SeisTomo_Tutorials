@@ -199,7 +199,7 @@
 <h2>Bash<a class="headerlink" href="#bash" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="task-1">
 <h3>Task 1<a class="headerlink" href="#task-1" title="Permalink to this headline">¶</a></h3>
-<p>Here, we have downloaded a raw earthquake catalog online (e.g., events-selected.dat). Our goal is, based on this catalog, to extract waveform files using the seismic data download tool <code class="docutils literal notranslate"><span class="pre">SOD</span></code>. To make the catalog as a suitable input to <code class="docutils literal notranslate"><span class="pre">SOD</span></code>, we need to reformat it into including seven columns, i.e., <code class="docutils literal notranslate"><span class="pre">time</span></code> <code class="docutils literal notranslate"><span class="pre">latitude</span></code> <code class="docutils literal notranslate"><span class="pre">longitude</span></code> <code class="docutils literal notranslate"><span class="pre">depth</span></code> <code class="docutils literal notranslate"><span class="pre">depthUnits</span></code> <code class="docutils literal notranslate"><span class="pre">magnitude</span></code> <code class="docutils literal notranslate"><span class="pre">magnitudeType</span></code>.</p>
+<p>We have a raw earthquake catalog (<code class="docutils literal notranslate"><span class="pre">events-selected.dat</span></code>). The goal is to reformat this catalog so that it can be used in some seismological tools (e.g., <code class="docutils literal notranslate"><span class="pre">SOD</span></code>). In this exercise, the final file has be to a csv file with seven columns, i.e., <code class="docutils literal notranslate"><span class="pre">time</span></code>, <code class="docutils literal notranslate"><span class="pre">latitude</span></code>, <code class="docutils literal notranslate"><span class="pre">longitude</span></code>, <code class="docutils literal notranslate"><span class="pre">depth</span></code>, <code class="docutils literal notranslate"><span class="pre">depthUnits</span></code>, <code class="docutils literal notranslate"><span class="pre">magnitude</span></code>, <code class="docutils literal notranslate"><span class="pre">magnitudeType</span></code>.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> The content of events-selected.dat
 <span class="gp">$</span> cat events-selected.dat
 <span class="go">year month day hour minute second event ID latitude (decimal degrees), longitude (decimal degrees), depth (km) event magnitude</span>
@@ -208,22 +208,21 @@
 <span class="go">2019 07 04 17 33 48.530  38443183  35.70750 -117.50150  11.780  6.40  58  7.400   0.100   0.300   0.080  le   3d</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> Example of a reformatted catalog suitable as an input to <span class="sb">``</span>SOD<span class="sb">``</span>, e.g., events.csv
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> An example of a reformatted catalog suitable as an input to SOD
 <span class="gp">$</span> cat  events.csv
-<span class="go">time latitude longitude depth depthUnits magnitude magnitudeType</span>
+<span class="go">time, latitude, longitude, depth, depthUnits, magnitude, magnitudeType</span>
 <span class="go">20190706T03:19:52.260Z, 35.76883, -117.59717, 1.860, KILOMETER, 7.10, mww</span>
 <span class="go">20190704T17:33:48.530Z, 35.70750, -117.50150, 11.780, KILOMETER, 6.40, mww</span>
 </pre></div>
 </div>
-<p>Using the bash command lines to reformat the raw catalog events-selected.dat into a suitable input to <code class="docutils literal notranslate"><span class="pre">SOD</span></code>.</p>
-<p>Please download the <a class="reference external" href="https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/exercises/programming/bash-solution.tar">solution</a>.</p>
+<p>Please download the <a class="reference external" href="https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/exercises/bash-solution.tar">solution</a>.</p>
 </div>
 </div>
 <div class="section" id="python">
 <h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id1">
 <h3>Task 1<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>Use Python to do the above bash tasks again (<a class="reference external" href="https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/exercises/programming/python-solution.tar">solution</a>).</p>
+<p>Use Python to do the above bash tasks again (<a class="reference external" href="https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/exercises/python-solution.tar">solution</a>).</p>
 </div>
 </div>
 </div>

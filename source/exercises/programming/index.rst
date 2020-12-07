@@ -1,10 +1,6 @@
 Programming
 ===========
 
-This section is still **UNDER CONSTRUCTION**.
-
-**We may need to revised the following tasks for our own purposes for seismic tomography**
-
 
 Bash
 ----

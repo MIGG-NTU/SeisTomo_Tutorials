@@ -29,4 +29,4 @@ Task 1: calculate travel time
     - ``tts+``: a list of standard S phases including depth phases
 
 
-Please download the `solution <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/exercises/seismology/taup_time.sh>`__.
+Please download the `solution <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/exercises/seismic-wave-solution.tar>`__.

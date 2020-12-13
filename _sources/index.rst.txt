@@ -20,7 +20,7 @@ Programming      Shijie HAO   `programming <https://github.com/MIGG-NTU/SeisTomo
 ===============  ============ ========================
 Topic            Instructor   Lecture Resources
 ===============  ============ ========================
-Data Fetching    Jiayuan Yao  `pptx <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/lectures/20201214-seismic-data.pptx>`__ | pptx <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/seismic-data.tar>`__
+Data Fetching    Jiayuan Yao  `pptx <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/lectures/20201214-seismic-data.pptx>`__ | `seismic-data <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/seismic-data.tar>`__
 Data Processing  Jiayuan Yao
 Data Analysis    Jiayuan Yao
 ===============  ============ ========================

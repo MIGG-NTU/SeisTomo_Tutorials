@@ -96,6 +96,7 @@ In order to follow the toturials, you have to install the following terms in you
 .. code-block:: console
 
    $ conda install obspy
+   $ conda install cartopy
 
 
 4. Install SAC 101.6a: Install binary package is **recommended**. The installed directory is recommened to be ``/opt`` instead of ``/usr/local``.

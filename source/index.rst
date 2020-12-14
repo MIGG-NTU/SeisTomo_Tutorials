@@ -1,6 +1,13 @@
 SeisTomo Tutorials
 ==================
 
+This website hosts a series of introductory tutorials about seimic tomography.
+
+The videos and all the materials are also available on `BaiduDisk <https://pan.baidu.com/s/1-8wQmywkvByrPtBhKD4x5g>`__ (passwd: ``4vgu``).
+
+Please note that the materials (especially the codes) on this website and in BaiduDisk will not maintained after the tutorials. Instead, the codes will be maintained in `SeisData_Tools <https://github.com/MIGG-NTU/SeisData_Tools>`__, which is an effort to collect and maintain codes and notes about seismic data in our group.
+
+
 Schedule
 --------
 

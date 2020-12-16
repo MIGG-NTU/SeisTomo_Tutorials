@@ -59,4 +59,7 @@ Resources
 
 - `Remote Online Sessions for Emerging Seismologists <https://www.iris.edu/hq/inclass/course/roses>`__: a very good seismological course for Ph.D. students
 - `seisman's blog <https://blog.seisman.info/>`__: the most popular Chinese blog about seismology
+- `Seismological Networks <https://link.springer.com/referenceworkentry/10.1007/978-3-030-10475-7_16-1>`__
+- `Encyclopedia of Solid Earth Geophysics <https://link.springer.com/referencework/10.1007/978-3-030-10475-7>`__
+
 

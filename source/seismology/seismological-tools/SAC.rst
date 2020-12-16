@@ -8,6 +8,8 @@ Seismic Analysis Code (SAC) is one of the most commonly used seismic data proces
 
     - Linux: https://seisman.github.io/SAC_Docs_zh/introduction/linux-install/
     - maxOS: https://seisman.github.io/SAC_Docs_zh/introduction/macOS-install/
+    
+Those who use WSL have to install **X Window System**. Please refer to one `Chinese manual <http://www.yuan-ji.me/%E5%A6%82%E4%BD%95%E5%9C%A8Windows-Subsystem-for-Linux-(WSL)-%E4%B8%8A%E8%BF%90%E8%A1%8CLinux-GUI-%E8%BD%AF%E4%BB%B6/>`__. You may try different X Servers, e.g., ``VcXsrv``.
 
 
 Checklist

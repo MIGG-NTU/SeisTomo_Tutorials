@@ -32,6 +32,13 @@ Data Processing  Jiayuan Yao
 Data Analysis    Jiayuan Yao
 ===============  ============ ========================
 
+**Seismic Tomography: 2020-12-21 14:00-16:00**
+
+===================  ============ ========================
+Topic                Instructor   Lecture Resources
+===================  ============ ========================
+Seismic Tomography   Ping Tong
+===================  ============ ========================
 
 Requirements
 ------------

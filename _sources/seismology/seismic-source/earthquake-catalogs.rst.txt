@@ -47,7 +47,7 @@ CENC Catalog
 
 The CENC (China Earthquake Networks Center) catalog is a unified and formal earthquake catalog, produced by CENC.
 
-- Homepage: http://data.earthquake.cn/datashare/report.shtml?PAGEID=earthquake_zhengshi/
+- Homepage: http://data.earthquake.cn/datashare/report.shtml?PAGEID=earthquake_zhengshi
 - Time range: 2008/12/29 - now
 
 

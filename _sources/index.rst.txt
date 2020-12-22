@@ -19,17 +19,15 @@ Topic            Instructor   Lecture Resources
 Seismology       Jiayuan YAO  `pptx <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/lectures/20201207-seismology-file-management.pptx>`__
 File Management  Jiayuan YAO  pptx is included in the above pptx
 Command Lines    Tianjue LI   `command lines <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/lectures/command-lines.tar>`__
-Programming      Shijie HAO   `programming <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/lectures/programming.tar>`__ | `pptx <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/lectures/20201207-programming.pptx>`__
+Programming      Shijie HAO   `pptx <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/lectures/20201207-programming.pptx>`__ | `programming <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/lectures/programming.tar>`__
 ===============  ============ ===================
 
 **Data: 2020-12-14 14:00-16:00**
 
-===============  ============ ========================
-Topic            Instructor   Lecture Resources
-===============  ============ ========================
-Data Fetching    Jiayuan Yao  `pptx <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/lectures/20201214-seismic-data.pptx>`__ | `seismic-data <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/lectures/seismic-data.tar>`__
-Data Processing  Jiayuan Yao
-Data Analysis    Jiayuan Yao
+====================================  ============ ========================
+Topic                                 Instructor   Lecture Resources
+====================================  ============ ========================
+Data Fetching, Processing & Analysis  Jiayuan Yao  `pptx <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/lectures/20201214-seismic-data.pptx>`__ | `seismic-data <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/lectures/seismic-data.tar>`__
 ===============  ============ ========================
 
 **Seismic Tomography: 2020-12-21 14:00-16:00**

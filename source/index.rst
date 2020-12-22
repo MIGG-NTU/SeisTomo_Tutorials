@@ -28,7 +28,7 @@ Programming      Shijie HAO   `pptx <https://github.com/MIGG-NTU/SeisTomo_Tutori
 Topic                                 Instructor   Lecture Resources
 ====================================  ============ ========================
 Data Fetching, Processing & Analysis  Jiayuan Yao  `pptx <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/lectures/20201214-seismic-data.pptx>`__ | `seismic-data <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/lectures/seismic-data.tar>`__
-===============  ============ ========================
+====================================  ============ ========================
 
 **Seismic Tomography: 2020-12-21 14:00-16:00**
 

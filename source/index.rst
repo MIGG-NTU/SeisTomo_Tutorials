@@ -35,7 +35,7 @@ Data Fetching, Processing & Analysis  Jiayuan Yao  `pptx <https://github.com/MIG
 ===================  ============ ========================
 Topic                Instructor   Lecture Resources
 ===================  ============ ========================
-Seismic Tomography   Ping Tong
+Seismic Tomography   Ping Tong    `pptx <https://github.com/MIGG-NTU/SeisTomo_Tutorials/raw/main/source/download/lectures/20201221-tomography.pdf>`__
 ===================  ============ ========================
 
 Requirements

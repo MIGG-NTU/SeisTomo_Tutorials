@@ -10,7 +10,7 @@ SeisTomo Tutorials
 
    From 2021/07/03, the tutorials on this website and in BaiduDisk are not maintained any more.
 
----
+----
 
 This website hosts a series of introductory tutorials about seimic tomography.
 

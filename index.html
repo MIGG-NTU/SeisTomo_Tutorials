@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>SeisTomo Tutorials &mdash; SeisTomo_Tutorials 0.1 documentation</title>
   
@@ -13,10 +13,15 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
 
   
   
+
   
+  
+
   
 
   
@@ -26,10 +31,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -50,7 +55,7 @@
           
 
           
-            <a href="#" class="icon icon-home" alt="Documentation Home"> SeisTomo_Tutorials
+            <a href="#" class="icon icon-home"> SeisTomo_Tutorials
           
 
           
@@ -154,6 +159,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -165,7 +172,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             
               <a href="https://github.com/MIGG-NTU/SeisTomo_Tutorials/blob/main/source/index.rst" class="fa fa-github"> Edit on GitHub</a>
             
@@ -183,9 +190,22 @@
             
   <div class="section" id="seistomo-tutorials">
 <h1>SeisTomo Tutorials<a class="headerlink" href="#seistomo-tutorials" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>From 2021/07/03, the tutorials are maintained on <a class="reference external" href="https://seismo-learn.org/seismology101/">Seismology101</a>,
+which are tutorials for absolute beginners in Seismology in Chinese.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>From 2021/07/03, the tutorials on this website and in BaiduDisk are not maintained any more.</p>
+</div>
+<p>—</p>
 <p>This website hosts a series of introductory tutorials about seimic tomography.</p>
-<p>The videos and all the materials are also available on <a class="reference external" href="https://pan.baidu.com/s/1-8wQmywkvByrPtBhKD4x5g">BaiduDisk</a> (passwd: <code class="docutils literal notranslate"><span class="pre">4vgu</span></code>).</p>
-<p>Please note that the materials (especially the codes) on this website and in BaiduDisk will not maintained after the tutorials. Instead, the codes will be maintained in <a class="reference external" href="https://github.com/MIGG-NTU/SeisData_Tools">SeisData_Tools</a>, which is an effort to collect and maintain codes and notes about seismic data in our group.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The lecture resources and videos are also available in
+<a class="reference external" href="https://pan.baidu.com/s/1-8wQmywkvByrPtBhKD4x5g">BaiduDisk</a> with passwd <code class="docutils literal notranslate"><span class="pre">4vgu</span></code>.</p>
+</div>
 <div class="section" id="schedule">
 <h2>Schedule<a class="headerlink" href="#schedule" title="Permalink to this headline">¶</a></h2>
 <p><strong>Basics: 2020-12-07 14:00-16:00</strong></p>
@@ -280,58 +300,58 @@
 </li>
 <li><p>Enter <code class="docutils literal notranslate"><span class="pre">python</span></code>, then you can see <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">3.8.6</span> <span class="pre">|</span> <span class="pre">packaged</span> <span class="pre">by</span> <span class="pre">conda-forge</span></code></p></li>
 </ul>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python
 <span class="go">Python 3.8.6 | packaged by conda-forge | (default, Oct  7 2020, 19:08:05)</span>
 <span class="go">[GCC 7.5.0] on linux</span>
 <span class="go">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span>
-<span class="gp">&gt;</span>&gt;&gt;
+<span class="go">&gt;&gt;&gt;</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>Add package sources</p></li>
 </ul>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda config --add channels conda-forge <span class="c1"># this will reivse ~/.condarc</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda config --add channels conda-forge <span class="c1"># this will reivse ~/.condarc</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>Update <code class="docutils literal notranslate"><span class="pre">anaconda</span></code> and <code class="docutils literal notranslate"><span class="pre">conda</span></code></p></li>
 </ul>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda update conda
-<span class="gp">$</span> conda update anaconda
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda update conda
+<span class="gp">$ </span>conda update anaconda
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>Create a new enviroment named <code class="docutils literal notranslate"><span class="pre">seis</span></code></p></li>
 </ul>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda create --name seis       <span class="c1"># creat a enviroment named seis</span>
-<span class="gp">$</span> conda activate seis            <span class="c1"># activate the environment</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda create --name seis       <span class="c1"># creat a enviroment named seis</span>
+<span class="gp">$ </span>conda activate seis            <span class="c1"># activate the environment</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>Get familiar with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">environment</span></code></p></li>
 </ul>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda info --envs              <span class="c1"># list all the enviroments</span>
-<span class="gp">$</span> conda list                     <span class="c1"># list all the packages in the current environment</span>
-<span class="gp">$</span> conda deactivate               <span class="c1"># deactivate an active environment</span>
-<span class="gp">$</span> conda remove --name seis --all <span class="c1"># remove an environment</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda info --envs              <span class="c1"># list all the enviroments</span>
+<span class="gp">$ </span>conda list                     <span class="c1"># list all the packages in the current environment</span>
+<span class="gp">$ </span>conda deactivate               <span class="c1"># deactivate an active environment</span>
+<span class="gp">$ </span>conda remove --name seis --all <span class="c1"># remove an environment</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>Install important python packages in the <code class="docutils literal notranslate"><span class="pre">seis</span></code> environment</p></li>
 </ul>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda activate seis                           <span class="c1"># activate the environment</span>
-<span class="gp">$</span> conda install numpy scipy matplotlib pandas   <span class="c1"># install the packages</span>
-<span class="gp">$</span> conda list <span class="p">|</span> grep numpy                       <span class="c1"># check numpy</span>
-<span class="gp">$</span> conda list <span class="p">|</span> grep scipy                       <span class="c1"># check scipy</span>
-<span class="gp">$</span> conda list <span class="p">|</span> grep matplotlib                  <span class="c1"># check matplotlib</span>
-<span class="gp">$</span> conda list <span class="p">|</span> grep pandas                      <span class="c1"># check pandas</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda activate seis                           <span class="c1"># activate the environment</span>
+<span class="gp">$ </span>conda install numpy scipy matplotlib pandas   <span class="c1"># install the packages</span>
+<span class="gp">$ </span>conda list <span class="p">|</span> grep numpy                       <span class="c1"># check numpy</span>
+<span class="gp">$ </span>conda list <span class="p">|</span> grep scipy                       <span class="c1"># check scipy</span>
+<span class="gp">$ </span>conda list <span class="p">|</span> grep matplotlib                  <span class="c1"># check matplotlib</span>
+<span class="gp">$ </span>conda list <span class="p">|</span> grep pandas                      <span class="c1"># check pandas</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="3">
 <li><p>Install ObsPy in the <code class="docutils literal notranslate"><span class="pre">seis</span></code> environment</p></li>
 </ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda install obspy
-<span class="gp">$</span> conda install cartopy
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda install obspy
+<span class="gp">$ </span>conda install cartopy
 </pre></div>
 </div>
 <ol class="arabic simple" start="4">
@@ -349,7 +369,7 @@
 <li><p>Install SOD: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">mv</span> <span class="pre">sod-3.2.10</span> <span class="pre">/opt</span></code></p></li>
 <li><p>Update the enviroment variable <code class="docutils literal notranslate"><span class="pre">$PATH</span></code></p></li>
 </ul>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">echo</span> <span class="s1">&#39;export PATH=${PATH}:/opt/sod-3.2.10/bin&#39;</span>&gt;&gt; ~/.bashrc
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">echo</span> <span class="s1">&#39;export PATH=${PATH}:/opt/sod-3.2.10/bin&#39;</span>&gt;&gt; ~/.bashrc
 </pre></div>
 </div>
 <ul class="simple">
@@ -365,9 +385,9 @@
 <li><p>Install TauP: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">mv</span> <span class="pre">TauP-2.4.5</span> <span class="pre">/opt</span></code></p></li>
 <li><p>Update the enviroment variable <code class="docutils literal notranslate"><span class="pre">$PATH</span></code></p></li>
 </ul>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">echo</span> <span class="s1">&#39;export TAUPHOME=/opt/TauP-2.4.5&#39;</span> &gt;&gt; ~/.bashrc
-<span class="gp">$</span> <span class="nb">echo</span> <span class="s1">&#39;export PATH=${TAUPHOME}/bin:${PATH}&#39;</span> &gt;&gt; ~/.bashrc
-<span class="gp">$</span> <span class="nb">source</span> ~/.bashrc
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">echo</span> <span class="s1">&#39;export TAUPHOME=/opt/TauP-2.4.5&#39;</span> &gt;&gt; ~/.bashrc
+<span class="gp">$ </span><span class="nb">echo</span> <span class="s1">&#39;export PATH=${TAUPHOME}/bin:${PATH}&#39;</span> &gt;&gt; ~/.bashrc
+<span class="gp">$ </span><span class="nb">source</span> ~/.bashrc
 </pre></div>
 </div>
 <ul class="simple">
@@ -380,9 +400,9 @@
 <ul class="simple">
 <li><p>For Ubuntu, run the following command:</p></li>
 </ul>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo apt install gcc
-<span class="gp">$</span> sudo apt install gfortran
-<span class="gp">$</span> sudo apt install make
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo apt install gcc
+<span class="gp">$ </span>sudo apt install gfortran
+<span class="gp">$ </span>sudo apt install make
 </pre></div>
 </div>
 <div class="toctree-wrapper compound">
@@ -403,35 +423,28 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="computer/index.html" class="btn btn-neutral float-right" title="Computer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
+        <a href="computer/index.html" class="btn btn-neutral float-right" title="Computer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, MIG
+        &#169; Copyright 2020, MIG.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

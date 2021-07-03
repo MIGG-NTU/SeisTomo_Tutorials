@@ -1,12 +1,23 @@
 SeisTomo Tutorials
 ==================
 
+.. note::
+
+   From 2021/07/03, the tutorials are maintained on `Seismology101 <https://seismo-learn.org/seismology101/>`__,
+   which are tutorials for absolute beginners in Seismology in Chinese.
+
+.. note::
+
+   From 2021/07/03, the tutorials on this website and in BaiduDisk are not maintained any more.
+
+---
+
 This website hosts a series of introductory tutorials about seimic tomography.
 
-The videos and all the materials are also available on `BaiduDisk <https://pan.baidu.com/s/1-8wQmywkvByrPtBhKD4x5g>`__ (passwd: ``4vgu``).
+.. note::
 
-Please note that the materials (especially the codes) on this website and in BaiduDisk will not maintained after the tutorials. Instead, the codes will be maintained in `SeisData_Tools <https://github.com/MIGG-NTU/SeisData_Tools>`__, which is an effort to collect and maintain codes and notes about seismic data in our group.
-
+   The lecture resources and videos are also available in
+   `BaiduDisk <https://pan.baidu.com/s/1-8wQmywkvByrPtBhKD4x5g>`__ with passwd ``4vgu``.
 
 Schedule
 --------

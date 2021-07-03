@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Command Lines &mdash; SeisTomo_Tutorials 0.1 documentation</title>
   
@@ -13,10 +13,15 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
+
   
+  
+
   
 
   
@@ -26,10 +31,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -51,7 +56,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> SeisTomo_Tutorials
+            <a href="../index.html" class="icon icon-home"> SeisTomo_Tutorials
           
 
           
@@ -203,6 +208,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -216,7 +223,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             
               <a href="https://github.com/MIGG-NTU/SeisTomo_Tutorials/blob/main/source/computer/command-lines.rst" class="fa fa-github"> Edit on GitHub</a>
             
@@ -249,8 +256,8 @@
 <div class="section" id="pwd">
 <h3>pwd<a class="headerlink" href="#pwd" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://man.linuxde.net/pwd">pwd</a> is a command to find out the path of the current working directory (folder) you’re in. The command will return an absolute (full) path.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> show the absolute <span class="o">(</span>full<span class="o">)</span> path where you are
-<span class="gp">$</span> <span class="nb">pwd</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>show the absolute <span class="o">(</span>full<span class="o">)</span> path where you are
+<span class="gp">$ </span><span class="nb">pwd</span>
 <span class="go">/Users/litianjue/Documents/EOS/help/Tutorial/Example</span>
 </pre></div>
 </div>
@@ -258,8 +265,8 @@
 <div class="section" id="cd">
 <h3>cd<a class="headerlink" href="#cd" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://man.linuxde.net/cd">cd</a> is a command to navigate through the Linux files and directories. It requires either the full path or the name of the directory, depending on the current working directory that you’re in.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> /Users/litianjue/Documents/EOS/help/Tutorial/Example  <span class="c1"># Your destination folder.</span>
-<span class="gp">$</span> <span class="nb">pwd</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span> /Users/litianjue/Documents/EOS/help/Tutorial/Example  <span class="c1"># Your destination folder.</span>
+<span class="gp">$ </span><span class="nb">pwd</span>
 <span class="go">/Users/litianjue/Documents/EOS/Help/Tutorial/Example</span>
 </pre></div>
 </div>
@@ -267,8 +274,8 @@
 <div class="section" id="ls">
 <h3>ls<a class="headerlink" href="#ls" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://man.linuxde.net/ls">ls</a> is a command to view the contents of a directory. By default, this command will display the contents of your current working directory.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> show the contents under the current folder
-<span class="gp">$</span> ls
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>show the contents under the current folder
+<span class="gp">$ </span>ls
 <span class="go">TauP-2.4.5.tar  Time.temp1   Time.temp2   events-selected.dat</span>
 </pre></div>
 </div>
@@ -276,8 +283,8 @@
 <div class="section" id="mkdir">
 <h3>mkdir<a class="headerlink" href="#mkdir" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://man.linuxde.net/mkdir">mkdir</a> is a command allowing the user to create directories (also referred to as folders in some operating systems).</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> mkdir temp
-<span class="gp">$</span> ls
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mkdir temp
+<span class="gp">$ </span>ls
 <span class="go">TauP-2.4.5.tar  Time.temp1   Time.temp2   events-selected.dat temp</span>
 </pre></div>
 </div>
@@ -285,11 +292,11 @@
 <div class="section" id="cp">
 <h3>cp<a class="headerlink" href="#cp" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://man.linuxde.net/cp">cp</a> is a command standing for copy. It is used to copy files (as default) or group of files or directory (with <code class="docutils literal notranslate"><span class="pre">-R</span></code>).</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> mkdir temp2
-<span class="gp">$</span> cp events-selected.dat temp/events   <span class="c1"># copy file events-selected.dat into folder temp renamed as events</span>
-<span class="gp">$</span> cp -R temp2 temp/  <span class="c1"># copy folder temp2 into folder temp</span>
-<span class="gp">$</span> <span class="nb">cd</span> temp
-<span class="gp">$</span> ls
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mkdir temp2
+<span class="gp">$ </span>cp events-selected.dat temp/events   <span class="c1"># copy file events-selected.dat into folder temp renamed as events</span>
+<span class="gp">$ </span>cp -R temp2 temp/  <span class="c1"># copy folder temp2 into folder temp</span>
+<span class="gp">$ </span><span class="nb">cd</span> temp
+<span class="gp">$ </span>ls
 <span class="go">events temp2</span>
 </pre></div>
 </div>
@@ -297,11 +304,11 @@
 <div class="section" id="mv">
 <h3>mv<a class="headerlink" href="#mv" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://man.linuxde.net/mv">mv</a> is a command standing for move. It is used to move one or more files or directories from one place to another. It has two distinct functions:(i) It rename a file or folder; (ii) It moves group of files to different directory.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> mkdir temp3
-<span class="gp">$</span> mv events-selected.dat temp/events   <span class="c1"># move file events-selected.dat into folder temp renamed as events</span>
-<span class="gp">$</span> mv temp3 temp/  <span class="c1"># move folder temp3 into folder temp</span>
-<span class="gp">$</span> <span class="nb">cd</span> temp
-<span class="gp">$</span> ls
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mkdir temp3
+<span class="gp">$ </span>mv events-selected.dat temp/events   <span class="c1"># move file events-selected.dat into folder temp renamed as events</span>
+<span class="gp">$ </span>mv temp3 temp/  <span class="c1"># move folder temp3 into folder temp</span>
+<span class="gp">$ </span><span class="nb">cd</span> temp
+<span class="gp">$ </span>ls
 <span class="go">events  events-selected.dat  temp2   temp3</span>
 </pre></div>
 </div>
@@ -309,12 +316,12 @@
 <div class="section" id="rm">
 <h3>rm<a class="headerlink" href="#rm" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://man.linuxde.net/rm">rm</a> is a command standing for remove. It is used to remove objects such as files (default) and directories (with <code class="docutils literal notranslate"><span class="pre">-R</span></code>).</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> temp
-<span class="gp">$</span> ls
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span> temp
+<span class="gp">$ </span>ls
 <span class="go">events  events-selected.dat  temp2   temp3</span>
-<span class="gp">$</span> rm events
-<span class="gp">$</span> rm -r temp2
-<span class="gp">$</span> ls
+<span class="gp">$ </span>rm events
+<span class="gp">$ </span>rm -r temp2
+<span class="gp">$ </span>ls
 <span class="go">events-selected.dat temp3</span>
 </pre></div>
 </div>
@@ -325,8 +332,8 @@
 <div class="section" id="cat">
 <h3>cat<a class="headerlink" href="#cat" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://man.linuxde.net/cat">cat</a> is a command used very frequently in Linux. It reads data from the file and gives their content as output. It helps us to create, view, concatenate files.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> show the content of a catalog file, e.g., events-selected.dat
-<span class="gp">$</span> cat events-selected.dat
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>show the content of a catalog file, e.g., events-selected.dat
+<span class="gp">$ </span>cat events-selected.dat
 <span class="go">year month day hour minute second event ID latitude (decimal degrees), longitude (decimal degrees), depth (km) event magnitude</span>
 <span class="go">2019 07 06 03 47 52.980  38457687  35.90800 -117.74833   7.290  5.50  57  2.700   0.100   0.300   0.090  le   3d</span>
 <span class="go">2019 07 06 03 19 52.260  38457511  35.76883 -117.59717   1.860  7.10  48  4.800   0.100   0.400   0.090  le   3d</span>
@@ -337,17 +344,17 @@
 <div class="section" id="paste">
 <h3>paste<a class="headerlink" href="#paste" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://man.linuxde.net/paste">paste</a> is one of the most useful commands used to join files horizontally (parallel merging) by outputting lines consisting of lines from each file specified, separated by tab as delimiter, to the standard output.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> paste two files together
-<span class="gp">$</span> cat Time.temp1
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>paste two files together
+<span class="gp">$ </span>cat Time.temp1
 <span class="go">20190706</span>
 <span class="go">20190706</span>
 <span class="go">20190704</span>
-<span class="gp">$</span> cat Time.temp2
+<span class="gp">$ </span>cat Time.temp2
 <span class="go">0347</span>
 <span class="go">0319</span>
 <span class="go">1733</span>
-<span class="gp">$</span> paste Time.temp1 Time.temp2 &gt; Time   <span class="c1"># Here, ``&gt;`` is Standard Output, it redirects the output content to a file.</span>
-<span class="gp">$</span> cat Time
+<span class="gp">$ </span>paste Time.temp1 Time.temp2 &gt; Time   <span class="c1"># Here, ``&gt;`` is Standard Output, it redirects the output content to a file.</span>
+<span class="gp">$ </span>cat Time
 <span class="go">20190706 0347</span>
 <span class="go">20190706 0319</span>
 <span class="go">20190704 1733</span>
@@ -357,26 +364,26 @@
 <div class="section" id="awk">
 <h3>awk<a class="headerlink" href="#awk" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://man.linuxde.net/awk">awk</a> is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool. It is used to extract certain columns or sections in an ASCII-format file given a specified field separator. By default, fields are separated by a space. We can change that with the –field-separator option, which sets the <code class="docutils literal notranslate"><span class="pre">-F</span></code>‘S’ variable S to whatever you want it to be.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> extract the depth <span class="o">(</span>fourth<span class="o">)</span> and magnitude <span class="o">(</span>fifth<span class="o">)</span> columns
-<span class="gp">$</span> awk <span class="s1">&#39;FNR&gt;1{print $10,$11}&#39;</span> events-selected.dat  <span class="c1"># Here, the division character is the default setting ``empty space``; ``FNR &gt; 1`` means skipping the first line.</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>extract the depth <span class="o">(</span>fourth<span class="o">)</span> and magnitude <span class="o">(</span>fifth<span class="o">)</span> columns
+<span class="gp">$ </span>awk <span class="s1">&#39;FNR&gt;1{print $10,$11}&#39;</span> events-selected.dat  <span class="c1"># Here, the division character is the default setting ``empty space``; ``FNR &gt; 1`` means skipping the first line.</span>
 <span class="go">7.290 5.50</span>
 <span class="go">1.860 7.10</span>
 <span class="go">11.780 6.40</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> extract the origin <span class="nb">time</span> <span class="o">(</span>first<span class="o">)</span> column and reformat it into yyyymmdd hhmmss.sss
-<span class="gp">$</span> awk <span class="s1">&#39;FNR&gt;1{print $1$2$3}&#39;</span> events-selected.dat &gt; origin.temp1   <span class="c1"># Here, ``|`` is pipelines, using it, the standard output of one command is fed into the standard input of another.</span>
-<span class="gp">$</span> cat origin.temp1
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>extract the origin <span class="nb">time</span> <span class="o">(</span>first<span class="o">)</span> column and reformat it into yyyymmdd hhmmss.sss
+<span class="gp">$ </span>awk <span class="s1">&#39;FNR&gt;1{print $1$2$3}&#39;</span> events-selected.dat &gt; origin.temp1   <span class="c1"># Here, ``|`` is pipelines, using it, the standard output of one command is fed into the standard input of another.</span>
+<span class="gp">$ </span>cat origin.temp1
 <span class="go">20190706</span>
 <span class="go">20190706</span>
 <span class="go">20190704</span>
-<span class="gp">$</span> awk <span class="s1">&#39;FNR&gt;1{print $4$5$6}&#39;</span> events-selected.dat  &gt; origin.temp2
-<span class="gp">$</span> cat origin.temp2
+<span class="gp">$ </span>awk <span class="s1">&#39;FNR&gt;1{print $4$5$6}&#39;</span> events-selected.dat  &gt; origin.temp2
+<span class="gp">$ </span>cat origin.temp2
 <span class="go">034752.980</span>
 <span class="go">031952.260</span>
 <span class="go">173348.530</span>
-<span class="gp">$</span> paste origin.temp1 origin.temp2 &gt; origin
-<span class="gp">$</span> cat origin
+<span class="gp">$ </span>paste origin.temp1 origin.temp2 &gt; origin
+<span class="gp">$ </span>cat origin
 <span class="go">20190706    034752.980</span>
 <span class="go">20190706    031952.260</span>
 <span class="go">20190704    173348.530</span>
@@ -386,8 +393,8 @@
 <div class="section" id="printf">
 <h3>printf<a class="headerlink" href="#printf" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://man.linuxde.net/printf">printf</a> is a command in Linux used to display the given string, number or any other format specifier on the terminal window. It works the same way as “printf” works in programming languages like C.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> extract the depth <span class="o">(</span>fourth<span class="o">)</span> columns with keeping one decimal place
-<span class="gp">$</span> awk <span class="s1">&#39;FNR&gt;1{printf&quot;%.1f\n&quot;,$10}&#39;</span> events-selected.dat
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>extract the depth <span class="o">(</span>fourth<span class="o">)</span> columns with keeping one decimal place
+<span class="gp">$ </span>awk <span class="s1">&#39;FNR&gt;1{printf&quot;%.1f\n&quot;,$10}&#39;</span> events-selected.dat
 <span class="go">7.3</span>
 <span class="go">1.9</span>
 <span class="go">11.8</span>
@@ -397,19 +404,19 @@
 <div class="section" id="cut">
 <h3>cut<a class="headerlink" href="#cut" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://man.linuxde.net/cut">cut</a> is a command for cutting out the sections from each line of files and writing the result to standard output. It can be used to cut parts of a line by byte position, character and field. Often used options include column indicator <code class="docutils literal notranslate"><span class="pre">-c</span></code>, and combination of <code class="docutils literal notranslate"><span class="pre">-d</span></code> (seperator) and <code class="docutils literal notranslate"><span class="pre">-f</span></code> (field number) to realise the extraction of certain sections in the ASCII-format file.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> extract the origin <span class="nb">time</span> <span class="o">(</span>first<span class="o">)</span> column and reformat it into yyyymmdd hhmmss.sss
-<span class="gp">$</span> awk <span class="s1">&#39;FNR&gt;1{print}&#39;</span> events-selected.dat <span class="p">|</span> cut -c <span class="m">1</span>-4,6-7,9-10 &gt; origin.temp1
-<span class="gp">$</span> cat origin.temp1
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>extract the origin <span class="nb">time</span> <span class="o">(</span>first<span class="o">)</span> column and reformat it into yyyymmdd hhmmss.sss
+<span class="gp">$ </span>awk <span class="s1">&#39;FNR&gt;1{print}&#39;</span> events-selected.dat <span class="p">|</span> cut -c <span class="m">1</span>-4,6-7,9-10 &gt; origin.temp1
+<span class="gp">$ </span>cat origin.temp1
 <span class="go">20190706</span>
 <span class="go">20190706</span>
 <span class="go">20190704</span>
-<span class="gp">$</span> awk <span class="s1">&#39;FNR&gt;1{print}&#39;</span> events-selected.dat <span class="p">|</span> cut -c <span class="m">12</span>-13,15-16,18-23 &gt; origin.temp2
-<span class="gp">$</span> cat origin.temp2
+<span class="gp">$ </span>awk <span class="s1">&#39;FNR&gt;1{print}&#39;</span> events-selected.dat <span class="p">|</span> cut -c <span class="m">12</span>-13,15-16,18-23 &gt; origin.temp2
+<span class="gp">$ </span>cat origin.temp2
 <span class="go">034752.980</span>
 <span class="go">031952.260</span>
 <span class="go">173348.530</span>
-<span class="gp">$</span> paste origin.temp1 origin.temp2 &gt; origin
-<span class="gp">$</span> cat origin
+<span class="gp">$ </span>paste origin.temp1 origin.temp2 &gt; origin
+<span class="gp">$ </span>cat origin
 <span class="go">20190706    034752.980</span>
 <span class="go">20190706    031952.260</span>
 <span class="go">20190704    173348.530</span>
@@ -419,8 +426,8 @@
 <div class="section" id="grep">
 <h3>grep<a class="headerlink" href="#grep" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://man.linuxde.net/grep">grep</a> is a filter command for searching for a particular pattern of characters in a file, and displaying all lines that contain that pattern.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> extract the lines containing <span class="sb">``</span>3d<span class="sb">``</span> in catalog file events-selected.dat
-<span class="gp">$</span> cat events-selected.dat <span class="p">|</span> grep <span class="s2">&quot;3d&quot;</span>  <span class="c1"># Note the capital case is different from the lower case.</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>extract the lines containing <span class="sb">``</span>3d<span class="sb">``</span> <span class="k">in</span> catalog file events-selected.dat
+<span class="gp">$ </span>cat events-selected.dat <span class="p">|</span> grep <span class="s2">&quot;3d&quot;</span>  <span class="c1"># Note the capital case is different from the lower case.</span>
 <span class="go">2019 07 06 03 47 52.980  38457687  35.90800 -117.74833   7.290  5.50  57  2.700   0.100   0.300   0.090  le   3d</span>
 <span class="go">2019 07 06 03 19 52.260  38457511  35.76883 -117.59717   1.860  7.10  48  4.800   0.100   0.400   0.090  le   3d</span>
 <span class="go">2019 07 04 17 33 48.530  38443183  35.70750 -117.50150  11.780  6.40  58  7.400   0.100   0.300   0.080  le   3d</span>
@@ -430,9 +437,9 @@
 <div class="section" id="sort">
 <h3>sort<a class="headerlink" href="#sort" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://man.linuxde.net/sort">sort</a> is a command for sorting a file, arranging the records in a particular order. Often used options include <code class="docutils literal notranslate"><span class="pre">-k</span></code> (column number), <code class="docutils literal notranslate"><span class="pre">-g</span></code> (in numerical order), <code class="docutils literal notranslate"><span class="pre">-r</span></code> (in decreasing order, default is increasing order), <code class="docutils literal notranslate"><span class="pre">-u</span></code> (sort and remove duplicates) and <code class="docutils literal notranslate"><span class="pre">-o</span></code> (output to a new file).</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> sort the events in decreasing order within the catalog file events-selected.dat according to their magnitudes.
-<span class="gp">$</span> awk <span class="s1">&#39;FNR&gt;1{print}&#39;</span> events-selected.dat <span class="p">|</span> sort -nk11,11 -r -o events-ordered.dat
-<span class="gp">$</span> cat events-ordered.dat
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>sort the events <span class="k">in</span> decreasing order within the catalog file events-selected.dat according to their magnitudes.
+<span class="gp">$ </span>awk <span class="s1">&#39;FNR&gt;1{print}&#39;</span> events-selected.dat <span class="p">|</span> sort -nk11,11 -r -o events-ordered.dat
+<span class="gp">$ </span>cat events-ordered.dat
 <span class="go">2019 07 06 03 19 52.260  38457511  35.76883 -117.59717   1.860  7.10  48  4.800   0.100   0.400   0.090  le   3d</span>
 <span class="go">2019 07 04 17 33 48.530  38443183  35.70750 -117.50150  11.780  6.40  58  7.400   0.100   0.300   0.080  le   3d</span>
 <span class="go">2019 07 06 03 47 52.980  38457687  35.90800 -117.74833   7.290  5.50  57  2.700   0.100   0.300   0.090  le   3d</span>
@@ -453,23 +460,23 @@
 <div class="section" id="tar">
 <h3>tar<a class="headerlink" href="#tar" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://man.linuxde.net/tar">tar</a> is a command standing for tape archive, used to create compressed or uncompressed archive files and also maintain and modify them. Often used commands include <code class="docutils literal notranslate"><span class="pre">-x</span></code> (extract the archive), <code class="docutils literal notranslate"><span class="pre">-c</span></code> (create the archive), <code class="docutils literal notranslate"><span class="pre">-v</span></code> (displays verbose information), <code class="docutils literal notranslate"><span class="pre">-f</span></code> (creates archive with given filename), <code class="docutils literal notranslate"><span class="pre">-z</span></code> (zip, tells tar command that create tar file using gzip), <code class="docutils literal notranslate"><span class="pre">-j</span></code> (filter archive tar file using tbzip).</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> decompress a file
-<span class="gp">$</span> ls
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>decompress a file
+<span class="gp">$ </span>ls
 <span class="go">TauP-2.4.5.tar</span>
-<span class="gp">$</span> tar -zxvf TauP-2.4.5.tar
-<span class="gp">#</span> or use the following <span class="nb">command</span> line
-<span class="gp">$</span> tar -jxvf TauP-2.4.5.tar
-<span class="gp">$</span> ls
+<span class="gp">$ </span>tar -zxvf TauP-2.4.5.tar
+<span class="gp"># </span>or use the following <span class="nb">command</span> line
+<span class="gp">$ </span>tar -jxvf TauP-2.4.5.tar
+<span class="gp">$ </span>ls
 <span class="go">TauP-2.4.5</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> compress a file
-<span class="gp">$</span> ls
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>compress a file
+<span class="gp">$ </span>ls
 <span class="go">TauP-2.4.5</span>
-<span class="gp">$</span> tar -zcvf TauP-2.4.5.tar TauP-2.4.5
-<span class="gp">#</span> or use the following <span class="nb">command</span> line
-<span class="gp">$</span> tar -jcvf TauP-2.4.5.tar TauP-2.4.5
-<span class="gp">$</span> ls
+<span class="gp">$ </span>tar -zcvf TauP-2.4.5.tar TauP-2.4.5
+<span class="gp"># </span>or use the following <span class="nb">command</span> line
+<span class="gp">$ </span>tar -jcvf TauP-2.4.5.tar TauP-2.4.5
+<span class="gp">$ </span>ls
 <span class="go">TauP-2.4.5    TauP-2.4.5.tar</span>
 </pre></div>
 </div>
@@ -477,40 +484,40 @@
 <div class="section" id="gzip">
 <h3>gzip<a class="headerlink" href="#gzip" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://man.linuxde.net/gzip">gzip</a> is a command for compressing files. Often used commands include <code class="docutils literal notranslate"><span class="pre">-k</span></code> (compression while keep the original file), <code class="docutils literal notranslate"><span class="pre">-r</span></code> (compress every file in a folder and its subfolders), <code class="docutils literal notranslate"><span class="pre">-d</span></code> (decompress a file using the “gzip” command), <code class="docutils literal notranslate"><span class="pre">-v</span></code> (display the name and percentage reduction for each file compressed or decompressed).</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> compress the file
-<span class="gp">$</span> ls
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>compress the file
+<span class="gp">$ </span>ls
 <span class="go">events-selected.dat</span>
-<span class="gp">$</span> gzip -v events-selected.dat
+<span class="gp">$ </span>gzip -v events-selected.dat
 <span class="go">events-selected.dat:           57.3% -- replaced with events-selected.dat.gz</span>
-<span class="gp">$</span> ls
+<span class="gp">$ </span>ls
 <span class="go">events-selected.dat.gz</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> or compress the file <span class="k">while</span> keeping the original one
-<span class="gp">$</span> gzip -kv events-selected.dat
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>or compress the file <span class="k">while</span> keeping the original one
+<span class="gp">$ </span>gzip -kv events-selected.dat
 <span class="go">events-selected.dat:           57.3% -- replaced with events-selected.dat.gz</span>
-<span class="gp">$</span> ls
+<span class="gp">$ </span>ls
 <span class="go">events-selected.dat      events-selected.dat.gz</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> decompress the file
-<span class="gp">$</span> gzip -dv events-selected.dat.gz
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>decompress the file
+<span class="gp">$ </span>gzip -dv events-selected.dat.gz
 <span class="go">events-selected.dat.gz:        57.3% -- replaced with events-selected.dat</span>
-<span class="gp">$</span> ls
+<span class="gp">$ </span>ls
 <span class="go">events-selected.dat</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> compress each file in folder temp
-<span class="gp">$</span> mkdir temp
-<span class="gp">$</span> cp events-selected.dat ./temp/
-<span class="gp">$</span> <span class="nb">cd</span> ./temp/
-<span class="gp">$</span> ls
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>compress each file <span class="k">in</span> folder temp
+<span class="gp">$ </span>mkdir temp
+<span class="gp">$ </span>cp events-selected.dat ./temp/
+<span class="gp">$ </span><span class="nb">cd</span> ./temp/
+<span class="gp">$ </span>ls
 <span class="go">events-selected.dat</span>
-<span class="gp">$</span> <span class="nb">cd</span> ../
-<span class="gp">$</span> gzip -rv temp
+<span class="gp">$ </span><span class="nb">cd</span> ../
+<span class="gp">$ </span>gzip -rv temp
 <span class="go">temp/events-selected.dat:      57.3% -- replaced with temp/events-selected.dat.gz</span>
-<span class="gp">$</span> <span class="nb">cd</span> ./temp
-<span class="gp">$</span> ls
+<span class="gp">$ </span><span class="nb">cd</span> ./temp
+<span class="gp">$ </span>ls
 <span class="go">events-selected.dat.gz</span>
 </pre></div>
 </div>
@@ -529,8 +536,8 @@
 <div class="section" id="head">
 <h3>head<a class="headerlink" href="#head" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://man.linuxde.net/head">head</a> is the complementary of Tail command, it prints the top N number of data of the given input. By default, it prints the first 10 lines of the specified files. Often used option is <code class="docutils literal notranslate"><span class="pre">-n</span> <span class="pre">num</span></code> (Prints the first ‘num’ lines instead of first 10 lines. num is mandatory to be specified in command otherwise it displays an error).</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> show the first two lines of content of a catalog file, e.g., events-selected.dat
-<span class="gp">$</span> cat events-selected.dat <span class="p">|</span> head -n <span class="m">2</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>show the first two lines of content of a catalog file, e.g., events-selected.dat
+<span class="gp">$ </span>cat events-selected.dat <span class="p">|</span> head -n <span class="m">2</span>
 <span class="go">year month day hour minute second event ID latitude (decimal degrees), longitude (decimal degrees), depth (km) event magnitude</span>
 <span class="go">2019 07 06 03 47 52.980  38457687  35.90800 -117.74833   7.290  5.50  57  2.700   0.100   0.300   0.090  le   3d</span>
 </pre></div>
@@ -539,8 +546,8 @@
 <div class="section" id="tail">
 <h3>tail<a class="headerlink" href="#tail" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://man.linuxde.net/tail">tail</a> is the complementary of Head command, it prints the last N number of data of the given input. By default it prints the last 10 lines of the specified files. Often used option is <code class="docutils literal notranslate"><span class="pre">-n</span> <span class="pre">num</span></code> (Prints the last ‘num’ lines instead of last 10 lines. num is mandatory to be specified in command otherwise it displays an error).</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> show the last two lines of content of a catalog file, e.g., events-selected.dat
-<span class="gp">$</span> cat events-selected.dat <span class="p">|</span> tail -n <span class="m">2</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>show the last two lines of content of a catalog file, e.g., events-selected.dat
+<span class="gp">$ </span>cat events-selected.dat <span class="p">|</span> tail -n <span class="m">2</span>
 <span class="go">2019 07 06 03 19 52.260  38457511  35.76883 -117.59717   1.860  7.10  48  4.800   0.100   0.400   0.090  le   3d</span>
 <span class="go">2019 07 04 17 33 48.530  38443183  35.70750 -117.50150  11.780  6.40  58  7.400   0.100   0.300   0.080  le   3d</span>
 </pre></div>
@@ -549,8 +556,8 @@
 <div class="section" id="which">
 <h3>which<a class="headerlink" href="#which" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://man.linuxde.net/which">which</a> is the command used to locate the executable file associated with the given command by searching it in the path environment variable.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> show the location of installed sac
-<span class="gp">$</span> which sac
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>show the location of installed sac
+<span class="gp">$ </span>which sac
 <span class="go">/usr/local/MyCode/sac/bin/sac</span>
 </pre></div>
 </div>
@@ -562,20 +569,20 @@
 <div class="section" id="sed">
 <h3>sed<a class="headerlink" href="#sed" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://man.linuxde.net/sed">sed</a> is the command standing for stream editor and it can perform lots of functions on file, e.g., searching, find and replace, insertion or deletion.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> delete the line containing <span class="m">11</span>.780
-<span class="gp">$</span> cat events-selected.dat
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>delete the line containing <span class="m">11</span>.780
+<span class="gp">$ </span>cat events-selected.dat
 <span class="go">year month day hour minute second event ID latitude (decimal degrees), longitude (decimal degrees), depth (km) event magnitude</span>
 <span class="go">2019 07 06 03 47 52.980  38457687  35.90800 -117.74833   7.290  5.50  57  2.700   0.100   0.300   0.090  le   3d</span>
 <span class="go">2019 07 06 03 19 52.260  38457511  35.76883 -117.59717   1.860  7.10  48  4.800   0.100   0.400   0.090  le   3d</span>
 <span class="go">2019 07 04 17 33 48.530  38443183  35.70750 -117.50150  11.780  6.40  58  7.400   0.100   0.300   0.080  le   3d</span>
-<span class="gp">$</span> sed <span class="s1">&#39;/11.780/d&#39;</span> events-selected.dat
+<span class="gp">$ </span>sed <span class="s1">&#39;/11.780/d&#39;</span> events-selected.dat
 <span class="go">year month day hour minute second event ID latitude (decimal degrees), longitude (decimal degrees), depth (km) event magnitude</span>
 <span class="go">2019 07 06 03 47 52.980  38457687  35.90800 -117.74833   7.290  5.50  57  2.700   0.100   0.300   0.090  le   3d</span>
 <span class="go">2019 07 06 03 19 52.260  38457511  35.76883 -117.59717   1.860  7.10  48  4.800   0.100   0.400   0.090  le   3d</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> replace le with LOCEVT in the whole file
-<span class="gp">$</span> sed <span class="s1">&#39;s/le/LOCEVT/g&#39;</span> events-selected.dat
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>replace le with LOCEVT <span class="k">in</span> the whole file
+<span class="gp">$ </span>sed <span class="s1">&#39;s/le/LOCEVT/g&#39;</span> events-selected.dat
 <span class="go">year month day hour minute second event ID latitude (decimal degrees), longitude (decimal degrees), depth (km) event magnitude</span>
 <span class="go">2019 07 06 03 47 52.980  38457687  35.90800 -117.74833   7.290  5.50  57  2.700   0.100   0.300   0.090  LOCEVT   3d</span>
 <span class="go">2019 07 06 03 19 52.260  38457511  35.76883 -117.59717   1.860  7.10  48  4.800   0.100   0.400   0.090  LOCEVT   3d</span>
@@ -599,37 +606,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../programming/index.html" class="btn btn-neutral float-right" title="Programming" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="file-manage.html" class="btn btn-neutral float-left" title="File Management" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="../programming/index.html" class="btn btn-neutral float-right" title="Programming" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="file-manage.html" class="btn btn-neutral float-left" title="File Management" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, MIG
+        &#169; Copyright 2020, MIG.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

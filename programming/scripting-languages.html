@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Scripting Languages &mdash; SeisTomo_Tutorials 0.1 documentation</title>
   
@@ -13,10 +13,15 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
+
   
+  
+
   
 
   
@@ -26,10 +31,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -51,7 +56,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> SeisTomo_Tutorials
+            <a href="../index.html" class="icon icon-home"> SeisTomo_Tutorials
           
 
           
@@ -169,6 +174,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -182,7 +189,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             
               <a href="https://github.com/MIGG-NTU/SeisTomo_Tutorials/blob/main/source/programming/scripting-languages.rst" class="fa fa-github"> Edit on GitHub</a>
             
@@ -219,8 +226,8 @@ date
 </pre></div>
 </div>
 <p>Save the above content, make the script executable and run it:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> chmod +x hello.sh  <span class="c1"># make the script executable</span>
-<span class="gp">$</span> ./hello.sh         <span class="c1"># run the script</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>chmod +x hello.sh  <span class="c1"># make the script executable</span>
+<span class="gp">$ </span>./hello.sh         <span class="c1"># run the script</span>
 </pre></div>
 </div>
 <p><strong>Resources</strong></p>
@@ -252,18 +259,18 @@ date
 <p><strong>Install packages</strong></p>
 <p>There are several ways to install Python packages. The most convenient ways are <code class="docutils literal notranslate"><span class="pre">conda</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span></code>. If you want to install Python package, it’s recommended to check if it’s available from conda. If not, then you can pip.</p>
 <p>conda is the package manager provide d by Anaconda:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda search numpy   <span class="c1"># Search packages</span>
-<span class="gp">$</span> conda install numpy  <span class="c1"># Install packages</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda search numpy   <span class="c1"># Search packages</span>
+<span class="gp">$ </span>conda install numpy  <span class="c1"># Install packages</span>
 </pre></div>
 </div>
 <p>pip is the built-in package manager of Python:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install numpy  <span class="c1"># Search packages</span>
-<span class="gp">$</span> pip install numpy  <span class="c1"># Install pacakges</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install numpy  <span class="c1"># Search packages</span>
+<span class="gp">$ </span>pip install numpy  <span class="c1"># Install pacakges</span>
 </pre></div>
 </div>
 <p>Run following commands to install some most commonly used packages for scientific computing:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda install ipython numpy scipy matplotlib pandas
-<span class="gp">$</span> conda install obspy --channel conda-forge
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda install ipython numpy scipy matplotlib pandas
+<span class="gp">$ </span>conda install obspy --channel conda-forge
 </pre></div>
 </div>
 </div>
@@ -292,37 +299,29 @@ date
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../seismology/index.html" class="btn btn-neutral float-right" title="Seismology" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="compiled-languages.html" class="btn btn-neutral float-left" title="Compiled Language" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="../seismology/index.html" class="btn btn-neutral float-right" title="Seismology" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="compiled-languages.html" class="btn btn-neutral float-left" title="Compiled Language" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, MIG
+        &#169; Copyright 2020, MIG.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

@@ -206,11 +206,3 @@ In order to follow the toturials, you have to install the following terms in you
    exercises/data-fetch/index
    exercises/data-process/index
    exercises/data-analysis/index
-
-.. toctree::
-   :maxdepth: 3
-   :hidden:
-   :caption: Appendix
-
-   references
-   links
